@@ -5,7 +5,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from src.python.build_language_graphs import run_joern_parse
+from sajaniemi_extractor.build_language_graphs import run_joern_parse
 
 
 class BuildLanguageGraphsTests(unittest.TestCase):
@@ -28,7 +28,7 @@ class BuildLanguageGraphsTests(unittest.TestCase):
                 )
                 self.assertEqual(command[2:], ["--output", str(output.resolve()), "--language", "rubysrc"])
 
-            with patch("src.python.build_language_graphs.subprocess.run", side_effect=inspect_command):
+            with patch("sajaniemi_extractor.build_language_graphs.subprocess.run", side_effect=inspect_command):
                 run_joern_parse(source, output, "Ruby", force=False, dry_run=False)
 
     def test_non_ruby_sources_use_the_original_absolute_directory(self) -> None:
@@ -38,7 +38,7 @@ class BuildLanguageGraphsTests(unittest.TestCase):
             source.mkdir()
             output = root / "python.bin"
 
-            with patch("src.python.build_language_graphs.subprocess.run") as run:
+            with patch("sajaniemi_extractor.build_language_graphs.subprocess.run") as run:
                 run_joern_parse(source, output, "Python", force=False, dry_run=False)
 
             self.assertEqual(

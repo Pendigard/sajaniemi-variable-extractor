@@ -15,7 +15,7 @@ import time
 from pathlib import Path
 from typing import Any
 
-from .paths import scala_script_path
+from sajaniemi_extractor.paths import scala_script_path
 from sajaniemi_extractor.variable_aware import legacy_annotations_from_roles, resolve_variable_aware_output
 
 

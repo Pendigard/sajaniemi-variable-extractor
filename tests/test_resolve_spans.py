@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.python.resolve_spans import resolve_annotations
+from sajaniemi_extractor.resolve_spans import resolve_annotations
 
 
 class ResolveSpansTests(unittest.TestCase):

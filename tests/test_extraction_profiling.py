@@ -9,15 +9,15 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from src.python.profile_extraction import parse_profiles, process_tree_rss_bytes
-from src.python.variable_aware import legacy_annotations_from_roles
+from tools.profile_extraction import parse_profiles, process_tree_rss_bytes
+from sajaniemi_extractor.variable_aware import legacy_annotations_from_roles
 from tests.scala_sources import all_scala_sources, scala_source
 
 
 class ExtractionProfilingTests(unittest.TestCase):
     def test_rss_is_explicitly_unavailable_when_ps_is_restricted(self) -> None:
         denied = subprocess.CompletedProcess(["ps"], returncode=1, stdout="", stderr="denied")
-        with patch("src.python.profile_extraction.subprocess.run", return_value=denied):
+        with patch("tools.profile_extraction.subprocess.run", return_value=denied):
             self.assertIsNone(process_tree_rss_bytes(123))
 
     def test_manual_swap_analysis_has_no_per_variable_global_scan_or_cfg_search(self) -> None:

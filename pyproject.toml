@@ -15,7 +15,7 @@ sajaniemi-variable-extractor = "sajaniemi_extractor.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["sajaniemi_extractor*"]
+include = ["sajaniemi_extractor*", "tools*"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

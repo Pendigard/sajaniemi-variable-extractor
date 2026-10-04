@@ -7,9 +7,9 @@ import json
 from pathlib import Path
 
 from .build_language_graphs import LANGUAGES, run_joern_parse
-from .compare_annotations import compare_bundle
+from tools.compare_annotations import compare_bundle
 from .pipeline import normalize_language, run_pipeline
-from .profile_extraction import profile_graphs
+from tools.profile_extraction import profile_graphs
 from .run_dynamic_extractors import DEFAULT_SCALA_SCRIPT, extract_graphs
 
 

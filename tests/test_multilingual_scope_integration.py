@@ -8,7 +8,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.python.variable_aware import MINIMAL_VIEW_KEYS, resolve_variable_aware_output
+from sajaniemi_extractor.variable_aware import MINIMAL_VIEW_KEYS, resolve_variable_aware_output
 from tests.scope_validation import (
     final_subject_scope_metrics,
     output_metrics,

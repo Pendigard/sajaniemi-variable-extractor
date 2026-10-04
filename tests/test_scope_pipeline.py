@@ -9,8 +9,8 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.python.build_language_graphs import LANGUAGES, run_joern_parse
-from src.python.variable_aware import SourceResolver, resolve_variable_aware_output
+from sajaniemi_extractor.build_language_graphs import LANGUAGES, run_joern_parse
+from sajaniemi_extractor.variable_aware import SourceResolver, resolve_variable_aware_output
 from tests.scala_sources import scala_source
 from tests.scope_validation import (
     FORBIDDEN_FIELDS,

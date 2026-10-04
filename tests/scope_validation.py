@@ -7,7 +7,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-from src.python.variable_aware import MINIMAL_VIEW_KEYS, SourceResolver, legacy_annotations_from_roles
+from sajaniemi_extractor.variable_aware import MINIMAL_VIEW_KEYS, SourceResolver, legacy_annotations_from_roles
 
 
 FORBIDDEN_FIELDS = {"facts", "evidence", "role_evidence", "extra_fact_evidence"}

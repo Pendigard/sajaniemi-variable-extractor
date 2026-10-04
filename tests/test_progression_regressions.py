@@ -7,7 +7,7 @@ import time
 import unittest
 from collections import Counter
 
-from src.python.variable_aware import resolve_variable_aware_output, legacy_annotations_from_roles
+from sajaniemi_extractor.variable_aware import resolve_variable_aware_output, legacy_annotations_from_roles
 from tests.scope_validation import validate_output_invariants, canonical_json_digest
 
 ROOT = Path(__file__).resolve().parents[1]

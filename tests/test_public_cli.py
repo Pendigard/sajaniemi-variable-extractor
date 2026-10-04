@@ -12,6 +12,32 @@ from sajaniemi_extractor.cli import main
 
 
 class PublicCliTests(unittest.TestCase):
+    def test_profile_command_calls_tool_implementation(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            graphs = root / "graphs"
+            source = root / "source"
+            graphs.mkdir()
+            source.mkdir()
+            (graphs / "python.bin").write_bytes(b"graph")
+            report = root / "profile.json"
+            with patch("sajaniemi_extractor.cli.profile_graphs") as profile:
+                self.assertEqual(main(["profile", "--graph-dir", str(graphs), "--source", str(source),
+                                       "--report", str(report)]), 0)
+            self.assertEqual(profile.call_args.args[:4], (graphs, source, report, ["python"]))
+
+    def test_compare_command_calls_tool_implementation(self) -> None:
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            before = root / "before"
+            after = root / "after"
+            before.mkdir()
+            after.mkdir()
+            with patch("sajaniemi_extractor.cli.compare_bundle", return_value={"equal": True}) as compare:
+                with contextlib.redirect_stdout(io.StringIO()):
+                    self.assertEqual(main(["compare", "--before", str(before), "--after", str(after)]), 0)
+            compare.assert_called_once_with(before, after)
+
     def test_force_dry_run_keeps_graph_and_directory_unchanged(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)

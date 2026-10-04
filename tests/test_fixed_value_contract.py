@@ -4,8 +4,8 @@ import json, os, shutil, subprocess, tempfile, time, unittest
 from collections import Counter
 from pathlib import Path
 
-from src.python.build_language_graphs import run_joern_parse
-from src.python.variable_aware import MINIMAL_VIEW_KEYS, legacy_annotations_from_roles, resolve_variable_aware_output
+from sajaniemi_extractor.build_language_graphs import run_joern_parse
+from sajaniemi_extractor.variable_aware import MINIMAL_VIEW_KEYS, legacy_annotations_from_roles, resolve_variable_aware_output
 from tests.scope_validation import canonical_json_digest, duplicate_role_pair_count, validate_output_invariants
 
 ROOT = Path(__file__).resolve().parents[1]

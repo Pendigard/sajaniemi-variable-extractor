@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.python.compare_annotations import FILES, compare_bundle
+from tools.compare_annotations import FILES, compare_bundle
 
 
 def write_bundle(directory: Path, *, role: str = "stepper", byte_variant: bool = False) -> None:

@@ -5,7 +5,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.python.variable_aware import (
+from sajaniemi_extractor.variable_aware import (
     MINIMAL_VIEW_KEYS,
     SAJANIEMI_ROLES,
     SourceResolver,

@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.show_random_annotations import (
+from tools.show_random_annotations import (
     GREEN,
     NO_ROLE,
     RESET,

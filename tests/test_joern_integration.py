@@ -11,7 +11,7 @@ import unittest
 from collections import Counter
 from pathlib import Path
 
-from src.python.variable_aware import (
+from sajaniemi_extractor.variable_aware import (
     MINIMAL_VIEW_KEYS,
     SAJANIEMI_ROLES,
     legacy_annotations_from_roles,

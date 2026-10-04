@@ -30,7 +30,7 @@ sajaniemi-variable-extractor compare --before outputs/baseline --after outputs/e
 
 `parse` builds one graph. `extract` accepts all `.bin` files in a graph directory and writes the same bundle as `run`. `profile` measures Joern and Python resolution on existing graphs. `compare` reports file and variable-level differences between two complete bundles, exiting with status 1 when they differ.
 
-The Python functions live in `src/sajaniemi_extractor/` (`run_pipeline`, `extract_graphs`, `profile_graphs`, and `compare_bundle`); the CLI only supplies arguments. Joern scripts live in `src/scala/`. Direct profiling and comparison script entry points are in `tools/`. `src/python/` remains as compatibility imports for earlier code. Install with `-e` so the Scala scripts are found beside the Python sources and edits take effect immediately.
+The extraction functions live in `src/sajaniemi_extractor/` (`run_pipeline` and `extract_graphs`). The profiling, comparison, and annotation inspection implementations live in `src/tools/` (`profile_graphs` and `compare_bundle`); invoke their standalone CLIs with `python -m tools.profile_extraction`, `python -m tools.compare_annotations`, or `python -m tools.show_random_annotations`. The public CLI calls those same tool functions. Joern scripts live in `src/scala/`. Install with `-e` so edits take effect immediately.
 
 ## Test
 
