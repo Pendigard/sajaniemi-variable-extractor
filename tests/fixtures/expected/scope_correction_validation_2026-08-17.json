@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-17T00:00:00+09:00",
+  "patch_parent": "e03126b",
+  "joern_version": "HEAD+20260529-1449",
+  "tiny_fixture_integration": {
+    "status": "passed",
+    "duration_seconds": 220.875,
+    "languages": {
+      "C": {"variables":18,"role_records":24,"subjects_with_candidate":17,"resolved_scopes":17,"intentional_exclusions":1,"real_rejections":0,"eligible_coverage":1.0,"exact_scope_spans":17,"legacy_count":68},
+      "C++": {"variables":33,"role_records":39,"subjects_with_candidate":29,"resolved_scopes":29,"intentional_exclusions":4,"real_rejections":0,"eligible_coverage":1.0,"exact_scope_spans":29,"legacy_count":118},
+      "JavaScript": {"variables":37,"role_records":41,"subjects_with_candidate":27,"resolved_scopes":27,"intentional_exclusions":10,"real_rejections":0,"eligible_coverage":1.0,"exact_scope_spans":27,"legacy_count":106},
+      "Python": {"variables":19,"role_records":19,"subjects_with_candidate":13,"resolved_scopes":13,"intentional_exclusions":6,"real_rejections":0,"eligible_coverage":1.0,"exact_scope_spans":13,"legacy_count":54},
+      "Ruby": {"variables":26,"role_records":31,"subjects_with_candidate":24,"resolved_scopes":24,"intentional_exclusions":1,"eligibility_unknown_without_candidate":1,"real_rejections":0,"eligible_coverage":1.0,"exact_scope_spans":24,"legacy_count":91}
+    }
+  },
+  "cached_graph_regression": {
+    "status": "passed",
+    "duration_seconds": 280.110,
+    "languages": {
+      "c": {"variables":2251,"role_records":1178,"resolved_scopes":1636,"subjects_with_candidate":1637,"intentional_exclusions":556,"real_rejections":1,"duplicate_merged":0,"unclassified_with_candidate":1,"eligibility_unknown_without_candidate":58,"eligible_coverage":0.9993891264508247,"exact_scope_spans":1636,"duplicate_role_pairs_before":41,"duplicate_role_pairs_after":41,"non_scope_digest":"8a00831b0a7e1e4b2723aec31dcaf9032fb6110d7b817a770407b2a558aa29a5"},
+      "cpp": {"variables":4294,"role_records":2779,"resolved_scopes":3869,"subjects_with_candidate":3872,"intentional_exclusions":348,"real_rejections":3,"duplicate_merged":0,"unclassified_with_candidate":3,"eligibility_unknown_without_candidate":74,"eligible_coverage":0.9992252066115702,"exact_scope_spans":3869,"duplicate_role_pairs_before":1,"duplicate_role_pairs_after":1,"non_scope_digest":"fd4c9efc38a3ac73b676a2bedb6f98927686eefeb333acbec21ff5fdea049c66"},
+      "javascript": {"variables":4833,"role_records":2893,"resolved_scopes":3938,"subjects_with_candidate":4046,"raw_candidate_subjects_not_final":33,"intentional_exclusions":895,"real_rejections":0,"duplicate_merged":0,"unclassified_with_candidate":0,"eligibility_unknown_without_candidate":0,"eligible_coverage":1.0,"exact_scope_spans":3938,"duplicate_role_pairs_before":0,"duplicate_role_pairs_after":0,"non_scope_digest":"0b22ce79e5e41672517ef431ed5b879bda02d086495c7b113c5ac371a97f5a67"},
+      "python": {"variables":4249,"role_records":3123,"resolved_scopes":2613,"subjects_with_candidate":2613,"raw_candidate_subjects_not_final":1018,"intentional_exclusions":1636,"real_rejections":0,"duplicate_merged":0,"unclassified_with_candidate":0,"eligibility_unknown_without_candidate":0,"eligible_coverage":1.0,"exact_scope_spans":2613,"duplicate_role_pairs_before":2,"duplicate_role_pairs_after":2,"non_scope_digest":"a7096cdbe77998a0b1098ce989c8a6743520566f07cad6e26a9e2e1b0c3cbdce"},
+      "ruby": {"variables":1492,"role_records":1176,"resolved_scopes":1128,"subjects_with_candidate":1301,"intentional_exclusions":57,"real_rejections":145,"duplicate_merged":0,"unclassified_with_candidate":145,"eligibility_unknown_without_candidate":162,"eligible_coverage":0.8860958366064414,"exact_scope_spans":1128,"duplicate_role_pairs_before":0,"duplicate_role_pairs_after":0,"non_scope_digest":"dd6d26f0c100094f68418c3ffb68d7a9c84575bf1306f8693b0b503cb32f0733"}
+    },
+    "real_cases": {
+      "code/test/C++/000101_set-gc.cpp::LLVMFuzzerTestOneInput": "extern \"C\" int LLVMFuzzerTestOneInput(const std::uint8_t* data,\n                                      std::size_t size)\n{",
+      "code/test/JavaScript/000181_table.js::onShow": "onShow:function(){"
+    }
+  },
+  "classification_limit": "The pre-output does not expose ambiguous_start versus ambiguous_end. Supported source-backed candidates that fail resolution are conservatively unclassified; subjects without a candidate are excluded from eligible coverage."
+}

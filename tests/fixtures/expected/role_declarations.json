@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "python": {
+    "must_have": [
+      {"concept": "fixed_value", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "fixed_value"},
+      {"concept": "stepper", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "stepper"},
+      {"concept": "stepper", "variant": "declaration", "path": "Python/sajaniemi_negative_cases.py", "name": "walker"},
+      {"concept": "stepper", "variant": "declaration", "path": "Python/sajaniemi_negative_cases.py", "name": "i"},
+      {"concept": "gatherer", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "gatherer"},
+      {"concept": "gatherer", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "gatherer_assignment"},
+      {"concept": "walker", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "walker"},
+      {"concept": "follower", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "previous"},
+      {"concept": "most_recent_holder", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "most_recent_holder"},
+      {"concept": "most_wanted_holder", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "most_wanted_holder"},
+      {"concept": "most_wanted_holder", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "best_by_max"},
+      {"concept": "most_wanted_holder", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "best_by_min"},
+      {"concept": "one_way_flag", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "one_way_flag"},
+      {"concept": "one_way_flag", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "numeric_one_way_flag"},
+      {"concept": "one_way_flag", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "inverse_one_way_flag"},
+      {"concept": "temporary", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "temporary"},
+      {"concept": "organizer", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "organizer_items"},
+      {"concept": "organizer", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "permuted_organizer_items"},
+      {"concept": "container", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "container_items"}
+    ],
+    "must_not_have": [
+      {"concept": "walker", "variant": "declaration", "path": "Python/sajaniemi_negative_cases.py", "name": "walker"},
+      {"concept": "walker", "variant": "declaration", "path": "Python/sajaniemi_negative_cases.py", "name": "i"},
+      {"concept": "container", "variant": "declaration", "path": "Python/sajaniemi_negative_cases.py", "name": "panel"},
+      {"concept": "one_way_flag", "variant": "declaration", "path": "Python/sajaniemi_negative_cases.py", "name": "reverting_flag"},
+      {"concept": "container", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "indexed_organizer_items"},
+      {"concept": "organizer", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "indexed_organizer_items"},
+      {"concept": "organizer", "variant": "declaration", "path": "Python/sajaniemi_roles.py", "name": "container_items"},
+      {"concept": "container", "variant": "declaration", "path": "Python/sajaniemi_negative_cases.py", "name": "container"},
+      {"concept": "most_wanted_holder", "variant": "declaration", "path": "Python/sajaniemi_negative_cases.py", "name": "unqualified_maximum"},
+      {"concept": "temporary", "variant": "declaration", "path": "Python/sajaniemi_negative_cases.py", "name": "long_lived_temporary"}
+    ],
+    "allowed_extra_roles": ["fixed_value", "future_mutated_variable", "most_recent_holder", "temporary", "walker"]
+  },
+  "c": {
+    "must_have": [
+      {"concept": "fixed_value", "variant": "declaration", "path": "C/sajaniemi_role_variants.c", "name": "fixed_value"},
+      {"concept": "stepper", "variant": "declaration", "path": "C/sajaniemi_role_variants.c", "name": "stepper_plus_equal"},
+      {"concept": "stepper", "variant": "declaration", "path": "C/sajaniemi_role_variants.c", "name": "stepper_assignment"},
+      {"concept": "gatherer", "variant": "declaration", "path": "C/sajaniemi_role_variants.c", "name": "gatherer_total"},
+      {"concept": "most_wanted_holder", "variant": "declaration", "path": "C/sajaniemi_role_variants.c", "name": "most_wanted_holder"},
+      {"concept": "most_wanted_holder", "variant": "declaration", "path": "C/sajaniemi_role_variants.c", "name": "best_minimum"}
+    ],
+    "must_not_have": [],
+    "allowed_extra_roles": ["fixed_value", "future_mutated_variable", "stepper", "temporary"]
+  }
+}

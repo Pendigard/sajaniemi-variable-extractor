@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "languages": {
+    "Python": {
+      "source": "Python/follower_cases.py",
+      "cases": [
+        {"owner": "direct_before", "name": "previous_before", "category": "direct_before", "expectation": "present"},
+        {"owner": "direct_after", "name": "previous_after", "category": "direct_after", "expectation": "present"},
+        {"owner": "multiple_sites", "name": "previous_multiple", "category": "multiple_sites", "expectation": "present"},
+        {"owner": "multiple_loops", "name": "previous_loops", "category": "multiple_loops", "expectation": "present"},
+        {"owner": "fixed_offsets", "name": "previous_plus", "category": "source_plus_literal", "expectation": "present"},
+        {"owner": "fixed_offsets", "name": "previous_reverse_plus", "category": "literal_plus_source", "expectation": "present"},
+        {"owner": "fixed_offsets", "name": "previous_minus", "category": "source_minus_literal", "expectation": "present"},
+        {"owner": "fixed_offsets", "name": "previous_fixed_offset", "category": "fixed_variable_offset", "expectation": "present"},
+        {"owner": "projections", "name": "previous_field", "category": "field_projection", "expectation": "present"},
+        {"owner": "projections", "name": "previous_indexed_literal", "category": "indexed_literal", "expectation": "present"},
+        {"owner": "projections", "name": "previous_indexed_fixed", "category": "indexed_fixed", "expectation": "present"},
+        {"owner": "recursive_projections", "name": "previous_nested", "category": "nested_field_path", "expectation": "present"},
+        {"owner": "recursive_projections", "name": "previous_mixed", "category": "mixed_field_index_path", "expectation": "present"},
+        {"owner": "recursive_projections", "name": "sibling_follower", "category": "sibling_path_update", "expectation": "absent"},
+        {"owner": "recursive_projections", "name": "different_index_follower", "category": "different_literal_index", "expectation": "absent"},
+        {"owner": "Tracker", "name": "previous_member", "category": "persistent_member", "expectation": "present"},
+        {"owner": "OtherTracker", "name": "previous_member", "category": "homonymous_member", "expectation": "present"},
+        {"owner": "negative_rhs", "name": "two_sources", "category": "two_sources", "expectation": "absent"},
+        {"owner": "negative_rhs", "name": "dynamic_offset_follower", "category": "dynamic_offset", "expectation": "absent"},
+        {"owner": "negative_rhs", "name": "fixed_left", "category": "fixed_minus_source", "expectation": "absent"},
+        {"owner": "negative_rhs", "name": "multiplied", "category": "multiplication", "expectation": "absent"},
+        {"owner": "negative_rhs", "name": "transformed", "category": "call", "expectation": "absent"},
+        {"owner": "negative_rhs", "name": "duplicated_source", "category": "duplicated_source", "expectation": "absent"},
+        {"owner": "negative_rhs", "name": "self_dependent", "category": "self_dependency", "expectation": "absent"},
+        {"owner": "negative_rhs", "name": "mutated_follower", "category": "state_mutation", "expectation": "absent"},
+        {"owner": "negative_context", "name": "no_evolution", "category": "master_static", "expectation": "absent"},
+        {"owner": "negative_context", "name": "outside_write", "category": "outside_loop", "expectation": "absent"},
+        {"owner": "negative_context", "name": "dynamic_index_follower", "category": "dynamic_index", "expectation": "absent"},
+        {"owner": "negative_context", "name": "compound_index_follower", "category": "compound_index", "expectation": "absent"},
+        {"owner": "cycle_negatives", "name": "no_post_master", "category": "no_post_master_read", "expectation": "absent"},
+        {"owner": "cycle_negatives", "name": "read_before_only", "category": "read_before_master_update", "expectation": "absent"},
+        {"owner": "cycle_negatives", "name": "overwritten_before_read", "category": "follower_overwrite_before_read", "expectation": "absent"},
+        {"owner": "cycle_negatives", "name": "dependent_follower", "category": "master_depends_on_follower", "expectation": "absent"},
+        {"owner": "cycle_negatives", "name": "guarded_follower", "category": "follower_guard", "expectation": "absent"},
+        {"owner": "cycle_negatives", "name": "ancestor_guarded", "category": "ancestor_follower_guard", "expectation": "absent"},
+        {"owner": "cycle_negatives", "name": "mutating_follower", "category": "master_mutation_depends_on_follower", "expectation": "absent"},
+        {"owner": "cycle_negatives", "name": "transitive_follower", "category": "transitive_master_dependency", "expectation": "absent"},
+        {"owner": "allowed_conditional_read", "name": "conditional_previous", "category": "noncontrolling_conditional_read", "expectation": "present"},
+        {"owner": "parallel_cycle", "name": "parallel_previous", "category": "parallel_atomic", "expectation": "present"},
+        {"owner": "parallel_backedge", "name": "backedge_previous", "category": "parallel_backedge", "expectation": "present"},
+        {"owner": "parallel_three", "name": "three_previous", "category": "parallel_three", "expectation": "present"},
+        {"owner": "parallel_negatives", "name": "parallel_static", "category": "parallel_no_master_evolution", "expectation": "absent"},
+        {"owner": "parallel_negatives", "name": "parallel_no_read", "category": "parallel_no_post_read", "expectation": "absent"},
+        {"owner": "parallel_negatives", "name": "parallel_pre_only", "category": "parallel_read_before_only", "expectation": "absent"},
+        {"owner": "parallel_negatives", "name": "parallel_other_source", "category": "parallel_other_source", "expectation": "absent"},
+        {"owner": "parallel_negatives", "name": "parallel_swap", "category": "parallel_master_depends_on_follower", "expectation": "absent"},
+        {"owner": "parallel_negatives", "name": "parallel_starred", "category": "parallel_starred_target", "expectation": "absent"},
+        {"owner": "parallel_negatives", "name": "parallel_nested", "category": "parallel_nested_target", "expectation": "absent"},
+        {"owner": "Tracker", "name": "reset_member", "category": "member_reset", "expectation": "absent"},
+        {"owner": "MemberCopyNegatives", "name": "current_only", "category": "ordinary_setter", "expectation": "absent"},
+        {"owner": "MemberCopyNegatives", "name": "previous_parameter", "category": "parameter_copy", "expectation": "absent"},
+        {"owner": "MemberCopyNegatives", "name": "price", "category": "current_acquisition", "expectation": "absent"},
+        {"owner": "MemberCopyNegatives", "name": "external_without_transition", "category": "external_read_without_transition", "expectation": "absent"}
+      ]
+    },
+    "C": {
+      "source": "C/follower_cases.c",
+      "cases": [
+        {"owner": "direct_before", "name": "previous_before", "category": "direct_before", "expectation": "present"},
+        {"owner": "direct_after", "name": "previous_after", "category": "direct_after", "expectation": "present"},
+        {"owner": "Tracker", "name": "previous_member", "category": "persistent_member", "expectation": "indeterminate"},
+        {"owner": "Tracker", "name": "reset_member", "category": "member_reset", "expectation": "indeterminate"},
+        {"owner": "no_evolution", "name": "follower_static", "category": "master_static", "expectation": "absent"}
+      ]
+    },
+    "C++": {
+      "source": "C++/follower_cases.cpp",
+      "cases": [
+        {"owner": "direct_before", "name": "previous_before", "category": "direct_before", "expectation": "present"},
+        {"owner": "Tracker", "name": "previous_member", "category": "persistent_member", "expectation": "present"},
+        {"owner": "Tracker", "name": "reset_member", "category": "member_reset", "expectation": "absent"}
+      ]
+    },
+    "JavaScript": {
+      "source": "JavaScript/follower_cases.js",
+      "cases": [
+        {"owner": "directBefore", "name": "previousBefore", "category": "direct_before", "expectation": "present"},
+        {"owner": "directAfter", "name": "previousAfter", "category": "direct_after", "expectation": "present"},
+        {"owner": "Tracker", "name": "previousMember", "category": "persistent_member", "expectation": "present"},
+        {"owner": "Tracker", "name": "resetMember", "category": "member_reset", "expectation": "absent"},
+        {"owner": "noEvolution", "name": "staticFollower", "category": "master_static", "expectation": "absent"}
+      ]
+    },
+    "Ruby": {
+      "source": "Ruby/follower_cases.rb",
+      "cases": [
+        {"owner": "direct_before", "name": "previous_before", "category": "direct_before", "expectation": "present"},
+        {"owner": "direct_after", "name": "previous_after", "category": "direct_after", "expectation": "present"},
+        {"owner": "Tracker", "name": "@previous_member", "category": "persistent_member", "expectation": "present"},
+        {"owner": "Tracker", "name": "@reset_member", "category": "member_reset", "expectation": "absent"},
+        {"owner": "no_evolution", "name": "static_follower", "category": "master_static", "expectation": "absent"},
+        {"owner": "MemberCopyNegatives", "name": "@primitive", "category": "parameter_copy", "expectation": "absent"},
+        {"owner": "MemberCopyNegatives", "name": "@external_without_transition", "category": "external_read_without_transition", "expectation": "absent"}
+      ]
+    }
+  }
+}

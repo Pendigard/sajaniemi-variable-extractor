@@ -1,0 +1,27 @@
+{
+  "C": {
+    "by_category": {"global": {"tn": 3, "tp": 1}, "local": {"tn": 5, "tp": 4}, "member": {}, "parameter": {"tn": 2, "tp": 1}},
+    "defects": [], "fixed_value": 11, "fn": 0, "fp": 0, "indeterminate": 0, "legacy": 62, "precision": 1.0, "recall": 1.0, "role_records": 17, "seconds": 40.774, "tn": 10, "tp": 6, "variables": 26,
+    "views": {"control_context": 11, "declaration": 26, "identifier": 59, "reads": 25, "scope": 22, "state_mutations": 2, "updates": 0, "writes": 2}
+  },
+  "C++": {
+    "by_category": {"global": {}, "local": {"tn": 3, "tp": 1}, "member": {"tn": 6, "tp": 4}, "parameter": {"tn": 1, "tp": 1}},
+    "defects": [], "fixed_value": 16, "fn": 0, "fp": 0, "indeterminate": 0, "legacy": 62, "precision": 1.0, "recall": 1.0, "role_records": 19, "seconds": 41.53, "tn": 10, "tp": 6, "variables": 28,
+    "views": {"control_context": 3, "declaration": 28, "identifier": 77, "reads": 22, "scope": 13, "state_mutations": 4, "updates": 0, "writes": 13}
+  },
+  "JavaScript": {
+    "by_category": {"global": {"tn": 3, "tp": 1}, "local": {"tn": 6, "tp": 4}, "member": {}, "parameter": {"tn": 2, "tp": 1}},
+    "defects": [], "fixed_value": 9, "fn": 0, "fp": 0, "indeterminate": 0, "legacy": 56, "precision": 1.0, "recall": 1.0, "role_records": 15, "seconds": 45.134, "tn": 11, "tp": 6, "variables": 24,
+    "views": {"control_context": 8, "declaration": 24, "identifier": 57, "reads": 23, "scope": 20, "state_mutations": 4, "updates": 0, "writes": 2}
+  },
+  "Python": {
+    "by_category": {"global": {"tn": 2, "tp": 1}, "local": {"tn": 12, "tp": 4}, "member": {}, "parameter": {"tn": 3, "tp": 1}},
+    "defects": [], "fixed_value": 12, "fn": 0, "fp": 0, "indeterminate": 0, "legacy": 73, "precision": 1.0, "recall": 1.0, "role_records": 18, "seconds": 42.404, "tn": 17, "tp": 6, "variables": 36,
+    "views": {"control_context": 16, "declaration": 36, "identifier": 85, "reads": 30, "scope": 28, "state_mutations": 5, "updates": 3, "writes": 10}
+  },
+  "Ruby": {
+    "by_category": {"global": {}, "local": {"tn": 6, "tp": 2}, "member": {}, "parameter": {"tn": 2, "tp": 1}},
+    "defects": [], "fixed_value": 10, "fn": 0, "fp": 0, "indeterminate": 0, "legacy": 44, "precision": 1.0, "recall": 1.0, "role_records": 12, "seconds": 53.716, "tn": 8, "tp": 3, "variables": 20,
+    "views": {"control_context": 0, "declaration": 20, "identifier": 46, "reads": 21, "scope": 19, "state_mutations": 1, "updates": 1, "writes": 3}
+  }
+}

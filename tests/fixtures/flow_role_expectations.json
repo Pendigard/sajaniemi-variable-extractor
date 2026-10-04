@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "languages": {
+    "Python": {
+      "source": "Python/flow_role_cases.py",
+      "one_way_flag": {
+        "present": ["member_rising", "member_falling"],
+        "absent": ["global_reverted", "member_reverted", "incomplete", "mixed_monotone"]
+      },
+      "gatherer": {
+        "present": [
+          "product", "accumulator", "dynamic_total", "nested_total",
+          "transformed_score", "finalized_center", "compatible_sites"
+        ],
+        "absent": ["text", "stable_only", "dynamic_reset", "arbitrary_transform"]
+      },
+      "most_wanted_holder": {
+        "present": ["sentinel_maximum", "first_candidate_minimum", "direct_maximum", "reverse_minimum", "parameter_best", "nullable_minimum", "nullable_maximum", "terminal_choice"],
+        "absent": ["inert_holder", "conditional_copy", "transformed_holder", "missing_old_value", "mixed_direction", "reset_holder", "bootstrap_only", "arbitrary_or", "last_satisfying", "unrelated_terminal", "bad_fallback"]
+      }
+    },
+    "C": {
+      "source": "C/flow_role_cases.c",
+      "gatherer": {
+        "present": ["product", "accumulator", "transformed_score", "finalized_center"],
+        "absent": ["stable_only"]
+      },
+      "most_wanted_holder": {
+        "present": ["eligible_minimum", "helper_minimum"],
+        "absent": ["contradictory_guard", "holder_eligibility", "arbitrary_disjunction", "unresolved_helper", "contradictory_helper", "mutating_helper"]
+      }
+    },
+    "C++": {
+      "source": "C++/flow_role_cases.cpp",
+      "gatherer": {
+        "present": ["product", "accumulator", "transformed_score", "finalized_center", "number"],
+        "absent": [
+          "stable_only", "element_value", "address", "traversal_offset", "stride_index",
+          "explicit_text", "inferred_text", "stable_progression"
+        ]
+      },
+      "most_wanted_holder": {
+        "present": ["sentinel_maximum", "first_candidate_minimum", "direct_maximum", "reverse_minimum", "multiple_sites", "projected_best", "parameter_best", "recalculated_minimum", "limits_minimum", "epoch_minimum", "unbraced_maximum"],
+        "absent": ["inert_holder", "conditional_copy", "mismatched_candidate", "accumulated_holder", "transformed_holder", "false_maximum_call", "missing_old_value", "mixed_direction", "reset_holder", "bootstrap_only", "arbitrary_or", "impure_repeated", "incompatible_sentinel", "intra_epoch_reset"]
+      }
+    },
+    "JavaScript": {
+      "source": "JavaScript/flow_role_cases.js",
+      "gatherer": {
+        "present": ["product", "accumulator", "transformed_score", "finalized_center"],
+        "absent": ["stable_only"]
+      },
+      "most_wanted_holder": {
+        "present": ["infinity_minimum", "indexed_maximum", "indexed_minimum"],
+        "absent": ["mismatched_projection", "mismatched_index", "impure_projection"]
+      }
+    },
+    "Ruby": {
+      "source": "Ruby/flow_role_cases.rb",
+      "gatherer": {
+        "present": ["product", "transformed_score", "finalized_center"],
+        "absent": ["stable_only", "accumulator"]
+      }
+    }
+  },
+  "common": {
+    "one_way_flag": {
+      "present": ["rising", "falling"],
+      "absent": ["inert", "toggled", "reverted"]
+    },
+    "gatherer": {
+      "present": ["total", "phased"],
+      "absent": ["counter", "replaced"]
+    }
+  }
+}

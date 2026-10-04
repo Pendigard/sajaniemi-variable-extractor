@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "baseline_kind": "exact_parent_commit",
+  "scala_commit": "e03126b",
+  "python_resolver_commit": "e03126b",
+  "generated_at": "2026-08-17T00:00:00+09:00",
+  "joern_version": "HEAD+20260529-1449",
+  "source_root": "code/test",
+  "graph_version": {
+    "c": {"path":"graph/test/c.bin","size":865459,"mtime_epoch":1784556500},
+    "cpp": {"path":"graph/test/cpp.bin","size":2369536,"mtime_epoch":1784556523},
+    "javascript": {"path":"graph/test/javascript.bin","size":3902614,"mtime_epoch":1784556552},
+    "python": {"path":"graph/test/python.bin","size":5087544,"mtime_epoch":1784556575},
+    "ruby": {"path":"graph/test/ruby.bin","size":4117813,"mtime_epoch":1786611796}
+  },
+  "protected_source": {
+    "role_predicates_sha256": "94719f224a5c2e0f04ab832bbc6d2daf77fc87186c46e9ed49b7e415abe3a910",
+    "role_predicates_except_temporary_sha256": "60f23bf88b85e14b189cc19eae36fce1f51cc4c89a7a1b79bc78a9824e4d9da5",
+    "role_predicates_except_refined_roles_sha256": "440f6692e1b11cb4ccc20b403a78077d34b91eb6958947f6b08fdcdc5897f5c2",
+    "scope_of_sha256": "25e5fbd320594229d9a1dfcf223951324f280b4f458f74cc3ab9991e0e94e870"
+  },
+  "languages": {
+    "c":{"variables":2251,"role_records":1178,"duplicate_role_pairs":41,"roles":{"container":1,"fixed_value":1058,"follower":3,"gatherer":8,"most_recent_holder":9,"most_wanted_holder":1,"one_way_flag":2,"organizer":2,"stepper":42,"temporary":52},"views":{"control_context":819,"declaration":2251,"identifier":4745,"reads":1809,"scope":1067,"state_mutations":160,"updates":139,"writes":108},"legacy":{"count":3514,"digest":"6f39542b193a82491e82e0605ddd0ad306429a42ce8add73cff400b61040c645"},"non_scope_digest":"8a00831b0a7e1e4b2723aec31dcaf9032fb6110d7b817a770407b2a558aa29a5"},
+    "cpp":{"variables":4294,"role_records":2779,"duplicate_role_pairs":1,"roles":{"container":14,"fixed_value":2186,"follower":1,"gatherer":21,"most_recent_holder":7,"most_wanted_holder":3,"one_way_flag":9,"organizer":7,"stepper":110,"temporary":403,"walker":18},"views":{"control_context":1804,"declaration":4294,"identifier":10740,"reads":5211,"scope":3561,"state_mutations":365,"updates":163,"writes":159},"legacy":{"count":10027,"digest":"b5aebb1202231bb8286fc9a709e0f8ef2109c3edb288cde10597eb9df145da16"},"non_scope_digest":"fd4c9efc38a3ac73b676a2bedb6f98927686eefeb333acbec21ff5fdea049c66"},
+    "javascript":{"variables":4833,"role_records":2893,"duplicate_role_pairs":0,"roles":{"container":35,"fixed_value":2415,"follower":1,"gatherer":1,"most_recent_holder":10,"most_wanted_holder":1,"one_way_flag":5,"organizer":6,"stepper":64,"temporary":344,"walker":11},"views":{"control_context":1543,"declaration":4833,"identifier":12420,"reads":5008,"scope":1615,"state_mutations":643,"updates":152,"writes":137},"legacy":{"count":10014,"digest":"b35093f0a0557fd154f28edceff4cdcc54f6702da26b4d2a6b2764e4b97fa199"},"non_scope_digest":"0b22ce79e5e41672517ef431ed5b879bda02d086495c7b113c5ac371a97f5a67"},
+    "python":{"variables":4249,"role_records":3123,"duplicate_role_pairs":2,"roles":{"container":48,"fixed_value":2283,"gatherer":9,"most_recent_holder":3,"most_wanted_holder":11,"one_way_flag":7,"organizer":8,"stepper":2,"temporary":615,"walker":137},"views":{"control_context":1842,"declaration":4252,"identifier":12724,"reads":6790,"scope":1980,"state_mutations":355,"updates":401,"writes":519},"legacy":{"count":10852,"digest":"f24227c6ca930f567cd4d332d898141714c958c8bda60ab19bb15b7a20f24e14"},"non_scope_digest":"a7096cdbe77998a0b1098ce989c8a6743520566f07cad6e26a9e2e1b0c3cbdce"},
+    "ruby":{"variables":1492,"role_records":1176,"duplicate_role_pairs":0,"roles":{"container":13,"fixed_value":961,"one_way_flag":2,"stepper":1,"temporary":198,"walker":1},"views":{"control_context":412,"declaration":1492,"identifier":4136,"reads":2079,"scope":620,"state_mutations":156,"updates":40,"writes":222},"legacy":{"count":4153,"digest":"cb27ae11d6f9141c15aa8e81a743ce7a3e732fe28cc9415e7de63d7874b1b65e"},"non_scope_digest":"dd6d26f0c100094f68418c3ffb68d7a9c84575bf1306f8693b0b503cb32f0733"}
+  },
+  "subject_digests": {
+    "c": {"subject_ids_digest":"d723ec0b4b8b811c1477290df3e2c5d659b7e5aa402137749f3fe055b35d84e9","subject_scopes_digest":"53ccb3481a9332984cb569db3ad57c024c80279cc7cdc21ab34c6ad1666db652"},
+    "cpp": {"subject_ids_digest":"16642366e8867de3a1ff4e53c70e84722a96c56a5fb10994d8ce4415c0153bfa","subject_scopes_digest":"e7d118b016c84622dcbf3aa52ffd92ed2f41573e22c04a8b07b9a72a2f05e9e2"},
+    "javascript": {"subject_ids_digest":"e914868f567ffd7ca6b6e97b48db990329c8564afb046d458c6bcf97dfd4c0ff","subject_scopes_digest":"73840c4f3314587f0b04e8558d3e8857dd1d98811d573d98cbfc9428105d3f2d"},
+    "python": {"subject_ids_digest":"cfa9d1bbb98888ef92318f0bb1382d0bcfaf851dee62a6213a23018714eddeb1","subject_scopes_digest":"32a97fffabb5a395f3b56be4d108e93912bdabd67df05b530564c2473ecfbe58"},
+    "ruby": {"subject_ids_digest":"c7f09cf6d2ba6d66b0d5a87bd72f76b65e75953755954c05a531f74ff042c7ca","subject_scopes_digest":"f6661aa01288b2f8a6efc98a8ad0cb0790d7d7bf20629d24b06f6d2ea9134443"}
+  },
+  "notes": [
+    "Both Scala extraction and Python resolution came from e03126b.",
+    "Scope counts are observations and are never compared as golden targets."
+  ]
+}

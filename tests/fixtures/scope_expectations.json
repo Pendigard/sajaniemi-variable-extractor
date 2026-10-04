@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "languages": {
+    "C": {
+      "source": "C/scope_cases.c",
+      "frontend": "c",
+      "must_scope": [
+        {"variable": "static_local", "code": "static int c_static_definition(int static_value) {"},
+        {"variable": "compute_result", "code": "static int compute(int value) {"},
+        {"variable": "macro_separated_result", "code": "static int current_after_macro(int value) {"},
+        {"variable": "second_line_result", "code": "int second_same_line(int value) {"},
+        {"variable": "prototype_value", "code": "int c_prototype(int prototype_value);"},
+        {"variable": "multiline_value", "code": "int c_multiline_prototype(\n    int multiline_value,\n    int multiline_increment\n);"},
+        {"variable": "shared_name", "occurrence": 1, "code": "int c_function(int value) {"},
+        {"variable": "shared_name", "occurrence": 2, "code": "int c_other_function(int value) {"}
+      ],
+      "must_not_scope": [
+        {"variable": "c_global_value", "reason": "file"}
+      ],
+      "source_constructs": ["prototype", "multiline_prototype", "function_like_macro"]
+    },
+    "C++": {
+      "source": "C++/scope_cases.cpp",
+      "frontend": "c",
+      "must_scope": [
+        {"variable": "external_local", "code": "extern \"C\" int cpp_external_definition(int external_value) {"},
+        {"variable": "attributed_local", "code": "[[nodiscard]] inline int cpp_attributed_definition(int attributed_value) {"},
+        {"variable": "exported_local", "code": "SCOPE_API_EXPORT int cpp_exported_definition(int exported_value) {"},
+        {"variable": "parse_result", "code": "extern \"C\" int parse(const char *text) {"},
+        {"variable": "attributed_result", "code": "[[nodiscard]] inline Result parse(Input input) {"},
+        {"variable": "exported_result", "code": "API_EXPORT Result parse_exported(Input input) {"},
+        {"variable": "cpp_prototype_value", "code": "int cpp_prototype(int cpp_prototype_value);"},
+        {"variable": "constructor_local", "code": "ScopeBox(int seed)\n        : stored_{seed}, values_{seed, seed + 1} {"},
+        {"variable": "shared_name", "code": "int method(int value) {"},
+        {"variable": "enclosing_value", "code": "int lambda_owner(int seed) {"},
+        {"variable": "captured", "code": "int lambda_owner(int seed) {"},
+        {"variable": "first", "code": "int lambda_owner(int seed) {"},
+        {"variable": "second", "code": "int lambda_owner(int seed) {"},
+        {"variable": "lambda_local", "code": "[enclosing_value](int delta) {"},
+        {"variable": "first_local", "code": "[](int x) {"},
+        {"variable": "second_local", "code": "[](int x) {"}
+      ],
+      "must_not_scope": [],
+      "source_constructs": ["prototype", "constructor_initializer", "capture_lambda", "same_line_lambdas"]
+    },
+    "JavaScript": {
+      "source": "JavaScript/scope_cases.js",
+      "frontend": "javascript",
+      "must_scope": [
+        {"variable": "firstPropertyLocal", "code": "first:function(){"},
+        {"variable": "secondPropertyLocal", "code": "second:function(){"},
+        {"variable": "quotedPropertyLocal", "code": "\"quoted-name\":function(){"},
+        {"variable": "asyncPropertyLocal", "code": "async action(value){"},
+        {"variable": "readableSecondLocal", "code": "second:function(){"},
+        {"variable": "minifiedSecondPropertyLocal", "code": "second:function(){"},
+        {"variable": "showLocal", "code": "onShow:function(){"},
+        {"variable": "sharedName", "code": "function jsNamed(value) {"},
+        {"variable": "propertyLocal", "code": "assigned: function assignedFunction(value) {"},
+        {"variable": "anonymousLocal", "code": "const anonymousOwner = function (value) {"},
+        {"variable": "blockLocal", "code": "const blockArrow = (value) => {"},
+        {"variable": "firstLocal", "code": "function jsFirst(value) {"},
+        {"variable": "secondLocal", "code": "function jsSecond(value) {"},
+        {"variable": "minifiedLocal", "code": "const minifiedArrow=(value)=>{"},
+        {"variable": "expressionValue", "code": "const expressionArrow = (expressionValue) =>"}
+      ],
+      "must_not_scope": [
+        {"variable": "js_module_value", "reason": "module"},
+        {"variable": "anonymousOwner", "reason": "function_defining_variable"},
+        {"variable": "blockArrow", "reason": "function_defining_variable"},
+        {"variable": "expressionArrow", "reason": "function_defining_variable"}
+      ],
+      "source_constructs": ["named", "property_function", "anonymous", "arrow_block", "arrow_expression", "same_line", "minified"]
+    },
+    "Python": {
+      "source": "Python/scope_cases.py",
+      "frontend": "pythonsrc",
+      "must_scope": [
+        {"variable": "shared_name", "occurrence": 1, "code": "def python_function(value):"},
+        {"variable": "shared_name", "occurrence": 2, "code": "def python_other_function(value):"},
+        {"variable": "multiline_local", "code": "def python_multiline(\n    value: int,\n    increment: int = 1,\n) -> int:"},
+        {"variable": "method_local", "code": "def method(self, value):"},
+        {"variable": "nested", "code": "def method(self, value):"},
+        {"variable": "item", "code": "lambda item:"},
+        {"variable": "lambda_value", "code": "lambda lambda_value:"}
+      ],
+      "must_not_scope": [
+        {"variable": "python_module_value", "reason": "module"},
+        {"variable": "class_value", "reason": "class"},
+        {"variable": "python_lambda", "reason": "function_defining_variable"}
+      ],
+      "source_constructs": ["function", "method", "multiline", "lambda", "class", "frontend_adapters"]
+    },
+    "Ruby": {
+      "source": "Ruby/scope_cases.rb",
+      "frontend": "rubysrc",
+      "must_scope": [
+        {"variable": "shared_name", "code": "def ordinary(value)"},
+        {"variable": "default_local", "code": "def with_default(value = 1)"},
+        {"variable": "operator_local", "code": "def +(other)"},
+        {"variable": "equality_local", "code": "def ==(other)"},
+        {"variable": "comparison_local", "code": "def <=>(other)"},
+        {"variable": "shift_local", "code": "def <<(item)"},
+        {"variable": "indexed_local", "code": "def []=(key, value)"},
+        {"variable": "multiline_local", "code": "def multiline(\n      value,\n      increment = 1\n    )"},
+        {"variable": "do_local", "code": "values.each do |value|"},
+        {"variable": "brace_local", "code": "values.each { |value|"},
+        {"variable": "endless_value", "code": "def endless(endless_value) ="}
+      ],
+      "must_not_scope": [],
+      "source_constructs": ["ordinary", "default_parameter", "operator", "multiline", "do_block", "brace_block", "class", "module", "endless"]
+    }
+  }
+}

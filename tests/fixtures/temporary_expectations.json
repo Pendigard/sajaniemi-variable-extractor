@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "languages": {
+    "Python": {
+      "frontend": "pythonsrc",
+      "path": "Python/temporary_cases.py",
+      "cases": [
+        {"name": "temp_single", "category": "assignment_shape", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": ["fixed_value"]},
+        {"name": "temp_two_writes", "category": "all_writes_valid", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": []},
+        {"name": "invalid_second", "category": "one_invalid_write", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "plus_equal", "category": "update_plus_equal", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "self_left", "category": "update_self_left", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "self_right", "category": "update_self_right", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "same_line", "category": "same_line_read", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": ["fixed_value"]},
+        {"name": "minified_intervals", "category": "minified_intervals", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": []},
+        {"name": "function_alias", "category": "function_definition_artifact", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "indirect_items", "category": "indirect_write", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "first_write_unread", "category": "unread_before_redefinition", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "last_write_unread", "category": "unread_before_exit", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "branch_unread", "category": "definition_without_reachable_read", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "five_reads", "category": "five_reads_boundary", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": ["fixed_value"]},
+        {"name": "six_reads", "category": "six_reads", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "distance_five", "category": "distance_five_boundary", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": ["fixed_value"]},
+        {"name": "distance_six", "category": "distance_six", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "one_long_interval", "category": "one_interval_over_limit", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "loop_fresh", "category": "loop_redefined_before_read", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": []},
+        {"name": "loop_old", "category": "loop_previous_iteration", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "loop_conditional", "category": "loop_conditional_write", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "branch_complete", "category": "loop_all_branches_write", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": []},
+        {"name": "branch_missing", "category": "loop_branch_without_write", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "continue_before", "category": "continue_before_write", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": []},
+        {"name": "continue_after", "category": "continue_after_write", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": []},
+        {"name": "nested_escape", "category": "nested_loop_escape", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "temporary_fixed", "category": "conflict_fixed", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": ["fixed_value"]},
+        {"name": "stepper_conflict", "category": "conflict_stepper", "temporary": false, "must_have_roles": ["stepper"], "must_not_have_roles": ["temporary"]},
+        {"name": "gatherer_conflict", "category": "conflict_gatherer", "temporary": false, "must_have_roles": ["gatherer"], "must_not_have_roles": ["temporary"]},
+        {"name": "recent_conflict", "category": "conflict_most_recent", "temporary": false, "must_have_roles": ["most_recent_holder"], "must_not_have_roles": ["temporary"]},
+        {"name": "module_value", "category": "module_scope", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "descriptor_field", "category": "class_body_descriptor", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "class_attribute", "category": "class_body_attribute", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "instance_member", "category": "instance_member", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]}
+        ,{"name": "method_temporary", "category": "callable_method", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": ["fixed_value"]}
+      ]
+    },
+    "C": {
+      "frontend": "c",
+      "path": "C/temporary_cases.c",
+      "cases": [
+        {"name": "temp_single", "category": "assignment_shape", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": ["fixed_value"]},
+        {"name": "plus_equal", "category": "update_plus_equal", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "post_increment", "category": "update_post_increment", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "pre_increment", "category": "update_pre_increment", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "loop_fresh", "category": "loop_redefined_before_read", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": []},
+        {"name": "loop_old", "category": "loop_previous_iteration", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]}
+      ]
+    },
+    "JavaScript": {
+      "frontend": "jssrc",
+      "path": "JavaScript/temporary_cases.js",
+      "cases": [
+        {"name": "tempSingle", "category": "assignment_shape", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": ["fixed_value"]},
+        {"name": "plusEqual", "category": "update_plus_equal", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "postIncrement", "category": "update_post_increment", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "preIncrement", "category": "update_pre_increment", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "loopFresh", "category": "loop_redefined_before_read", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": []},
+        {"name": "loopOld", "category": "loop_previous_iteration", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]}
+        ,{"name": "programTemp", "category": "program_scope", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]}
+      ]
+    },
+    "Ruby": {
+      "frontend": "rubysrc",
+      "path": "Ruby/temporary_cases.rb",
+      "cases": [
+        {"name": "top_level_temporary", "category": "top_level_scope", "temporary": false, "must_have_roles": [], "must_not_have_roles": ["temporary"]},
+        {"name": "method_temporary", "category": "callable_method", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": ["fixed_value"]},
+        {"name": "closure_temporary", "category": "callable_closure", "temporary": true, "must_have_roles": ["temporary"], "must_not_have_roles": ["fixed_value"]}
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "purpose": "observational baseline before the Temporary predicate and priority patch; counts are not acceptance targets",
+  "git_commit": "e03126b",
+  "joern_version": "4.0.550",
+  "fixture_root": "tests/fixtures/code/Python",
+  "frontend": "pythonsrc",
+  "variables": 51,
+  "role_records": 66,
+  "role_counts": {
+    "container": 1,
+    "fixed_value": 15,
+    "follower": 1,
+    "gatherer": 2,
+    "most_recent_holder": 3,
+    "most_wanted_holder": 3,
+    "one_way_flag": 3,
+    "organizer": 2,
+    "stepper": 3,
+    "temporary": 18,
+    "walker": 15
+  },
+  "temporary_overlap_counts": {
+    "fixed_value": 2,
+    "walker": 15
+  },
+  "legacy_count": 256,
+  "legacy_digest": "1de54df0bc816b1202b49f1edd28420166224796abe09e6944aee390ec83f69a",
+  "subject_and_views_digest": "277bab1bbd0d492c528a3bb21df5460acb9c4dda139490dc4da8879d3b0ca3c9",
+  "temporary_only": ["organizer_index"],
+  "temporary_and_fixed_value": ["items", "temporary"],
+  "temporary_and_walker": [
+    "assignment_value", "container_value", "flag_value", "follower_value",
+    "gathered_value", "inverse_flag_value", "maximum_value", "minimum_value",
+    "nested_value", "numeric_flag_value", "recent_value", "walker", "wanted_value"
+  ],
+  "notes": [
+    "flag_value and maximum_value occur in both fixture files; overlap_counts count subjects, not distinct names",
+    "no Temporary overlap with Stepper, Gatherer, Most-recent holder, or other roles was observed on this fixture"
+  ]
+}

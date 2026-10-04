@@ -1,0 +1,7 @@
+/refs
+.DS_Store
+__pycache__/
+/local_ignored_tests/
+/graph/
+/outputs/
+/workspace/

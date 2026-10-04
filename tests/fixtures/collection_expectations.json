@@ -1,0 +1,112 @@
+{
+  "schema_version": 1,
+  "languages": {
+    "C": {
+      "source": "C/collection_cases.c",
+      "cases": [
+        {"name": "organizer_qsort", "role": "organizer", "expectation": "present"},
+        {"name": "fixed_collection", "role": "fixed_value", "expectation": "present", "is_collection": true},
+        {"name": "replaced_only", "role": "container", "expectation": "present", "is_collection": true},
+        {"name": "replaced_only", "role": "organizer", "expectation": "absent"},
+        {"name": "path_text", "role": "container", "expectation": "absent", "is_collection": false},
+        {"name": "file_name", "role": "container", "expectation": "absent", "is_collection": false}
+      ],
+      "mutation_cases": [
+        {"name": "organizer_qsort", "kinds": ["rearrange"]},
+        {"name": "file_name", "kinds": []}
+      ]
+    },
+    "C++": {
+      "source": "C++/collection_cases.cpp",
+      "cases": [
+        {"name": "organizer_sort", "role": "organizer", "expectation": "present"},
+        {"name": "organizer_reverse", "role": "organizer", "expectation": "present"},
+        {"name": "organizer_swap", "role": "organizer", "expectation": "present", "is_collection": true},
+        {"name": "fixed_collection", "role": "fixed_value", "expectation": "present", "is_collection": true},
+        {"name": "container_values", "role": "container", "expectation": "present"},
+        {"name": "member_items", "kind": "member", "role": "container", "expectation": "present"},
+        {"name": "ambiguous_items", "kind": "member", "role": "fixed_value", "expectation": "absent", "is_collection": true},
+        {"name": "replaced_only", "role": "container", "expectation": "present", "is_collection": true},
+        {"name": "container_values", "role": "organizer", "expectation": "absent"},
+        {"name": "replaced_only", "role": "organizer", "expectation": "absent"},
+        {"name": "path_text", "role": "container", "expectation": "absent"},
+        {"name": "tmp_file", "role": "container", "expectation": "absent"}
+      ],
+      "mutation_cases": [
+        {"name": "member_items", "kind": "member", "kinds": ["push_back"]},
+        {"name": "container_values", "kinds": ["pop_back", "push_back", "rearrange"]},
+        {"name": "tmp_file", "kinds": []}
+      ]
+    },
+    "JavaScript": {
+      "source": "JavaScript/collection_cases.js",
+      "cases": [
+        {"name": "organizerSort", "role": "organizer", "expectation": "present"},
+        {"name": "organizerReverse", "role": "organizer", "expectation": "present"},
+        {"name": "fixedCollection", "role": "fixed_value", "expectation": "present", "is_collection": true},
+        {"name": "containerPush", "role": "container", "expectation": "present"},
+        {"name": "containerBoth", "role": "container", "expectation": "present"},
+        {"name": "containerBoth", "role": "organizer", "expectation": "absent"},
+        {"name": "transformedOnly", "role": "organizer", "expectation": "absent"},
+        {"name": "transformedOnly", "role": "container", "expectation": "present", "is_collection": true},
+        {"name": "replacedOnly", "role": "container", "expectation": "present", "is_collection": true},
+        {"name": "pathText", "role": "container", "expectation": "absent", "is_collection": false},
+        {"name": "collectionByNameOnly", "role": "container", "expectation": "absent", "is_collection": false}
+      ],
+      "mutation_cases": [
+        {"name": "containerBoth", "kinds": ["pop", "push", "sort"]},
+        {"name": "collectionByNameOnly", "kinds": []}
+      ]
+    },
+    "Python": {
+      "source": "Python/collection_cases.py",
+      "cases": [
+        {"name": "organizer_sort", "role": "organizer", "expectation": "present"},
+        {"name": "organizer_reverse", "role": "organizer", "expectation": "present"},
+        {"name": "organizer_shuffle", "role": "organizer", "expectation": "present", "is_collection": true},
+        {"name": "organizer_tuple", "role": "organizer", "expectation": "present", "is_collection": true},
+        {"name": "organizer_manual", "role": "organizer", "expectation": "present", "is_collection": true},
+        {"name": "fixed_collection", "role": "fixed_value", "expectation": "present", "is_collection": true},
+        {"name": "container_append", "role": "container", "expectation": "present"},
+        {"name": "container_both", "role": "container", "expectation": "present"},
+        {"name": "container_both", "role": "organizer", "expectation": "absent"},
+        {"name": "transformed_only", "role": "organizer", "expectation": "absent"},
+        {"name": "transformed_only", "role": "container", "expectation": "present", "is_collection": true},
+        {"name": "replaced_only", "role": "organizer", "expectation": "absent"},
+        {"name": "replaced_only", "role": "container", "expectation": "present", "is_collection": true},
+        {"name": "updated_element", "role": "container", "expectation": "present", "is_collection": true},
+        {"name": "rebound_collection", "role": "container", "expectation": "present", "is_collection": true},
+        {"name": "updated_binding", "role": "container", "expectation": "present", "is_collection": true},
+        {"name": "path_text", "role": "container", "expectation": "absent", "is_collection": false},
+        {"name": "collection_by_name_only", "role": "container", "expectation": "absent", "is_collection": false},
+        {"name": "scalar_from_index", "role": "container", "expectation": "absent", "is_collection": false},
+        {"name": "ambiguous_factory", "role": "container", "expectation": "absent", "is_collection": false},
+        {"name": "remove_target", "role": "container", "expectation": "absent", "is_collection": false}
+      ],
+      "mutation_cases": [
+        {"name": "transformed_only", "kinds": ["element_transform"]},
+        {"name": "container_both", "kinds": ["append", "pop", "sort"]},
+        {"name": "remove_target", "kinds": []}
+      ]
+    },
+    "Ruby": {
+      "source": "Ruby/collection_cases.rb",
+      "cases": [
+        {"name": "organizer_sort", "role": "organizer", "expectation": "present"},
+        {"name": "organizer_reverse", "role": "organizer", "expectation": "present"},
+        {"name": "fixed_collection", "role": "fixed_value", "expectation": "present", "is_collection": true},
+        {"name": "container_values", "role": "container", "expectation": "present"},
+        {"name": "container_values", "role": "organizer", "expectation": "absent"},
+        {"name": "transformed_only", "role": "organizer", "expectation": "absent"},
+        {"name": "transformed_only", "role": "container", "expectation": "present", "is_collection": true},
+        {"name": "replaced_only", "role": "container", "expectation": "present", "is_collection": true},
+        {"name": "path_text", "role": "container", "expectation": "absent", "is_collection": false},
+        {"name": "collection_by_name_only", "role": "container", "expectation": "absent", "is_collection": false}
+      ],
+      "mutation_cases": [
+        {"name": "container_values", "kinds": ["<<", "pop", "sort!"]},
+        {"name": "collection_by_name_only", "kinds": []}
+      ]
+    }
+  }
+}

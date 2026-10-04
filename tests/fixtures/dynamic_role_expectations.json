@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "languages": {
+    "Python": {
+      "source": "Python/dynamic_role_cases.py",
+      "present": {
+        "stepper": ["literal_stepper", "fixed_stepper", "anchor_stepper", "dependent_stepper", "numeric_index", "fixed_guard_stepper", "self_guard_stepper", "guard_anchor", "dependent_guard_stepper"],
+        "walker": ["element", "pointer", "node"],
+        "most_recent_holder": ["current", "corrected_time", "interest"],
+        "most_wanted_holder": ["best", "closest", "max_profit", "max_buy", "max_sell"]
+      },
+      "absent": {
+        "stepper": ["one_off_correction", "dynamic_update", "cycle_a", "cycle_b", "toggled", "dynamic_guard_stepper", "member_guard_stepper", "call_guard_stepper", "indexed_guard_stepper"],
+        "walker": ["numeric_index", "dynamic_update"],
+        "most_recent_holder": ["dynamic_correction", "conditional_correction", "shadowed_acquisition", "isolated", "pointer", "node", "best", "value", "created_value"],
+        "most_wanted_holder": ["current"]
+      }
+    },
+    "C++": {
+      "source": "C++/dynamic_role_cases.cpp",
+      "present": {
+        "stepper": ["literal_stepper", "fixed_stepper", "numeric_index", "fixed_guard_stepper", "self_guard_stepper", "guard_anchor", "dependent_guard_stepper"],
+        "walker": ["element", "pointer", "node", "itr"],
+        "most_recent_holder": ["current", "corrected_time"],
+        "most_wanted_holder": ["best"]
+      },
+      "absent": {
+        "stepper": ["itr", "age", "dynamic_update", "dynamic_guard_stepper", "member_guard_stepper", "call_guard_stepper", "indexed_guard_stepper"],
+        "walker": ["numeric_index", "dynamic_update"],
+        "most_recent_holder": ["rejected_correction", "pointer", "node", "best", "value_"],
+        "most_wanted_holder": ["current"]
+      }
+    },
+    "JavaScript": {
+      "source": "JavaScript/dynamic_role_cases.js",
+      "present": {
+        "stepper": ["stepper"],
+        "walker": ["element"],
+        "most_recent_holder": ["current", "interest", "param"],
+        "most_wanted_holder": []
+      },
+      "absent": {
+        "stepper": ["dynamicUpdate"],
+        "walker": ["dynamicUpdate"],
+        "most_recent_holder": ["element", "value"],
+        "most_wanted_holder": ["current"]
+      }
+    },
+    "Ruby": {
+      "source": "Ruby/dynamic_role_cases.rb",
+      "present": {
+        "stepper": ["stepper", "numeric_index"],
+        "walker": ["element"],
+        "most_recent_holder": ["current", "lat", "long", "@interest"],
+        "most_wanted_holder": []
+      },
+      "absent": {
+        "stepper": ["dynamic_update"],
+        "walker": ["numeric_index", "dynamic_update"],
+        "most_recent_holder": ["element", "@value"],
+        "most_wanted_holder": ["current"]
+      }
+    },
+    "C": {
+      "source": "C/dynamic_role_cases.c",
+      "present": {
+        "stepper": ["stepper"],
+        "walker": ["pointer", "node"],
+        "most_recent_holder": ["current"],
+        "most_wanted_holder": []
+      },
+      "absent": {
+        "stepper": ["dynamic_update"],
+        "walker": ["dynamic_update"],
+        "most_recent_holder": ["pointer", "node"],
+        "most_wanted_holder": ["current"]
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "c": {
+    "digest": "c1233689de63ba84dfecab403d43991933257ab33ccb7de1bcd40852bbba0206",
+    "duplicates": 41,
+    "fixed_value": 1002,
+    "legacy": 3249,
+    "neutral_digest": "e7c8d3574d15b1b871554d858501bbb445c7424a86ec5f7bc09b94f4c77b73f4",
+    "role_counts": {
+      "container": 1,
+      "fixed_value": 1002,
+      "follower": 3,
+      "gatherer": 8,
+      "most_recent_holder": 9,
+      "most_wanted_holder": 1,
+      "one_way_flag": 2,
+      "organizer": 2,
+      "stepper": 42,
+      "temporary": 62
+    },
+    "role_records": 1132,
+    "variables": 2251,
+    "views": {
+      "control_context": 819,
+      "declaration": 2251,
+      "identifier": 4745,
+      "reads": 1809,
+      "scope": 1636,
+      "state_mutations": 160,
+      "updates": 139,
+      "writes": 108
+    }
+  },
+  "cpp": {
+    "digest": "44022528ba7851065c0cef1cfbedc1f61e2b1b09bbc2ce50a06653c5428dc2a2",
+    "duplicates": 1,
+    "fixed_value": 1879,
+    "legacy": 8455,
+    "neutral_digest": "10f519661ef0b2410c8f071e7e5dd0d63d4814e15fd8fa8a6641a98b12395047",
+    "role_counts": {
+      "container": 14,
+      "fixed_value": 1879,
+      "follower": 1,
+      "gatherer": 21,
+      "most_recent_holder": 7,
+      "most_wanted_holder": 3,
+      "one_way_flag": 9,
+      "organizer": 7,
+      "stepper": 110,
+      "temporary": 281,
+      "walker": 18
+    },
+    "role_records": 2350,
+    "variables": 4294,
+    "views": {
+      "control_context": 1804,
+      "declaration": 4294,
+      "identifier": 10740,
+      "reads": 5211,
+      "scope": 3869,
+      "state_mutations": 365,
+      "updates": 163,
+      "writes": 159
+    }
+  },
+  "javascript": {
+    "digest": "733a0a589a0ec17277828a0f86d258ccef7a1909b5fff438a715b1757e3ba5d5",
+    "duplicates": 0,
+    "fixed_value": 1719,
+    "legacy": 7648,
+    "neutral_digest": "bd624d9548806a8d20019ae1cab4ee840bd6ae79585098c0fcb9f7862a79dce9",
+    "role_counts": {
+      "container": 35,
+      "fixed_value": 1719,
+      "follower": 1,
+      "gatherer": 1,
+      "most_recent_holder": 10,
+      "most_wanted_holder": 1,
+      "one_way_flag": 5,
+      "organizer": 6,
+      "stepper": 64,
+      "temporary": 277,
+      "walker": 11
+    },
+    "role_records": 2130,
+    "variables": 4833,
+    "views": {
+      "control_context": 1543,
+      "declaration": 4833,
+      "identifier": 12420,
+      "reads": 5008,
+      "scope": 3938,
+      "state_mutations": 643,
+      "updates": 152,
+      "writes": 137
+    }
+  },
+  "python": {
+    "digest": "ecbc7b8d2879b6835574ec1b3dca0e5a25a9e9714d9de2a583f7d4f5ae98c9b0",
+    "duplicates": 2,
+    "fixed_value": 1745,
+    "legacy": 8610,
+    "neutral_digest": "c63a945cb2cf4bc7455713d8af2c34a4250d78bf79ab76c7941c3e5b2659e380",
+    "role_counts": {
+      "container": 48,
+      "fixed_value": 1745,
+      "gatherer": 9,
+      "most_recent_holder": 3,
+      "most_wanted_holder": 11,
+      "one_way_flag": 7,
+      "organizer": 8,
+      "stepper": 2,
+      "temporary": 484,
+      "walker": 137
+    },
+    "role_records": 2454,
+    "variables": 4249,
+    "views": {
+      "control_context": 1842,
+      "declaration": 4252,
+      "identifier": 12724,
+      "reads": 6790,
+      "scope": 2613,
+      "state_mutations": 355,
+      "updates": 401,
+      "writes": 519
+    }
+  },
+  "ruby": {
+    "digest": "e349ee0b2c0473921f78b3c337e60d9d3c60c049bebce9d238fa74123b2879bc",
+    "duplicates": 0,
+    "fixed_value": 719,
+    "legacy": 3255,
+    "neutral_digest": "1db0e6b07c8578c7897f29ecc585be8cbe9787e9f946946c6e82996edf491ebb",
+    "role_counts": {
+      "container": 13,
+      "fixed_value": 719,
+      "one_way_flag": 2,
+      "stepper": 1,
+      "temporary": 169,
+      "walker": 1
+    },
+    "role_records": 905,
+    "variables": 1492,
+    "views": {
+      "control_context": 412,
+      "declaration": 1492,
+      "identifier": 4136,
+      "reads": 2079,
+      "scope": 1128,
+      "state_mutations": 156,
+      "updates": 40,
+      "writes": 222
+    }
+  }
+}
