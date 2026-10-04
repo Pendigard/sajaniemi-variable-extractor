@@ -15,7 +15,8 @@ import time
 from pathlib import Path
 from typing import Any
 
-from src.python.variable_aware import legacy_annotations_from_roles, resolve_variable_aware_output
+from .paths import scala_script_path
+from sajaniemi_extractor.variable_aware import legacy_annotations_from_roles, resolve_variable_aware_output
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -184,16 +185,9 @@ def profile_graph(graph: Path, code_root: Path, scala_script: Path, temporary: P
     }
 
 
-def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--graph-dir", type=Path, default=ROOT / "graph/test")
-    parser.add_argument("--languages", default="c,cpp,javascript,python,ruby")
-    parser.add_argument("--code-root", type=Path, default=ROOT / "code/test")
-    parser.add_argument("--scala-script", type=Path, default=ROOT / "src/scala/extract_dynamic_variables.sc")
-    parser.add_argument("--report", type=Path, required=True)
-    args = parser.parse_args()
-
-    stems = [stem.strip() for stem in args.languages.split(",") if stem.strip()]
+def profile_graphs(graph_dir: Path, code_root: Path, report_path: Path, stems: list[str],
+                   scala_script: Path = scala_script_path()) -> dict[str, Any]:
+    """Profile selected graphs and write a JSON report."""
     report: dict[str, Any] = {
         "schema_version": 1,
         "rss_measurement": "100 ms ps samples of the joern process tree when ps is permitted; approximate and may miss short peaks",
@@ -202,14 +196,27 @@ def main() -> None:
     with tempfile.TemporaryDirectory(prefix="sajaniemi-profile-") as directory:
         temporary = Path(directory)
         for stem in stems:
-            graph = args.graph_dir / f"{stem}.bin"
+            graph = graph_dir / f"{stem}.bin"
             if not graph.is_file():
                 raise SystemExit(f"missing graph: {graph}")
             print(f"[profile] {stem}: {graph}", flush=True)
-            report["graphs"][stem] = profile_graph(graph, args.code_root, args.scala_script, temporary)
-    args.report.parent.mkdir(parents=True, exist_ok=True)
-    args.report.write_text(json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote profile report to {args.report}")
+            report["graphs"][stem] = profile_graph(graph, code_root, scala_script, temporary)
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(json.dumps(report, ensure_ascii=False, sort_keys=True, indent=2) + "\n", encoding="utf-8")
+    print(f"Wrote profile report to {report_path}")
+    return report
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--graph-dir", type=Path, default=ROOT / "graph/test")
+    parser.add_argument("--languages", default="c,cpp,javascript,python,ruby")
+    parser.add_argument("--code-root", type=Path, default=ROOT / "code/test")
+    parser.add_argument("--scala-script", type=Path, default=scala_script_path())
+    parser.add_argument("--report", type=Path, required=True)
+    args = parser.parse_args()
+    stems = [stem.strip() for stem in args.languages.split(",") if stem.strip()]
+    profile_graphs(args.graph_dir, args.code_root, args.report, stems, args.scala_script)
 
 
 if __name__ == "__main__":

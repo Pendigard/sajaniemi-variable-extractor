@@ -12,7 +12,7 @@ import time
 from pathlib import Path
 from typing import Any, Iterable
 
-from src.python.resolve_spans import build_source_index, identifier_matches, pick_match, positive_int
+from sajaniemi_extractor.resolve_spans import build_source_index, identifier_matches, pick_match, positive_int
 
 
 SAJANIEMI_ROLES = frozenset({

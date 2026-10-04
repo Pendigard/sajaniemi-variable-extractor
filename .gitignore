@@ -5,3 +5,6 @@ __pycache__/
 /graph/
 /outputs/
 /workspace/
+/build/
+*.egg-info/
+/old_src/

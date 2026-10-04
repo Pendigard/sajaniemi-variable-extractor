@@ -4,9 +4,11 @@
 from __future__ import annotations
 
 import argparse
+import shlex
 import shutil
 import subprocess
 import tempfile
+import uuid
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -42,46 +44,39 @@ def run_joern_parse(source_dir: Path, output: Path, language: str, force: bool, 
         if not force:
             print(f"[skip] {output} already exists (use --force to rebuild)")
             return
-        output.unlink()
-
-    output.parent.mkdir(parents=True, exist_ok=True)
-    print(f"[joern-parse] {source_dir} -> {output} ({config.joern_language})")
-    if dry_run:
-        return
-
     parse_source = source_dir.resolve()
     output = output.resolve()
+    command = ["joern-parse", str(parse_source), "--output", str(output), "--language", config.joern_language]
+    staging_dir = None
+    if language == "Ruby":
+        staging_dir = Path(tempfile.gettempdir()) / f"sajaniemi-ruby-source-{uuid.uuid4().hex}"
+        command[1] = str(staging_dir / source_dir.name)
+    if dry_run:
+        if staging_dir is not None:
+            print(f"[dry-run] copy {parse_source} to {command[1]}")
+        print(f"[dry-run] {shlex.join(command)}")
+        return
+
+    if output.exists():
+        output.unlink()
+    output.parent.mkdir(parents=True, exist_ok=True)
+    print(f"[joern-parse] {source_dir} -> {output} ({config.joern_language})")
     if language == "Ruby":
         # rubysrc2cpg may silently respect the enclosing Git worktree's ignore
         # rules. The research corpora live under ignored /code, so parse an
         # isolated copy while keeping the original tree untouched.
-        with tempfile.TemporaryDirectory(prefix="sajaniemi-ruby-source-") as directory:
-            staged_source = Path(directory) / source_dir.name
-            shutil.copytree(parse_source, staged_source)
-            subprocess.run(
-                [
-                    "joern-parse",
-                    str(staged_source),
-                    "--output",
-                    str(output),
-                    "--language",
-                    config.joern_language,
-                ],
-                check=True,
-            )
+        assert staging_dir is not None
+        staging_dir.mkdir()
+        try:
+            shutil.copytree(parse_source, staging_dir / source_dir.name)
+            print(shlex.join(command))
+            subprocess.run(command, check=True)
+        finally:
+            shutil.rmtree(staging_dir)
         return
 
-    subprocess.run(
-        [
-            "joern-parse",
-            str(parse_source),
-            "--output",
-            str(output),
-            "--language",
-            config.joern_language,
-        ],
-        check=True,
-    )
+    print(shlex.join(command))
+    subprocess.run(command, check=True)
 
 
 def build_graphs(code_root: Path, output_dir: Path, splits: list[str], force: bool, dry_run: bool) -> None:
