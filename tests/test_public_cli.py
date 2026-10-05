@@ -66,6 +66,7 @@ class PublicCliTests(unittest.TestCase):
             root = Path(directory)
             source = root / "source"
             source.mkdir()
+            (source / "example.py").write_text("a = 1\n", encoding="utf-8")
             output = root / "bundle"
             with patch("sajaniemi_extractor.build_language_graphs.subprocess.run") as run:
                 self.assertEqual(main(["run", "--source", str(source), "--language", "python",

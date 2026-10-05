@@ -1,0 +1,338 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="140mm" height="91.72mm" viewBox="0 0 700 458.6" role="img" aria-labelledby="title-g">
+<title id="title-g">Eleven Sajaniemi variable roles: shared examples with behavioral glyphs</title>
+<rect width="700" height="458.6" fill="white"/>
+<text x="46" y="18" font-family="DejaVu Sans, sans-serif" font-size="14.725" font-weight="700" fill="#202c32" xml:space="preserve" data-column-title="role">Variable Role</text>
+<text x="426" y="18" font-family="DejaVu Sans, sans-serif" font-size="14.725" font-weight="700" fill="#202c32" xml:space="preserve" data-column-title="examples">Examples</text>
+<path d="M5,27 L695,27" fill="none" stroke="#cbd3d7" stroke-width="1" />
+<path d="M377,3 L377,453.6" fill="none" stroke="#cbd3d7" stroke-width="1" />
+<g data-example="traversal">
+<g data-code-line="# linked-list traversal">
+<text x="426" y="45.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#3d474d" xml:space="preserve" ># </text>
+<text x="440.8703125" y="45.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#3d474d" xml:space="preserve" >linked</text>
+<text x="485.48125" y="45.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#3d474d" xml:space="preserve" >-</text>
+<text x="492.91640624999997" y="45.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#3d474d" xml:space="preserve" >list</text>
+<text x="522.6570312499999" y="45.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#3d474d" xml:space="preserve" > </text>
+<text x="530.0921874999999" y="45.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#3d474d" xml:space="preserve" >traversal</text>
+</g>
+<g data-code-line="steps, node, prev = 0, head, None">
+<text x="426" y="60.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#225ea8" xml:space="preserve" data-variable="steps">steps</text>
+<text x="463.17578125" y="60.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >, </text>
+<text x="478.04609375" y="60.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#00745b" xml:space="preserve" data-variable="node">node</text>
+<text x="507.78671875000003" y="60.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >, </text>
+<text x="522.65703125" y="60.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#9a426c" xml:space="preserve" data-variable="prev">prev</text>
+<text x="552.3976562500001" y="60.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > = 0, </text>
+<text x="597.00859375" y="60.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >head</text>
+<text x="626.7492187500001" y="60.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >, </text>
+<text x="641.61953125" y="60.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >None</text>
+</g>
+<g data-code-line="while node is not None:">
+<text x="426" y="75.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >while</text>
+<text x="463.17578125" y="75.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > </text>
+<text x="470.6109375" y="75.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#00745b" xml:space="preserve" data-variable="node">node</text>
+<text x="500.3515625" y="75.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > </text>
+<text x="507.78671875" y="75.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >is</text>
+<text x="522.6570312499999" y="75.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > </text>
+<text x="530.0921874999999" y="75.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >not</text>
+<text x="552.39765625" y="75.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > </text>
+<text x="559.8328124999999" y="75.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >None</text>
+<text x="589.5734375" y="75.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >:</text>
+</g>
+<g data-code-line="    prev = node">
+<text x="426" y="90.6" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >    </text>
+<text x="455.740625" y="90.6" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#9a426c" xml:space="preserve" data-variable="prev">prev</text>
+<text x="485.48125000000005" y="90.6" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > = </text>
+<text x="507.78671875000003" y="90.6" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#00745b" xml:space="preserve" data-variable="node">node</text>
+</g>
+<g data-code-line="    node = node.next">
+<text x="426" y="105.8" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >    </text>
+<text x="455.740625" y="105.8" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#00745b" xml:space="preserve" data-variable="node">node</text>
+<text x="485.48125000000005" y="105.8" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > = </text>
+<text x="507.78671875000003" y="105.8" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#00745b" xml:space="preserve" data-variable="node">node</text>
+<text x="537.52734375" y="105.8" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >.</text>
+<text x="544.9625" y="105.8" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >next</text>
+</g>
+<g data-code-line="    steps += 1">
+<text x="426" y="121.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >    </text>
+<text x="455.740625" y="121.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#225ea8" xml:space="preserve" data-variable="steps">steps</text>
+<text x="492.91640625" y="121.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > += 1</text>
+</g>
+<g data-code-line="    visit(prev, node, steps)">
+<text x="426" y="136.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >    </text>
+<text x="455.740625" y="136.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >visit</text>
+<text x="492.91640625" y="136.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >(</text>
+<text x="500.3515625" y="136.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#9a426c" xml:space="preserve" data-variable="prev">prev</text>
+<text x="530.0921875" y="136.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >, </text>
+<text x="544.9625" y="136.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#00745b" xml:space="preserve" data-variable="node">node</text>
+<text x="574.703125" y="136.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >, </text>
+<text x="589.5734375" y="136.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#225ea8" xml:space="preserve" data-variable="steps">steps</text>
+<text x="626.74921875" y="136.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >)</text>
+</g>
+<g data-glyph="prev" transform="translate(385 76.6) scale(0.95)">
+<path d="M9,3 L19,3 L19,9 L30,9 M1,9 L11,9 L11,15 L22,15 M13,5 L8,8 M25,11 L20,14" fill="none" stroke="#9a426c" stroke-width="1.4" />
+</g>
+<g data-glyph="node" transform="translate(385 91.8) scale(0.95)">
+<rect x="0" y="6" width="6" height="6" fill="white" stroke="#00745b" rx="0" />
+<rect x="13" y="6" width="6" height="6" fill="white" stroke="#00745b" rx="0" />
+<rect x="26" y="6" width="6" height="6" fill="white" stroke="#00745b" rx="0" />
+<path d="M6,9 L13,9 M19,9 L26,9" fill="none" stroke="#00745b" stroke-width="1.4" />
+</g>
+<g data-glyph="steps" transform="translate(385 107.0) scale(0.95)">
+<path d="M1,16 L1,12 L10,12 L10,7 L20,7 L20,2 L31,2" fill="none" stroke="#225ea8" stroke-width="1.4" />
+</g>
+</g>
+<g data-glyph="steps" transform="translate(5 31.0) scale(0.95)">
+<path d="M1,16 L1,12 L10,12 L10,7 L20,7 L20,2 L31,2" fill="none" stroke="#225ea8" stroke-width="1.4" />
+</g>
+<text x="46" y="45.0" font-family="DejaVu Sans, sans-serif" font-size="13.3" font-weight="700" fill="#225ea8" xml:space="preserve" data-role-name="steps">Stepper</text>
+<g data-definition="steps">
+<text x="46" y="60.2" font-family="DejaVu Sans, sans-serif" font-size="12.16" font-weight="400" fill="#3d474d" xml:space="preserve" >Steps through values predictable from the start.</text>
+</g>
+<g data-glyph="node" transform="translate(5 64.25) scale(0.95)">
+<rect x="0" y="6" width="6" height="6" fill="white" stroke="#00745b" rx="0" />
+<rect x="13" y="6" width="6" height="6" fill="white" stroke="#00745b" rx="0" />
+<rect x="26" y="6" width="6" height="6" fill="white" stroke="#00745b" rx="0" />
+<path d="M6,9 L13,9 M19,9 L26,9" fill="none" stroke="#00745b" stroke-width="1.4" />
+</g>
+<text x="46" y="78.25" font-family="DejaVu Sans, sans-serif" font-size="13.3" font-weight="700" fill="#00745b" xml:space="preserve" data-role-name="node">Walker</text>
+<g data-definition="node">
+<text x="46" y="93.45" font-family="DejaVu Sans, sans-serif" font-size="12.16" font-weight="400" fill="#3d474d" xml:space="preserve" >Traverses a complex data structure.</text>
+</g>
+<g data-glyph="prev" transform="translate(5 97.5) scale(0.95)">
+<path d="M9,3 L19,3 L19,9 L30,9 M1,9 L11,9 L11,15 L22,15 M13,5 L8,8 M25,11 L20,14" fill="none" stroke="#9a426c" stroke-width="1.4" />
+</g>
+<text x="46" y="111.5" font-family="DejaVu Sans, sans-serif" font-size="13.3" font-weight="700" fill="#9a426c" xml:space="preserve" data-role-name="prev">Follower</text>
+<g data-definition="prev">
+<text x="46" y="126.7" font-family="DejaVu Sans, sans-serif" font-size="12.16" font-weight="400" fill="#3d474d" xml:space="preserve" >Follows another variable, e.g. a stepper or walker.</text>
+</g>
+<path d="M5,146.2 L695,146.2" fill="none" stroke="#cbd3d7" stroke-width="1" />
+<g data-example="readings">
+<g data-code-line="# input processing">
+<text x="426" y="163.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#3d474d" xml:space="preserve" ># </text>
+<text x="440.8703125" y="163.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#3d474d" xml:space="preserve" >input</text>
+<text x="478.04609375" y="163.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#3d474d" xml:space="preserve" > </text>
+<text x="485.48125" y="163.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#3d474d" xml:space="preserve" >processing</text>
+</g>
+<g data-code-line="limit = 4">
+<text x="426" y="178.39999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#5c5200" xml:space="preserve" data-variable="limit">limit</text>
+<text x="463.17578125" y="178.39999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > = 4</text>
+</g>
+<g data-code-line="best = -float(&quot;inf&quot;)">
+<text x="426" y="193.6" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#a83b24" xml:space="preserve" data-variable="best">best</text>
+<text x="455.740625" y="193.6" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > = -</text>
+<text x="485.48125000000005" y="193.6" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >float</text>
+<text x="522.65703125" y="193.6" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >(&quot;</text>
+<text x="537.52734375" y="193.6" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >inf</text>
+<text x="559.8328125" y="193.6" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >&quot;)</text>
+</g>
+<g data-code-line="total, seen = 0, False">
+<text x="426" y="208.79999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#00737a" xml:space="preserve" data-variable="total">total</text>
+<text x="463.17578125" y="208.79999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >, </text>
+<text x="478.04609375" y="208.79999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#66651f" xml:space="preserve" data-variable="seen">seen</text>
+<text x="507.78671875000003" y="208.79999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > = 0, </text>
+<text x="552.3976562500001" y="208.79999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >False</text>
+</g>
+<g data-code-line="for _ in range(limit):">
+<text x="426" y="224.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >for</text>
+<text x="448.30546875" y="224.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > </text>
+<text x="455.74062499999997" y="224.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >_</text>
+<text x="463.17578124999994" y="224.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > </text>
+<text x="470.6109374999999" y="224.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >in</text>
+<text x="485.48124999999993" y="224.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > </text>
+<text x="492.9164062499999" y="224.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >range</text>
+<text x="530.0921874999999" y="224.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >(</text>
+<text x="537.5273437499999" y="224.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#5c5200" xml:space="preserve" data-variable="limit">limit</text>
+<text x="574.7031249999999" y="224.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >):</text>
+</g>
+<g data-code-line="    latest = read()">
+<text x="426" y="239.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >    </text>
+<text x="455.740625" y="239.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#7146a0" xml:space="preserve" data-variable="latest">latest</text>
+<text x="500.3515625" y="239.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > = </text>
+<text x="522.65703125" y="239.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >read</text>
+<text x="552.3976562500001" y="239.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >()</text>
+</g>
+<g data-code-line="    best = max(best, latest)">
+<text x="426" y="254.39999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >    </text>
+<text x="455.740625" y="254.39999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#a83b24" xml:space="preserve" data-variable="best">best</text>
+<text x="485.48125000000005" y="254.39999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > = </text>
+<text x="507.78671875000003" y="254.39999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >max</text>
+<text x="530.0921875" y="254.39999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >(</text>
+<text x="537.52734375" y="254.39999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#a83b24" xml:space="preserve" data-variable="best">best</text>
+<text x="567.26796875" y="254.39999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >, </text>
+<text x="582.13828125" y="254.39999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#7146a0" xml:space="preserve" data-variable="latest">latest</text>
+<text x="626.74921875" y="254.39999999999998" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >)</text>
+</g>
+<g data-code-line="    total += latest">
+<text x="426" y="269.59999999999997" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >    </text>
+<text x="455.740625" y="269.59999999999997" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#00737a" xml:space="preserve" data-variable="total">total</text>
+<text x="492.91640625" y="269.59999999999997" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > += </text>
+<text x="522.65703125" y="269.59999999999997" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#7146a0" xml:space="preserve" data-variable="latest">latest</text>
+</g>
+<g data-code-line="    if latest &lt; 0:">
+<text x="426" y="284.79999999999995" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >    </text>
+<text x="455.740625" y="284.79999999999995" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >if</text>
+<text x="470.61093750000003" y="284.79999999999995" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > </text>
+<text x="478.04609375" y="284.79999999999995" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#7146a0" xml:space="preserve" data-variable="latest">latest</text>
+<text x="522.65703125" y="284.79999999999995" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > &lt; 0:</text>
+</g>
+<g data-code-line="        seen = True">
+<text x="426" y="300.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >        </text>
+<text x="485.48125" y="300.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#66651f" xml:space="preserve" data-variable="seen">seen</text>
+<text x="515.221875" y="300.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > = </text>
+<text x="537.52734375" y="300.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >True</text>
+</g>
+<g data-code-line="report(latest, best, total, seen)">
+<text x="426" y="315.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >report</text>
+<text x="470.6109375" y="315.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >(</text>
+<text x="478.04609374999995" y="315.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#7146a0" xml:space="preserve" data-variable="latest">latest</text>
+<text x="522.6570312499999" y="315.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >, </text>
+<text x="537.5273437499999" y="315.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#a83b24" xml:space="preserve" data-variable="best">best</text>
+<text x="567.2679687499999" y="315.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >, </text>
+<text x="582.1382812499999" y="315.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#00737a" xml:space="preserve" data-variable="total">total</text>
+<text x="619.3140624999999" y="315.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >, </text>
+<text x="634.1843749999998" y="315.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#66651f" xml:space="preserve" data-variable="seen">seen</text>
+<text x="663.9249999999998" y="315.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >)</text>
+</g>
+<g data-glyph="limit" transform="translate(385 164.39999999999998) scale(0.95)">
+<path d="M1,4 L31,4 M1,13 L31,13" fill="none" stroke="#5c5200" stroke-width="1.4" />
+</g>
+<g data-glyph="latest" transform="translate(385 225.2) scale(0.95)">
+<rect x="19" y="3" width="12" height="12" fill="white" stroke="#7146a0" rx="0" />
+<path d="M1,9 L16,9 M12,5 L16,9 L12,13" fill="none" stroke="#7146a0" stroke-width="1.4" />
+</g>
+<g data-glyph="best" transform="translate(385 240.39999999999998) scale(0.95)">
+<path d="M1,14 L10,14 L10,5 L26,5 L26,2 L31,2 M1,14 L10,5 L17,10 L26,2" fill="none" stroke="#a83b24" stroke-width="1.4" />
+</g>
+<g data-glyph="total" transform="translate(385 255.59999999999997) scale(0.95)">
+<path d="M1,2 L16,9 L30,9 M1,16 L16,9" fill="none" stroke="#00737a" stroke-width="1.4" />
+<rect x="25" y="4" width="7" height="10" fill="white" stroke="#00737a" rx="0" />
+</g>
+<g data-glyph="seen" transform="translate(385 286.0) scale(0.95)">
+<rect x="0" y="5" width="6" height="9" fill="white" stroke="#66651f" rx="0" />
+<rect x="25" y="5" width="6" height="9" fill="#66651f" stroke="none" rx="0" />
+<path d="M9,9 L22,9 M18,5 L22,9 L18,13" fill="none" stroke="#66651f" stroke-width="1.4" />
+</g>
+</g>
+<g data-glyph="limit" transform="translate(5 149.2) scale(0.95)">
+<path d="M1,4 L31,4 M1,13 L31,13" fill="none" stroke="#5c5200" stroke-width="1.4" />
+</g>
+<text x="46" y="163.2" font-family="DejaVu Sans, sans-serif" font-size="13.3" font-weight="700" fill="#5c5200" xml:space="preserve" data-role-name="limit">Fixed Value</text>
+<g data-definition="limit">
+<text x="46" y="178.39999999999998" font-family="DejaVu Sans, sans-serif" font-size="12.16" font-weight="400" fill="#3d474d" xml:space="preserve" >Retains its value after initialization.</text>
+</g>
+<g data-glyph="latest" transform="translate(5 182.45) scale(0.95)">
+<rect x="19" y="3" width="12" height="12" fill="white" stroke="#7146a0" rx="0" />
+<path d="M1,9 L16,9 M12,5 L16,9 L12,13" fill="none" stroke="#7146a0" stroke-width="1.4" />
+</g>
+<text x="46" y="196.45" font-family="DejaVu Sans, sans-serif" font-size="13.3" font-weight="700" fill="#7146a0" xml:space="preserve" data-role-name="latest">Most-recent holder</text>
+<g data-definition="latest">
+<text x="46" y="211.64999999999998" font-family="DejaVu Sans, sans-serif" font-size="12.16" font-weight="400" fill="#3d474d" xml:space="preserve" >Holds the latest value encountered.</text>
+</g>
+<g data-glyph="best" transform="translate(5 215.7) scale(0.95)">
+<path d="M1,14 L10,14 L10,5 L26,5 L26,2 L31,2 M1,14 L10,5 L17,10 L26,2" fill="none" stroke="#a83b24" stroke-width="1.4" />
+</g>
+<text x="46" y="229.7" font-family="DejaVu Sans, sans-serif" font-size="13.3" font-weight="700" fill="#a83b24" xml:space="preserve" data-role-name="best">Most-wanted holder</text>
+<g data-definition="best">
+<text x="46" y="244.89999999999998" font-family="DejaVu Sans, sans-serif" font-size="12.16" font-weight="400" fill="#3d474d" xml:space="preserve" >Holds the best value encountered so far.</text>
+</g>
+<g data-glyph="total" transform="translate(5 248.95) scale(0.95)">
+<path d="M1,2 L16,9 L30,9 M1,16 L16,9" fill="none" stroke="#00737a" stroke-width="1.4" />
+<rect x="25" y="4" width="7" height="10" fill="white" stroke="#00737a" rx="0" />
+</g>
+<text x="46" y="262.95" font-family="DejaVu Sans, sans-serif" font-size="13.3" font-weight="700" fill="#00737a" xml:space="preserve" data-role-name="total">Gatherer</text>
+<g data-definition="total">
+<text x="46" y="278.15" font-family="DejaVu Sans, sans-serif" font-size="12.16" font-weight="400" fill="#3d474d" xml:space="preserve" >Accumulates the effect of individual values.</text>
+</g>
+<g data-glyph="seen" transform="translate(5 282.2) scale(0.95)">
+<rect x="0" y="5" width="6" height="9" fill="white" stroke="#66651f" rx="0" />
+<rect x="25" y="5" width="6" height="9" fill="#66651f" stroke="none" rx="0" />
+<path d="M9,9 L22,9 M18,5 L22,9 L18,13" fill="none" stroke="#66651f" stroke-width="1.4" />
+</g>
+<text x="46" y="296.2" font-family="DejaVu Sans, sans-serif" font-size="13.3" font-weight="700" fill="#66651f" xml:space="preserve" data-role-name="seen">One-way flag</text>
+<g data-definition="seen">
+<text x="46" y="311.4" font-family="DejaVu Sans, sans-serif" font-size="12.16" font-weight="400" fill="#3d474d" xml:space="preserve" >A two-valued variable that changes at most once.</text>
+</g>
+<path d="M5,325.2 L695,325.2" fill="none" stroke="#cbd3d7" stroke-width="1" />
+<g data-example="collections">
+<g data-code-line="# collection updates">
+<text x="426" y="342.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#3d474d" xml:space="preserve" ># </text>
+<text x="440.8703125" y="342.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#3d474d" xml:space="preserve" >collection</text>
+<text x="515.221875" y="342.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#3d474d" xml:space="preserve" > </text>
+<text x="522.6570312499999" y="342.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#3d474d" xml:space="preserve" >updates</text>
+</g>
+<g data-code-line="queue = [4, 7]">
+<text x="426" y="357.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#945515" xml:space="preserve" data-variable="queue">queue</text>
+<text x="463.17578125" y="357.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > = [4, 7]</text>
+</g>
+<g data-code-line="queue.append(3)">
+<text x="426" y="372.59999999999997" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#945515" xml:space="preserve" data-variable="queue">queue</text>
+<text x="463.17578125" y="372.59999999999997" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >.</text>
+<text x="470.6109375" y="372.59999999999997" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >append</text>
+<text x="515.221875" y="372.59999999999997" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >(3)</text>
+</g>
+<g data-code-line="queue.pop(0)">
+<text x="426" y="387.79999999999995" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#945515" xml:space="preserve" data-variable="queue">queue</text>
+<text x="463.17578125" y="387.79999999999995" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >.</text>
+<text x="470.6109375" y="387.79999999999995" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >pop</text>
+<text x="492.91640624999997" y="387.79999999999995" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >(0)</text>
+</g>
+<g data-code-line="items = [7, 4]">
+<text x="426" y="403.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#5746a5" xml:space="preserve" data-variable="items">items</text>
+<text x="463.17578125" y="403.0" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > = [7, 4]</text>
+</g>
+<g data-code-line="tmp = items[0]">
+<text x="426" y="418.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#5d6470" xml:space="preserve" data-variable="tmp">tmp</text>
+<text x="448.30546875" y="418.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" > = </text>
+<text x="470.6109375" y="418.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#5746a5" xml:space="preserve" data-variable="items">items</text>
+<text x="507.78671875" y="418.2" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >[0]</text>
+</g>
+<g data-code-line="items[0] = items[1]">
+<text x="426" y="433.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#5746a5" xml:space="preserve" data-variable="items">items</text>
+<text x="463.17578125" y="433.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >[0] = </text>
+<text x="507.78671875" y="433.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#5746a5" xml:space="preserve" data-variable="items">items</text>
+<text x="544.9625" y="433.4" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >[1]</text>
+</g>
+<g data-code-line="items[1] = tmp">
+<text x="426" y="448.59999999999997" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#5746a5" xml:space="preserve" data-variable="items">items</text>
+<text x="463.17578125" y="448.59999999999997" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="400" fill="#202c32" xml:space="preserve" >[1] = </text>
+<text x="507.78671875" y="448.59999999999997" font-family="DejaVu Sans Mono, monospace" font-size="12.35" font-weight="700" fill="#5d6470" xml:space="preserve" data-variable="tmp">tmp</text>
+</g>
+<g data-glyph="queue" transform="translate(385 358.59999999999997) scale(0.95)">
+<rect x="1" y="5" width="6" height="6" fill="white" stroke="#945515" rx="0" />
+<rect x="11" y="5" width="6" height="6" fill="white" stroke="#945515" rx="0" />
+<path d="M26,3 L26,13 M21,8 L31,8" fill="none" stroke="#945515" stroke-width="1.4" />
+</g>
+<g data-glyph="tmp" transform="translate(385 404.2) scale(0.95)">
+<path d="M1,15 L1,7 L15,7 L15,15 M15,11 L30,11 M26,7 L30,11 L26,15" fill="none" stroke="#5d6470" stroke-width="1.4" />
+</g>
+<g data-glyph="items" transform="translate(385 419.4) scale(0.95)">
+<path d="M1,3 L31,15 M1,15 L31,3" fill="none" stroke="#5746a5" stroke-width="1.4" />
+<rect x="0" y="1" width="3" height="3" fill="white" stroke="#5746a5" rx="0" />
+<rect x="29" y="13" width="3" height="3" fill="white" stroke="#5746a5" rx="0" />
+</g>
+</g>
+<g data-glyph="queue" transform="translate(5 328.2) scale(0.95)">
+<rect x="1" y="5" width="6" height="6" fill="white" stroke="#945515" rx="0" />
+<rect x="11" y="5" width="6" height="6" fill="white" stroke="#945515" rx="0" />
+<path d="M26,3 L26,13 M21,8 L31,8" fill="none" stroke="#945515" stroke-width="1.4" />
+</g>
+<text x="46" y="342.2" font-family="DejaVu Sans, sans-serif" font-size="13.3" font-weight="700" fill="#945515" xml:space="preserve" data-role-name="queue">Container</text>
+<g data-definition="queue">
+<text x="46" y="357.4" font-family="DejaVu Sans, sans-serif" font-size="12.16" font-weight="400" fill="#3d474d" xml:space="preserve" >Stores elements that can be added or removed.</text>
+</g>
+<g data-glyph="items" transform="translate(5 361.45) scale(0.95)">
+<path d="M1,3 L31,15 M1,15 L31,3" fill="none" stroke="#5746a5" stroke-width="1.4" />
+<rect x="0" y="1" width="3" height="3" fill="white" stroke="#5746a5" rx="0" />
+<rect x="29" y="13" width="3" height="3" fill="white" stroke="#5746a5" rx="0" />
+</g>
+<text x="46" y="375.45" font-family="DejaVu Sans, sans-serif" font-size="13.3" font-weight="700" fill="#5746a5" xml:space="preserve" data-role-name="items">Organizer</text>
+<g data-definition="items">
+<text x="46" y="390.65" font-family="DejaVu Sans, sans-serif" font-size="12.16" font-weight="400" fill="#3d474d" xml:space="preserve" >Only reorders elements after initialization.</text>
+</g>
+<g data-glyph="tmp" transform="translate(5 394.7) scale(0.95)">
+<path d="M1,15 L1,7 L15,7 L15,15 M15,11 L30,11 M26,7 L30,11 L26,15" fill="none" stroke="#5d6470" stroke-width="1.4" />
+</g>
+<text x="46" y="408.7" font-family="DejaVu Sans, sans-serif" font-size="13.3" font-weight="700" fill="#5d6470" xml:space="preserve" data-role-name="tmp">Temporary</text>
+<g data-definition="tmp">
+<text x="46" y="423.9" font-family="DejaVu Sans, sans-serif" font-size="12.16" font-weight="400" fill="#3d474d" xml:space="preserve" >Holds data briefly during execution.</text>
+</g>
+</svg>

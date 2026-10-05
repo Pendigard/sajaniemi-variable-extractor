@@ -5,11 +5,12 @@ from __future__ import annotations
 
 import argparse
 import json
-import subprocess
 import tempfile
 from pathlib import Path
 
 from .paths import scala_script_path
+from .build_language_graphs import _run_quietly
+from .resolve_spans import build_source_index
 from sajaniemi_extractor.variable_aware import (
     legacy_annotations_from_roles,
     resolve_variable_aware_output,
@@ -18,7 +19,6 @@ from sajaniemi_extractor.variable_aware import (
 
 
 def run_joern(graph: Path, scala_script: Path, output: Path, source_root: Path) -> None:
-    print(f"[joern] Running {scala_script} on {graph} -> {output}")
     cmd = [
         "joern",
         str(graph.resolve()),
@@ -30,7 +30,7 @@ def run_joern(graph: Path, scala_script: Path, output: Path, source_root: Path) 
         f"sourceRoot={source_root.resolve()}",
         "--nocolors",
     ]
-    subprocess.run(cmd, check=True, cwd=output.parent)
+    _run_quietly(cmd, cwd=output.parent)
 
 
 def write_jsonl(path: Path, annotations: list[dict]) -> None:
@@ -57,25 +57,65 @@ def extract_graphs(
     graphs = sorted(graph_dir.glob("*.bin"))
     if not graphs:
         raise ValueError(f"No .bin graph found in {graph_dir}.")
+    extract_group([(graph, code_root) for graph in graphs], code_root, output,
+                  scala_script=scala_script, jsonl_output=jsonl_output,
+                  variable_facts_output=variable_facts_output,
+                  legacy_output=legacy_output, keep_pre=keep_pre)
+
+
+def _prefix_raw_paths(value: object, group_root: Path, source_index: dict[str, Path]) -> None:
+    """Rebase Joern's repository-local paths before resolving a grouped split."""
+    if isinstance(value, list):
+        for item in value:
+            _prefix_raw_paths(item, group_root, source_index)
+    elif isinstance(value, dict):
+        for key, item in value.items():
+            if key == "path" and isinstance(item, str) and item:
+                source_file = source_index.get(item) or source_index.get(Path(item).name)
+                if source_file is not None:
+                    value[key] = source_file.relative_to(group_root).as_posix()
+            else:
+                _prefix_raw_paths(item, group_root, source_index)
+
+
+def extract_group(
+    graph_sources: list[tuple[Path, Path]],
+    code_root: Path,
+    output: Path,
+    *,
+    scala_script: Path = DEFAULT_SCALA_SCRIPT,
+    jsonl_output: Path | None = None,
+    variable_facts_output: Path | None = None,
+    legacy_output: Path | None = None,
+    keep_pre: Path | None = None,
+) -> None:
+    """Extract several repository graphs into one bundle for their shared root."""
+    if not graph_sources:
+        raise ValueError("No graphs to extract")
     if not code_root.is_dir():
         raise ValueError(f"Source directory does not exist: {code_root}")
+    code_root = code_root.resolve()
     if not scala_script.is_file():
         raise ValueError(f"Scala script does not exist: {scala_script}")
     output.parent.mkdir(parents=True, exist_ok=True)
 
     with tempfile.TemporaryDirectory(prefix="dynamic-joern-") as tmp:
         tmpdir = Path(tmp)
-        pre_files: list[Path] = []
-        for graph in graphs:
-            pre = tmpdir / f"{graph.stem}.pre.json"
-            print(f"[joern] {graph} -> {pre}")
-            run_joern(graph, scala_script, pre, code_root)
-            pre_files.append(pre)
-
         merged_pre = keep_pre or (tmpdir / "merged_pre_annotations.json")
         merged = {"schema_version": 1, "role_annotations": [], "variable_facts": []}
-        for pre in pre_files:
+        for index, (graph, source_root) in enumerate(graph_sources):
+            source_root = source_root.resolve()
+            pre = tmpdir / f"{index}.pre.json"
+            run_joern(graph, scala_script, pre, source_root)
             graph_output = json.loads(pre.read_text(encoding="utf-8"))
+            if source_root != code_root:
+                source_index = build_source_index(source_root)
+                _prefix_raw_paths(graph_output, code_root, source_index)
+                prefix = source_root.relative_to(code_root).as_posix()
+                for record in graph_output["role_annotations"] + graph_output["variable_facts"]:
+                    subject = record.get("subject", {})
+                    if isinstance(subject.get("id"), str):
+                        subject["id"] = f"{prefix}/{subject['id']}"
             merged["role_annotations"].extend(graph_output["role_annotations"])
             merged["variable_facts"].extend(graph_output["variable_facts"])
         write_json(merged_pre, merged)
@@ -90,15 +130,9 @@ def extract_graphs(
         write_json(facts_output, variable_facts)
         jsonl_output = jsonl_output or output.with_suffix(".jsonl")
         write_jsonl(jsonl_output, role_annotations)
-        print(f"Wrote {len(role_annotations)} role annotations to {output}")
-        print(f"Wrote {len(role_annotations)} role annotations to {jsonl_output}")
-        print(f"Wrote {len(variable_facts)} variable facts to {facts_output}")
         if legacy_output:
             legacy = legacy_annotations_from_roles(role_annotations)
             write_json(legacy_output, legacy)
-            print(f"Wrote {len(legacy)} converted legacy annotations to {legacy_output}")
-        if keep_pre:
-            print(f"Kept merged pre-annotations in {keep_pre}")
 
 
 def main() -> None:

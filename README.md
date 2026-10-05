@@ -1,41 +1,93 @@
 # Sajaniemi variable extractor
 
-A Joern-based static extractor that classifies variables by Sajaniemi roles. It parses source code into a code property graph, runs the Scala role analysis, then resolves variable positions against the original source files.
+This repository extracts **Sajaniemi variable roles** from source code using [Joern](https://joern.io/) code property graphs. It currently supports C, C++, JavaScript, Python, and Ruby.
 
-## Install and run
+The extractor was originally developed for research on the interpretability of language models for source code. The associated work has been submitted and is not yet published. Although this repository originates from that research, it is maintained as a standalone tool and can be used independently for other source-code analysis tasks.
 
-Requirements: Python 3.10 or newer, `joern` and `joern-parse` on `PATH`. From a clone of this repository:
+## Variable roles
 
-```sh
-conda activate torcharm
-python -m pip install -e .
+Sajaniemi's variable roles characterize variables according to how their values are created, updated, and used during program execution. For example, a *stepper* moves through a predictable sequence, a *gatherer* accumulates contributions, and a *most-wanted holder* keeps the best candidate seen so far.
+
+The extractor implements static contracts for eleven such roles. Variables for which none of these contracts can establish a role remain unlabelled.
+
+![Eleven variable roles with short Python examples](docs/assets/variable-roles.svg)
+
+The taxonomy is based on the following work by Sajaniemi and collaborators:
+
+- Jorma Sajaniemi. “Visualizing Roles of Variables to Novice Programmers.” *Proceedings of the 14th Annual Workshop of the Psychology of Programming Interest Group*, pp. 111–127, 2002. [Paper](https://ppig.org/files/2002-PPIG-14th-sajaniemi.pdf).
+- Jorma Sajaniemi and Raquel Navarro Prieto. “Roles of Variables in Experts’ Programming Knowledge.” *Proceedings of the 17th Annual Workshop of the Psychology of Programming Interest Group*, pp. 145–159, 2005. [Paper](https://ppig.org/files/2005-PPIG-17th-sajaniemi.pdf).
+
+## Installation
+
+Use Python **3.10 or newer**. Install [Joern 4.0.550](https://github.com/joernio/joern/releases/tag/v4.0.550) separately from its `joern-cli.zip` asset, and add the directory containing `joern` and `joern-parse` to `PATH`. The extractor calls both executables directly.
+
+With pip, from this checkout:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m pip install -e . --no-deps
+sajaniemi-variable-extractor --help
+```
+
+The second installation step exposes the CLI and keeps local code edits immediately available. For an optional uv workflow, use:
+
+```bash
+uv sync
+uv run sajaniemi-variable-extractor --help
+```
+
+For the extraction commands below, prefix `sajaniemi-variable-extractor` with `uv run` when using uv.
+
+Check the external Joern launchers before running an extraction:
+
+```bash
+command -v joern
+command -v joern-parse
+```
+
+On Windows, activate the virtual environment with its platform-specific activation script. The bundled Scala script is loaded from this checkout when present.
+
+## First extraction
+
+Run from the repository root to use the included Python fixture:
+
+```bash
 sajaniemi-variable-extractor run \
   --source tests/fixtures/code/Python \
-  --language Python \
   --output-dir outputs/example
 ```
 
-`run` accepts a directory of source files, a language (`C`, `C++`, `C#`, `JavaScript`, `Python`, or `Ruby`), and a destination directory. The main result is `roles.json`. The same directory also contains `roles.jsonl`, `variable_facts.json`, `legacy.json`, and `pre.json`; its `graphs/` subdirectory contains the reusable Joern graph. `roles.json` holds role annotations; `variable_facts.json` contains all resolved variables and their views. `pre.json` is the merged, unresolved Scala output. `legacy.json` provides token annotations for older consumers.
+`--source` is a directory containing source files (nested files are accepted), not an individual file. The CLI detects the language for a single tree. Its default `--layout auto` also accepts a directory of repositories or named splits; use `--layout single`, `repos`, or `splits` if the nesting is ambiguous. For a single tree, `--language Python` can check the detected language. The command writes `roles.json`, `roles.jsonl`, `variable_facts.json`, `legacy.json`, `pre.json`, and a reusable graph under `outputs/example/graphs/`. Existing graphs are reused; pass `--force` after changing source files.
 
-An existing graph is reused. Pass `--force` to rebuild it. `--dry-run` prints the exact `joern-parse` command and makes no filesystem changes; for Ruby it also shows the temporary staging copy. Run `sajaniemi-variable-extractor --help` or `<subcommand> --help` for all options.
+For separate parsing and extraction, use the same source tree with the resulting graph:
 
-## Advanced commands
-
-```sh
-sajaniemi-variable-extractor parse --source tests/fixtures/code/Python --language Python --output graph/python.bin
-sajaniemi-variable-extractor extract --graph-dir graph --source tests/fixtures/code/Python --output-dir outputs/example
-sajaniemi-variable-extractor profile --graph-dir graph --source tests/fixtures/code/Python --report outputs/profile.json
-sajaniemi-variable-extractor compare --before outputs/baseline --after outputs/example --report outputs/comparison.json
+```bash
+sajaniemi-variable-extractor parse \
+  --source tests/fixtures/code/Python --language Python \
+  --output outputs/manual/python.bin
+sajaniemi-variable-extractor extract \
+  --graph-dir outputs/manual --source tests/fixtures/code/Python \
+  --output-dir outputs/manual-results
 ```
 
-`parse` builds one graph. `extract` accepts all `.bin` files in a graph directory and writes the same bundle as `run`. `profile` measures Joern and Python resolution on existing graphs. `compare` reports file and variable-level differences between two complete bundles, exiting with status 1 when they differ.
+See the [CLI reference](docs/cli.md) for every command, input layout, argument, and output file, and [contract documentation](docs/contracts.md) for the classification rules.
 
-The extraction functions live in `src/sajaniemi_extractor/` (`run_pipeline` and `extract_graphs`). The profiling, comparison, and annotation inspection implementations live in `src/tools/` (`profile_graphs` and `compare_bundle`); invoke their standalone CLIs with `python -m tools.profile_extraction`, `python -m tools.compare_annotations`, or `python -m tools.show_random_annotations`. The public CLI calls those same tool functions. Joern scripts live in `src/scala/`. Install with `-e` so edits take effect immediately.
+## Use cases
 
-## Test
+- **Computer science education:** study how variables play semantic roles or create teaching examples.
+- **Code deobfuscation and variable renaming:** use inferred roles as clues when reading or renaming poorly named variables.
+- **LLM interpretability:** examine representations of variable behavior in code models.
+- **Machine-learning datasets:** generate source-linked role labels for code-semantics datasets.
 
-```sh
-PYTHONPATH=src conda run -n torcharm python -m pytest -q
-```
+These are possible applications of static annotations, not claims of accuracy for a particular corpus.
 
-The ordinary suite runs without Joern integration; opt into the real Joern fixture test with `RUN_JOERN_INTEGRATION=1` when Joern is installed. The tests validate fixtures and contracts, not correctness on an arbitrary corpus.
+## Authors
+
+- Célian Vasson
+- Benjamin Heinzerling
+
+## License
+
+The repository is distributed under the [MIT License](LICENSE).

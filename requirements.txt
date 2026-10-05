@@ -1,0 +1,2 @@
+# Mirrors the runtime dependencies in pyproject.toml for pip users.
+tqdm>=4.66,<5

@@ -1,0 +1,3603 @@
+{
+  "schema_version": 1,
+  "role_annotations": [
+    {
+      "schema_version": 1,
+      "concept": {
+        "family": "sajaniemi_role",
+        "name": "organizer"
+      },
+      "subject": {
+        "id": "cpp/01.cpp::swap:void(vector&,int,int)::parameter::v:5:11",
+        "joern_id": 111669149696,
+        "name": "v",
+        "kind": "parameter",
+        "path": "cpp/01.cpp",
+        "scope": {
+          "type": "function",
+          "name": "void(vector&,int,int)",
+          "qualified_name": "swap:void(vector&,int,int)"
+        },
+        "_declaration_line": 5,
+        "_declaration_column": 11
+      },
+      "views": {
+        "declaration": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 11,
+              "name": "v",
+              "code": "vector<int>& v"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 11,
+              "name": "v",
+              "code": "vector<int>& v"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 6,
+              "column": 16,
+              "name": "v",
+              "code": "v"
+            }
+          },
+          {
+            "usage": "unknown",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 7,
+              "column": 5,
+              "name": "v",
+              "code": "v"
+            }
+          },
+          {
+            "usage": "unknown",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 7,
+              "column": 12,
+              "name": "v",
+              "code": "v"
+            }
+          },
+          {
+            "usage": "unknown",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 8,
+              "column": 5,
+              "name": "v",
+              "code": "v"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 6,
+              "column": 16,
+              "name": "v",
+              "code": "v"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [
+          {
+            "usage": "state_mutation",
+            "mutation_kind": "indexed_write",
+            "parser_operator": "<operator>.assignment",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 7,
+              "column": 5,
+              "name": "v",
+              "code": "v[i] = v[j]"
+            }
+          },
+          {
+            "usage": "state_mutation",
+            "mutation_kind": "indexed_write",
+            "parser_operator": "<operator>.assignment",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 8,
+              "column": 5,
+              "name": "v",
+              "code": "v[j] = temp"
+            }
+          }
+        ],
+        "control_context": [],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 1,
+              "name": "swap",
+              "code": "void swap(vector<int>& v, int i, int j) {\n    int temp = v[i];\n    v[i] = v[j];\n    v[j] = temp;\n}",
+              "end_line": 5,
+              "end_column": 41,
+              "language": "NEWC",
+              "boundary": "block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "concept": {
+        "family": "sajaniemi_role",
+        "name": "fixed_value"
+      },
+      "subject": {
+        "id": "cpp/01.cpp::swap:void(vector&,int,int)::parameter::i:5:27",
+        "joern_id": 111669149697,
+        "name": "i",
+        "kind": "parameter",
+        "path": "cpp/01.cpp",
+        "scope": {
+          "type": "function",
+          "name": "void(vector&,int,int)",
+          "qualified_name": "swap:void(vector&,int,int)"
+        },
+        "_declaration_line": 5,
+        "_declaration_column": 27
+      },
+      "views": {
+        "declaration": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 27,
+              "name": "i",
+              "code": "int i"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 27,
+              "name": "i",
+              "code": "int i"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 6,
+              "column": 18,
+              "name": "i",
+              "code": "i"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 7,
+              "column": 7,
+              "name": "i",
+              "code": "i"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 6,
+              "column": 18,
+              "name": "i",
+              "code": "i"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 7,
+              "column": 7,
+              "name": "i",
+              "code": "i"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 1,
+              "name": "swap",
+              "code": "void swap(vector<int>& v, int i, int j) {\n    int temp = v[i];\n    v[i] = v[j];\n    v[j] = temp;\n}",
+              "end_line": 5,
+              "end_column": 41,
+              "language": "NEWC",
+              "boundary": "block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "concept": {
+        "family": "sajaniemi_role",
+        "name": "fixed_value"
+      },
+      "subject": {
+        "id": "cpp/01.cpp::swap:void(vector&,int,int)::parameter::j:5:34",
+        "joern_id": 111669149698,
+        "name": "j",
+        "kind": "parameter",
+        "path": "cpp/01.cpp",
+        "scope": {
+          "type": "function",
+          "name": "void(vector&,int,int)",
+          "qualified_name": "swap:void(vector&,int,int)"
+        },
+        "_declaration_line": 5,
+        "_declaration_column": 34
+      },
+      "views": {
+        "declaration": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 34,
+              "name": "j",
+              "code": "int j"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 34,
+              "name": "j",
+              "code": "int j"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 7,
+              "column": 14,
+              "name": "j",
+              "code": "j"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 8,
+              "column": 7,
+              "name": "j",
+              "code": "j"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 7,
+              "column": 14,
+              "name": "j",
+              "code": "j"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 8,
+              "column": 7,
+              "name": "j",
+              "code": "j"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 1,
+              "name": "swap",
+              "code": "void swap(vector<int>& v, int i, int j) {\n    int temp = v[i];\n    v[i] = v[j];\n    v[j] = temp;\n}",
+              "end_line": 5,
+              "end_column": 41,
+              "language": "NEWC",
+              "boundary": "block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "concept": {
+        "family": "sajaniemi_role",
+        "name": "temporary"
+      },
+      "subject": {
+        "id": "cpp/01.cpp::swap:void(vector&,int,int)::local::temp:6:9",
+        "joern_id": 94489280512,
+        "name": "temp",
+        "kind": "local",
+        "path": "cpp/01.cpp",
+        "scope": {
+          "type": "function",
+          "name": "void(vector&,int,int)",
+          "qualified_name": "swap:void(vector&,int,int)"
+        },
+        "_declaration_line": 6,
+        "_declaration_column": 9
+      },
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 6,
+              "column": 9,
+              "name": "temp",
+              "code": "int temp"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 6,
+              "column": 9,
+              "name": "temp",
+              "code": "int temp"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 8,
+              "column": 12,
+              "name": "temp",
+              "code": "temp"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 8,
+              "column": 12,
+              "name": "temp",
+              "code": "temp"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 1,
+              "name": "swap",
+              "code": "void swap(vector<int>& v, int i, int j) {\n    int temp = v[i];\n    v[i] = v[j];\n    v[j] = temp;\n}",
+              "end_line": 5,
+              "end_column": 41,
+              "language": "NEWC",
+              "boundary": "block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "concept": {
+        "family": "sajaniemi_role",
+        "name": "fixed_value"
+      },
+      "subject": {
+        "id": "js/01.js::01.js::program:cumsum_positive::parameter::arr:1:25",
+        "joern_id": 111669149697,
+        "name": "arr",
+        "kind": "parameter",
+        "path": "js/01.js",
+        "scope": {
+          "type": "function",
+          "name": "cumsum_positive",
+          "qualified_name": "01.js::program:cumsum_positive"
+        },
+        "_declaration_line": 1,
+        "_declaration_column": 25
+      },
+      "views": {
+        "declaration": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 25,
+              "name": "arr",
+              "code": "arr"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 25,
+              "name": "arr",
+              "code": "arr"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 22,
+              "name": "arr",
+              "code": "arr"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 22,
+              "name": "arr",
+              "code": "arr"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "for",
+            "relation": "contains_read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 1,
+              "name": "arr",
+              "code": "    for (const elt of arr) {"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "method",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 0,
+              "name": "cumsum_positive",
+              "code": "function cumsum_positive(arr) {\n    let total = 0;\n    let has_negative = false;\n    let cumsum = [];\n    for (const elt of arr) {\n        if (elt >= 0) {\n            total += elt;\n            cumsum.push(total);\n        } else {\n            has_negative = true;\n        }\n    }\n    return [cumsum, has_negative];\n}",
+              "end_line": 1,
+              "end_column": 30,
+              "language": "JSSRC",
+              "boundary": "javascript_block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "concept": {
+        "family": "sajaniemi_role",
+        "name": "gatherer"
+      },
+      "subject": {
+        "id": "js/01.js::01.js::program:cumsum_positive::local::total:2:8",
+        "joern_id": 94489280513,
+        "name": "total",
+        "kind": "local",
+        "path": "js/01.js",
+        "scope": {
+          "type": "function",
+          "name": "cumsum_positive",
+          "qualified_name": "01.js::program:cumsum_positive"
+        },
+        "_declaration_line": 2,
+        "_declaration_column": 8
+      },
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 2,
+              "column": 8,
+              "name": "total",
+              "code": "total"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 2,
+              "column": 8,
+              "name": "total",
+              "code": "total"
+            }
+          },
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 7,
+              "column": 12,
+              "name": "total",
+              "code": "total"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 8,
+              "column": 24,
+              "name": "total",
+              "code": "total"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 8,
+              "column": 24,
+              "name": "total",
+              "code": "total"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [
+          {
+            "usage": "update",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 7,
+              "column": 12,
+              "name": "total",
+              "code": "total += elt"
+            }
+          }
+        ],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "for",
+            "relation": "contains_update",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 1,
+              "name": "total",
+              "code": "    for (const elt of arr) {"
+            }
+          },
+          {
+            "usage": "control",
+            "type": "conditional",
+            "subtype": "if",
+            "relation": "guards_update",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 6,
+              "column": 1,
+              "name": "total",
+              "code": "        if (elt >= 0) {"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "method",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 0,
+              "name": "cumsum_positive",
+              "code": "function cumsum_positive(arr) {\n    let total = 0;\n    let has_negative = false;\n    let cumsum = [];\n    for (const elt of arr) {\n        if (elt >= 0) {\n            total += elt;\n            cumsum.push(total);\n        } else {\n            has_negative = true;\n        }\n    }\n    return [cumsum, has_negative];\n}",
+              "end_line": 1,
+              "end_column": 30,
+              "language": "JSSRC",
+              "boundary": "javascript_block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "concept": {
+        "family": "sajaniemi_role",
+        "name": "one_way_flag"
+      },
+      "subject": {
+        "id": "js/01.js::01.js::program:cumsum_positive::local::has_negative:3:8",
+        "joern_id": 94489280514,
+        "name": "has_negative",
+        "kind": "local",
+        "path": "js/01.js",
+        "scope": {
+          "type": "function",
+          "name": "cumsum_positive",
+          "qualified_name": "01.js::program:cumsum_positive"
+        },
+        "_declaration_line": 3,
+        "_declaration_column": 8
+      },
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 3,
+              "column": 8,
+              "name": "has_negative",
+              "code": "has_negative"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 3,
+              "column": 8,
+              "name": "has_negative",
+              "code": "has_negative"
+            }
+          },
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 10,
+              "column": 12,
+              "name": "has_negative",
+              "code": "has_negative"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 13,
+              "column": 20,
+              "name": "has_negative",
+              "code": "has_negative"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 13,
+              "column": 20,
+              "name": "has_negative",
+              "code": "has_negative"
+            }
+          }
+        ],
+        "writes": [
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 10,
+              "column": 12,
+              "name": "has_negative",
+              "code": "has_negative = true"
+            }
+          }
+        ],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "for",
+            "relation": "contains_write",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 1,
+              "name": "has_negative",
+              "code": "    for (const elt of arr) {"
+            }
+          },
+          {
+            "usage": "control",
+            "type": "conditional",
+            "subtype": "if",
+            "relation": "guards_write",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 6,
+              "column": 1,
+              "name": "has_negative",
+              "code": "        if (elt >= 0) {"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "method",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 0,
+              "name": "cumsum_positive",
+              "code": "function cumsum_positive(arr) {\n    let total = 0;\n    let has_negative = false;\n    let cumsum = [];\n    for (const elt of arr) {\n        if (elt >= 0) {\n            total += elt;\n            cumsum.push(total);\n        } else {\n            has_negative = true;\n        }\n    }\n    return [cumsum, has_negative];\n}",
+              "end_line": 1,
+              "end_column": 30,
+              "language": "JSSRC",
+              "boundary": "javascript_block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "concept": {
+        "family": "sajaniemi_role",
+        "name": "container"
+      },
+      "subject": {
+        "id": "js/01.js::01.js::program:cumsum_positive::local::cumsum:4:8",
+        "joern_id": 94489280515,
+        "name": "cumsum",
+        "kind": "local",
+        "path": "js/01.js",
+        "scope": {
+          "type": "function",
+          "name": "cumsum_positive",
+          "qualified_name": "01.js::program:cumsum_positive"
+        },
+        "_declaration_line": 4,
+        "_declaration_column": 8
+      },
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 4,
+              "column": 8,
+              "name": "cumsum",
+              "code": "cumsum"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 4,
+              "column": 8,
+              "name": "cumsum",
+              "code": "cumsum"
+            }
+          },
+          {
+            "usage": "unknown",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 8,
+              "column": 12,
+              "name": "cumsum",
+              "code": "cumsum"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 13,
+              "column": 12,
+              "name": "cumsum",
+              "code": "cumsum"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 13,
+              "column": 12,
+              "name": "cumsum",
+              "code": "cumsum"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [
+          {
+            "usage": "state_mutation",
+            "mutation_kind": "push",
+            "parser_operator": "__ecma.Array:push",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 8,
+              "column": 12,
+              "name": "cumsum",
+              "code": "cumsum.push(total)"
+            }
+          }
+        ],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "for",
+            "relation": "contains_state_mutation",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 1,
+              "name": "cumsum",
+              "code": "    for (const elt of arr) {"
+            }
+          },
+          {
+            "usage": "control",
+            "type": "conditional",
+            "subtype": "if",
+            "relation": "guards_state_mutation",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 6,
+              "column": 1,
+              "name": "cumsum",
+              "code": "        if (elt >= 0) {"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "method",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 0,
+              "name": "cumsum_positive",
+              "code": "function cumsum_positive(arr) {\n    let total = 0;\n    let has_negative = false;\n    let cumsum = [];\n    for (const elt of arr) {\n        if (elt >= 0) {\n            total += elt;\n            cumsum.push(total);\n        } else {\n            has_negative = true;\n        }\n    }\n    return [cumsum, has_negative];\n}",
+              "end_line": 1,
+              "end_column": 30,
+              "language": "JSSRC",
+              "boundary": "javascript_block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "concept": {
+        "family": "sajaniemi_role",
+        "name": "walker"
+      },
+      "subject": {
+        "id": "js/01.js::01.js::program:cumsum_positive::local::elt:5:4",
+        "joern_id": 94489280518,
+        "name": "elt",
+        "kind": "local",
+        "path": "js/01.js",
+        "scope": {
+          "type": "function",
+          "name": "cumsum_positive",
+          "qualified_name": "01.js::program:cumsum_positive"
+        },
+        "_declaration_line": 5,
+        "_declaration_column": 4
+      },
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 4,
+              "name": "elt",
+              "code": "elt"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 4,
+              "name": "elt",
+              "code": "elt"
+            }
+          }
+        ],
+        "reads": [],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "for",
+            "relation": "contains_declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 1,
+              "name": "elt",
+              "code": "    for (const elt of arr) {"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "method",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 0,
+              "name": "cumsum_positive",
+              "code": "function cumsum_positive(arr) {\n    let total = 0;\n    let has_negative = false;\n    let cumsum = [];\n    for (const elt of arr) {\n        if (elt >= 0) {\n            total += elt;\n            cumsum.push(total);\n        } else {\n            has_negative = true;\n        }\n    }\n    return [cumsum, has_negative];\n}",
+              "end_line": 1,
+              "end_column": 30,
+              "language": "JSSRC",
+              "boundary": "javascript_block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "concept": {
+        "family": "sajaniemi_role",
+        "name": "walker"
+      },
+      "subject": {
+        "id": "js/01.js::01.js::program:cumsum_positive::local::elt:5:4",
+        "joern_id": 94489280521,
+        "name": "elt",
+        "kind": "local",
+        "path": "js/01.js",
+        "scope": {
+          "type": "function",
+          "name": "cumsum_positive",
+          "qualified_name": "01.js::program:cumsum_positive"
+        },
+        "_declaration_line": 5,
+        "_declaration_column": 4
+      },
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 4,
+              "name": "elt",
+              "code": "elt"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 4,
+              "name": "elt",
+              "code": "elt"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 6,
+              "column": 12,
+              "name": "elt",
+              "code": "elt"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 7,
+              "column": 21,
+              "name": "elt",
+              "code": "elt"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 6,
+              "column": 12,
+              "name": "elt",
+              "code": "elt"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 7,
+              "column": 21,
+              "name": "elt",
+              "code": "elt"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "for",
+            "relation": "contains_declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 1,
+              "name": "elt",
+              "code": "    for (const elt of arr) {"
+            }
+          },
+          {
+            "usage": "control",
+            "type": "conditional",
+            "subtype": "if",
+            "relation": "contains_read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 6,
+              "column": 1,
+              "name": "elt",
+              "code": "        if (elt >= 0) {"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "method",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 0,
+              "name": "cumsum_positive",
+              "code": "function cumsum_positive(arr) {\n    let total = 0;\n    let has_negative = false;\n    let cumsum = [];\n    for (const elt of arr) {\n        if (elt >= 0) {\n            total += elt;\n            cumsum.push(total);\n        } else {\n            has_negative = true;\n        }\n    }\n    return [cumsum, has_negative];\n}",
+              "end_line": 1,
+              "end_column": 30,
+              "language": "JSSRC",
+              "boundary": "javascript_block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "concept": {
+        "family": "sajaniemi_role",
+        "name": "follower"
+      },
+      "subject": {
+        "id": "py/01.py::01.py:<module>.biggest_input_diff::local::prev:2:2",
+        "joern_id": 94489280516,
+        "name": "prev",
+        "kind": "local",
+        "path": "py/01.py",
+        "scope": {
+          "type": "function",
+          "name": "biggest_input_diff",
+          "qualified_name": "01.py:<module>.biggest_input_diff"
+        },
+        "_declaration_line": 2,
+        "_declaration_column": 2
+      },
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 2,
+              "column": 2,
+              "name": "prev",
+              "code": "prev"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 2,
+              "column": 2,
+              "name": "prev",
+              "code": "prev"
+            }
+          },
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 8,
+              "column": 3,
+              "name": "prev",
+              "code": "prev"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 11,
+              "column": 6,
+              "name": "prev",
+              "code": "prev"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 12,
+              "column": 36,
+              "name": "prev",
+              "code": "prev"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 11,
+              "column": 6,
+              "name": "prev",
+              "code": "prev"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 12,
+              "column": 36,
+              "name": "prev",
+              "code": "prev"
+            }
+          }
+        ],
+        "writes": [
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 8,
+              "column": 3,
+              "name": "prev",
+              "code": "prev = curr"
+            }
+          }
+        ],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "while",
+            "relation": "contains_write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 6,
+              "column": 1,
+              "name": "prev",
+              "code": "\twhile step < 100:"
+            }
+          },
+          {
+            "usage": "control",
+            "type": "conditional",
+            "subtype": "if",
+            "relation": "contains_read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 11,
+              "column": 1,
+              "name": "prev",
+              "code": "\t\tif prev != None:"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 1,
+              "column": 1,
+              "name": "biggest_input_diff",
+              "code": "<empty>",
+              "end_line": 1,
+              "end_column": 1,
+              "language": "PYTHONSRC",
+              "boundary": "python_def"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "concept": {
+        "family": "sajaniemi_role",
+        "name": "most_recent_holder"
+      },
+      "subject": {
+        "id": "py/01.py::01.py:<module>.biggest_input_diff::local::curr:3:2",
+        "joern_id": 94489280517,
+        "name": "curr",
+        "kind": "local",
+        "path": "py/01.py",
+        "scope": {
+          "type": "function",
+          "name": "biggest_input_diff",
+          "qualified_name": "01.py:<module>.biggest_input_diff"
+        },
+        "_declaration_line": 3,
+        "_declaration_column": 2
+      },
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 3,
+              "column": 2,
+              "name": "curr",
+              "code": "curr"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 3,
+              "column": 2,
+              "name": "curr",
+              "code": "curr"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 8,
+              "column": 10,
+              "name": "curr",
+              "code": "curr"
+            }
+          },
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 9,
+              "column": 3,
+              "name": "curr",
+              "code": "curr"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 12,
+              "column": 29,
+              "name": "curr",
+              "code": "curr"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 8,
+              "column": 10,
+              "name": "curr",
+              "code": "curr"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 12,
+              "column": 29,
+              "name": "curr",
+              "code": "curr"
+            }
+          }
+        ],
+        "writes": [
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 9,
+              "column": 3,
+              "name": "curr",
+              "code": "curr = int(input())"
+            }
+          }
+        ],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "while",
+            "relation": "contains_write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 6,
+              "column": 1,
+              "name": "curr",
+              "code": "\twhile step < 100:"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 1,
+              "column": 1,
+              "name": "biggest_input_diff",
+              "code": "<empty>",
+              "end_line": 1,
+              "end_column": 1,
+              "language": "PYTHONSRC",
+              "boundary": "python_def"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "concept": {
+        "family": "sajaniemi_role",
+        "name": "most_wanted_holder"
+      },
+      "subject": {
+        "id": "py/01.py::01.py:<module>.biggest_input_diff::local::max_diff:4:2",
+        "joern_id": 94489280518,
+        "name": "max_diff",
+        "kind": "local",
+        "path": "py/01.py",
+        "scope": {
+          "type": "function",
+          "name": "biggest_input_diff",
+          "qualified_name": "01.py:<module>.biggest_input_diff"
+        },
+        "_declaration_line": 4,
+        "_declaration_column": 2
+      },
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 4,
+              "column": 2,
+              "name": "max_diff",
+              "code": "max_diff"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 4,
+              "column": 2,
+              "name": "max_diff",
+              "code": "max_diff"
+            }
+          },
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 12,
+              "column": 4,
+              "name": "max_diff",
+              "code": "max_diff"
+            }
+          },
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 12,
+              "column": 19,
+              "name": "max_diff",
+              "code": "max_diff"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 15,
+              "column": 9,
+              "name": "max_diff",
+              "code": "max_diff"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 15,
+              "column": 9,
+              "name": "max_diff",
+              "code": "max_diff"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [
+          {
+            "usage": "update",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 12,
+              "column": 4,
+              "name": "max_diff",
+              "code": "max_diff = max(max_diff, curr - prev)"
+            }
+          }
+        ],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "while",
+            "relation": "contains_update",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 6,
+              "column": 1,
+              "name": "max_diff",
+              "code": "\twhile step < 100:"
+            }
+          },
+          {
+            "usage": "control",
+            "type": "conditional",
+            "subtype": "if",
+            "relation": "guards_update",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 11,
+              "column": 1,
+              "name": "max_diff",
+              "code": "\t\tif prev != None:"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 1,
+              "column": 1,
+              "name": "biggest_input_diff",
+              "code": "<empty>",
+              "end_line": 1,
+              "end_column": 1,
+              "language": "PYTHONSRC",
+              "boundary": "python_def"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "concept": {
+        "family": "sajaniemi_role",
+        "name": "stepper"
+      },
+      "subject": {
+        "id": "py/01.py::01.py:<module>.biggest_input_diff::local::step:5:2",
+        "joern_id": 94489280519,
+        "name": "step",
+        "kind": "local",
+        "path": "py/01.py",
+        "scope": {
+          "type": "function",
+          "name": "biggest_input_diff",
+          "qualified_name": "01.py:<module>.biggest_input_diff"
+        },
+        "_declaration_line": 5,
+        "_declaration_column": 2
+      },
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 5,
+              "column": 2,
+              "name": "step",
+              "code": "step"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 5,
+              "column": 2,
+              "name": "step",
+              "code": "step"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 6,
+              "column": 8,
+              "name": "step",
+              "code": "step"
+            }
+          },
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 7,
+              "column": 3,
+              "name": "step",
+              "code": "step"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 6,
+              "column": 8,
+              "name": "step",
+              "code": "step"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [
+          {
+            "usage": "update",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 7,
+              "column": 3,
+              "name": "step",
+              "code": "step += 1"
+            }
+          }
+        ],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "while",
+            "relation": "contains_read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 6,
+              "column": 1,
+              "name": "step",
+              "code": "\twhile step < 100:"
+            }
+          },
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "while",
+            "relation": "contains_update",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 6,
+              "column": 1,
+              "name": "step",
+              "code": "\twhile step < 100:"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 1,
+              "column": 1,
+              "name": "biggest_input_diff",
+              "code": "<empty>",
+              "end_line": 1,
+              "end_column": 1,
+              "language": "PYTHONSRC",
+              "boundary": "python_def"
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "variable_facts": [
+    {
+      "schema_version": 1,
+      "subject": {
+        "id": "cpp/01.cpp::swap:void(vector&,int,int)::parameter::v:5:11",
+        "joern_id": 111669149696,
+        "name": "v",
+        "kind": "parameter",
+        "path": "cpp/01.cpp",
+        "scope": {
+          "type": "function",
+          "name": "void(vector&,int,int)",
+          "qualified_name": "swap:void(vector&,int,int)"
+        },
+        "_declaration_line": 5,
+        "_declaration_column": 11
+      },
+      "is_collection": true,
+      "roles": [
+        "organizer"
+      ],
+      "views": {
+        "declaration": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 11,
+              "name": "v",
+              "code": "vector<int>& v"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 11,
+              "name": "v",
+              "code": "vector<int>& v"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 6,
+              "column": 16,
+              "name": "v",
+              "code": "v"
+            }
+          },
+          {
+            "usage": "unknown",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 7,
+              "column": 5,
+              "name": "v",
+              "code": "v"
+            }
+          },
+          {
+            "usage": "unknown",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 7,
+              "column": 12,
+              "name": "v",
+              "code": "v"
+            }
+          },
+          {
+            "usage": "unknown",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 8,
+              "column": 5,
+              "name": "v",
+              "code": "v"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 6,
+              "column": 16,
+              "name": "v",
+              "code": "v"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [
+          {
+            "usage": "state_mutation",
+            "mutation_kind": "indexed_write",
+            "parser_operator": "<operator>.assignment",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 7,
+              "column": 5,
+              "name": "v",
+              "code": "v[i] = v[j]"
+            }
+          },
+          {
+            "usage": "state_mutation",
+            "mutation_kind": "indexed_write",
+            "parser_operator": "<operator>.assignment",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 8,
+              "column": 5,
+              "name": "v",
+              "code": "v[j] = temp"
+            }
+          }
+        ],
+        "control_context": [],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 1,
+              "name": "swap",
+              "code": "void swap(vector<int>& v, int i, int j) {\n    int temp = v[i];\n    v[i] = v[j];\n    v[j] = temp;\n}",
+              "end_line": 5,
+              "end_column": 41,
+              "language": "NEWC",
+              "boundary": "block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "subject": {
+        "id": "cpp/01.cpp::swap:void(vector&,int,int)::parameter::i:5:27",
+        "joern_id": 111669149697,
+        "name": "i",
+        "kind": "parameter",
+        "path": "cpp/01.cpp",
+        "scope": {
+          "type": "function",
+          "name": "void(vector&,int,int)",
+          "qualified_name": "swap:void(vector&,int,int)"
+        },
+        "_declaration_line": 5,
+        "_declaration_column": 27
+      },
+      "is_collection": false,
+      "roles": [
+        "fixed_value"
+      ],
+      "views": {
+        "declaration": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 27,
+              "name": "i",
+              "code": "int i"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 27,
+              "name": "i",
+              "code": "int i"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 6,
+              "column": 18,
+              "name": "i",
+              "code": "i"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 7,
+              "column": 7,
+              "name": "i",
+              "code": "i"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 6,
+              "column": 18,
+              "name": "i",
+              "code": "i"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 7,
+              "column": 7,
+              "name": "i",
+              "code": "i"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 1,
+              "name": "swap",
+              "code": "void swap(vector<int>& v, int i, int j) {\n    int temp = v[i];\n    v[i] = v[j];\n    v[j] = temp;\n}",
+              "end_line": 5,
+              "end_column": 41,
+              "language": "NEWC",
+              "boundary": "block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "subject": {
+        "id": "cpp/01.cpp::swap:void(vector&,int,int)::parameter::j:5:34",
+        "joern_id": 111669149698,
+        "name": "j",
+        "kind": "parameter",
+        "path": "cpp/01.cpp",
+        "scope": {
+          "type": "function",
+          "name": "void(vector&,int,int)",
+          "qualified_name": "swap:void(vector&,int,int)"
+        },
+        "_declaration_line": 5,
+        "_declaration_column": 34
+      },
+      "is_collection": false,
+      "roles": [
+        "fixed_value"
+      ],
+      "views": {
+        "declaration": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 34,
+              "name": "j",
+              "code": "int j"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 34,
+              "name": "j",
+              "code": "int j"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 7,
+              "column": 14,
+              "name": "j",
+              "code": "j"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 8,
+              "column": 7,
+              "name": "j",
+              "code": "j"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 7,
+              "column": 14,
+              "name": "j",
+              "code": "j"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 8,
+              "column": 7,
+              "name": "j",
+              "code": "j"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 1,
+              "name": "swap",
+              "code": "void swap(vector<int>& v, int i, int j) {\n    int temp = v[i];\n    v[i] = v[j];\n    v[j] = temp;\n}",
+              "end_line": 5,
+              "end_column": 41,
+              "language": "NEWC",
+              "boundary": "block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "subject": {
+        "id": "cpp/01.cpp::swap:void(vector&,int,int)::local::temp:6:9",
+        "joern_id": 94489280512,
+        "name": "temp",
+        "kind": "local",
+        "path": "cpp/01.cpp",
+        "scope": {
+          "type": "function",
+          "name": "void(vector&,int,int)",
+          "qualified_name": "swap:void(vector&,int,int)"
+        },
+        "_declaration_line": 6,
+        "_declaration_column": 9
+      },
+      "is_collection": false,
+      "roles": [
+        "temporary"
+      ],
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 6,
+              "column": 9,
+              "name": "temp",
+              "code": "int temp"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 6,
+              "column": 9,
+              "name": "temp",
+              "code": "int temp"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 8,
+              "column": 12,
+              "name": "temp",
+              "code": "temp"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 8,
+              "column": 12,
+              "name": "temp",
+              "code": "temp"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "cpp/01.cpp",
+              "line": 5,
+              "column": 1,
+              "name": "swap",
+              "code": "void swap(vector<int>& v, int i, int j) {\n    int temp = v[i];\n    v[i] = v[j];\n    v[j] = temp;\n}",
+              "end_line": 5,
+              "end_column": 41,
+              "language": "NEWC",
+              "boundary": "block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "subject": {
+        "id": "js/01.js::01.js::program:cumsum_positive::parameter::arr:1:25",
+        "joern_id": 111669149697,
+        "name": "arr",
+        "kind": "parameter",
+        "path": "js/01.js",
+        "scope": {
+          "type": "function",
+          "name": "cumsum_positive",
+          "qualified_name": "01.js::program:cumsum_positive"
+        },
+        "_declaration_line": 1,
+        "_declaration_column": 25
+      },
+      "is_collection": false,
+      "roles": [
+        "fixed_value"
+      ],
+      "views": {
+        "declaration": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 25,
+              "name": "arr",
+              "code": "arr"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "parameter",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 25,
+              "name": "arr",
+              "code": "arr"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 22,
+              "name": "arr",
+              "code": "arr"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 22,
+              "name": "arr",
+              "code": "arr"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "for",
+            "relation": "contains_read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 1,
+              "name": "arr",
+              "code": "    for (const elt of arr) {"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "method",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 0,
+              "name": "cumsum_positive",
+              "code": "function cumsum_positive(arr) {\n    let total = 0;\n    let has_negative = false;\n    let cumsum = [];\n    for (const elt of arr) {\n        if (elt >= 0) {\n            total += elt;\n            cumsum.push(total);\n        } else {\n            has_negative = true;\n        }\n    }\n    return [cumsum, has_negative];\n}",
+              "end_line": 1,
+              "end_column": 30,
+              "language": "JSSRC",
+              "boundary": "javascript_block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "subject": {
+        "id": "js/01.js::01.js::program:cumsum_positive::local::total:2:8",
+        "joern_id": 94489280513,
+        "name": "total",
+        "kind": "local",
+        "path": "js/01.js",
+        "scope": {
+          "type": "function",
+          "name": "cumsum_positive",
+          "qualified_name": "01.js::program:cumsum_positive"
+        },
+        "_declaration_line": 2,
+        "_declaration_column": 8
+      },
+      "is_collection": false,
+      "roles": [
+        "gatherer"
+      ],
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 2,
+              "column": 8,
+              "name": "total",
+              "code": "total"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 2,
+              "column": 8,
+              "name": "total",
+              "code": "total"
+            }
+          },
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 7,
+              "column": 12,
+              "name": "total",
+              "code": "total"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 8,
+              "column": 24,
+              "name": "total",
+              "code": "total"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 8,
+              "column": 24,
+              "name": "total",
+              "code": "total"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [
+          {
+            "usage": "update",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 7,
+              "column": 12,
+              "name": "total",
+              "code": "total += elt"
+            }
+          }
+        ],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "for",
+            "relation": "contains_update",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 1,
+              "name": "total",
+              "code": "    for (const elt of arr) {"
+            }
+          },
+          {
+            "usage": "control",
+            "type": "conditional",
+            "subtype": "if",
+            "relation": "guards_update",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 6,
+              "column": 1,
+              "name": "total",
+              "code": "        if (elt >= 0) {"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "method",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 0,
+              "name": "cumsum_positive",
+              "code": "function cumsum_positive(arr) {\n    let total = 0;\n    let has_negative = false;\n    let cumsum = [];\n    for (const elt of arr) {\n        if (elt >= 0) {\n            total += elt;\n            cumsum.push(total);\n        } else {\n            has_negative = true;\n        }\n    }\n    return [cumsum, has_negative];\n}",
+              "end_line": 1,
+              "end_column": 30,
+              "language": "JSSRC",
+              "boundary": "javascript_block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "subject": {
+        "id": "js/01.js::01.js::program:cumsum_positive::local::has_negative:3:8",
+        "joern_id": 94489280514,
+        "name": "has_negative",
+        "kind": "local",
+        "path": "js/01.js",
+        "scope": {
+          "type": "function",
+          "name": "cumsum_positive",
+          "qualified_name": "01.js::program:cumsum_positive"
+        },
+        "_declaration_line": 3,
+        "_declaration_column": 8
+      },
+      "is_collection": false,
+      "roles": [
+        "one_way_flag"
+      ],
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 3,
+              "column": 8,
+              "name": "has_negative",
+              "code": "has_negative"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 3,
+              "column": 8,
+              "name": "has_negative",
+              "code": "has_negative"
+            }
+          },
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 10,
+              "column": 12,
+              "name": "has_negative",
+              "code": "has_negative"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 13,
+              "column": 20,
+              "name": "has_negative",
+              "code": "has_negative"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 13,
+              "column": 20,
+              "name": "has_negative",
+              "code": "has_negative"
+            }
+          }
+        ],
+        "writes": [
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 10,
+              "column": 12,
+              "name": "has_negative",
+              "code": "has_negative = true"
+            }
+          }
+        ],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "for",
+            "relation": "contains_write",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 1,
+              "name": "has_negative",
+              "code": "    for (const elt of arr) {"
+            }
+          },
+          {
+            "usage": "control",
+            "type": "conditional",
+            "subtype": "if",
+            "relation": "guards_write",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 6,
+              "column": 1,
+              "name": "has_negative",
+              "code": "        if (elt >= 0) {"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "method",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 0,
+              "name": "cumsum_positive",
+              "code": "function cumsum_positive(arr) {\n    let total = 0;\n    let has_negative = false;\n    let cumsum = [];\n    for (const elt of arr) {\n        if (elt >= 0) {\n            total += elt;\n            cumsum.push(total);\n        } else {\n            has_negative = true;\n        }\n    }\n    return [cumsum, has_negative];\n}",
+              "end_line": 1,
+              "end_column": 30,
+              "language": "JSSRC",
+              "boundary": "javascript_block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "subject": {
+        "id": "js/01.js::01.js::program:cumsum_positive::local::cumsum:4:8",
+        "joern_id": 94489280515,
+        "name": "cumsum",
+        "kind": "local",
+        "path": "js/01.js",
+        "scope": {
+          "type": "function",
+          "name": "cumsum_positive",
+          "qualified_name": "01.js::program:cumsum_positive"
+        },
+        "_declaration_line": 4,
+        "_declaration_column": 8
+      },
+      "is_collection": true,
+      "roles": [
+        "container"
+      ],
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 4,
+              "column": 8,
+              "name": "cumsum",
+              "code": "cumsum"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 4,
+              "column": 8,
+              "name": "cumsum",
+              "code": "cumsum"
+            }
+          },
+          {
+            "usage": "unknown",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 8,
+              "column": 12,
+              "name": "cumsum",
+              "code": "cumsum"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 13,
+              "column": 12,
+              "name": "cumsum",
+              "code": "cumsum"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 13,
+              "column": 12,
+              "name": "cumsum",
+              "code": "cumsum"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [
+          {
+            "usage": "state_mutation",
+            "mutation_kind": "push",
+            "parser_operator": "__ecma.Array:push",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 8,
+              "column": 12,
+              "name": "cumsum",
+              "code": "cumsum.push(total)"
+            }
+          }
+        ],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "for",
+            "relation": "contains_state_mutation",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 1,
+              "name": "cumsum",
+              "code": "    for (const elt of arr) {"
+            }
+          },
+          {
+            "usage": "control",
+            "type": "conditional",
+            "subtype": "if",
+            "relation": "guards_state_mutation",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 6,
+              "column": 1,
+              "name": "cumsum",
+              "code": "        if (elt >= 0) {"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "method",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 0,
+              "name": "cumsum_positive",
+              "code": "function cumsum_positive(arr) {\n    let total = 0;\n    let has_negative = false;\n    let cumsum = [];\n    for (const elt of arr) {\n        if (elt >= 0) {\n            total += elt;\n            cumsum.push(total);\n        } else {\n            has_negative = true;\n        }\n    }\n    return [cumsum, has_negative];\n}",
+              "end_line": 1,
+              "end_column": 30,
+              "language": "JSSRC",
+              "boundary": "javascript_block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "subject": {
+        "id": "js/01.js::01.js::program:cumsum_positive::local::elt:5:4",
+        "joern_id": 94489280518,
+        "name": "elt",
+        "kind": "local",
+        "path": "js/01.js",
+        "scope": {
+          "type": "function",
+          "name": "cumsum_positive",
+          "qualified_name": "01.js::program:cumsum_positive"
+        },
+        "_declaration_line": 5,
+        "_declaration_column": 4
+      },
+      "is_collection": false,
+      "roles": [
+        "walker"
+      ],
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 4,
+              "name": "elt",
+              "code": "elt"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 4,
+              "name": "elt",
+              "code": "elt"
+            }
+          }
+        ],
+        "reads": [],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "for",
+            "relation": "contains_declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 1,
+              "name": "elt",
+              "code": "    for (const elt of arr) {"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "method",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 0,
+              "name": "cumsum_positive",
+              "code": "function cumsum_positive(arr) {\n    let total = 0;\n    let has_negative = false;\n    let cumsum = [];\n    for (const elt of arr) {\n        if (elt >= 0) {\n            total += elt;\n            cumsum.push(total);\n        } else {\n            has_negative = true;\n        }\n    }\n    return [cumsum, has_negative];\n}",
+              "end_line": 1,
+              "end_column": 30,
+              "language": "JSSRC",
+              "boundary": "javascript_block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "subject": {
+        "id": "js/01.js::01.js::program:cumsum_positive::local::elt:5:4",
+        "joern_id": 94489280521,
+        "name": "elt",
+        "kind": "local",
+        "path": "js/01.js",
+        "scope": {
+          "type": "function",
+          "name": "cumsum_positive",
+          "qualified_name": "01.js::program:cumsum_positive"
+        },
+        "_declaration_line": 5,
+        "_declaration_column": 4
+      },
+      "is_collection": false,
+      "roles": [
+        "walker"
+      ],
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 4,
+              "name": "elt",
+              "code": "elt"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 4,
+              "name": "elt",
+              "code": "elt"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 6,
+              "column": 12,
+              "name": "elt",
+              "code": "elt"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 7,
+              "column": 21,
+              "name": "elt",
+              "code": "elt"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 6,
+              "column": 12,
+              "name": "elt",
+              "code": "elt"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 7,
+              "column": 21,
+              "name": "elt",
+              "code": "elt"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "for",
+            "relation": "contains_declaration",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 5,
+              "column": 1,
+              "name": "elt",
+              "code": "    for (const elt of arr) {"
+            }
+          },
+          {
+            "usage": "control",
+            "type": "conditional",
+            "subtype": "if",
+            "relation": "contains_read",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 6,
+              "column": 1,
+              "name": "elt",
+              "code": "        if (elt >= 0) {"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "method",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "js/01.js",
+              "line": 1,
+              "column": 0,
+              "name": "cumsum_positive",
+              "code": "function cumsum_positive(arr) {\n    let total = 0;\n    let has_negative = false;\n    let cumsum = [];\n    for (const elt of arr) {\n        if (elt >= 0) {\n            total += elt;\n            cumsum.push(total);\n        } else {\n            has_negative = true;\n        }\n    }\n    return [cumsum, has_negative];\n}",
+              "end_line": 1,
+              "end_column": 30,
+              "language": "JSSRC",
+              "boundary": "javascript_block"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "subject": {
+        "id": "py/01.py::01.py:<module>.biggest_input_diff::local::prev:2:2",
+        "joern_id": 94489280516,
+        "name": "prev",
+        "kind": "local",
+        "path": "py/01.py",
+        "scope": {
+          "type": "function",
+          "name": "biggest_input_diff",
+          "qualified_name": "01.py:<module>.biggest_input_diff"
+        },
+        "_declaration_line": 2,
+        "_declaration_column": 2
+      },
+      "is_collection": false,
+      "roles": [
+        "follower"
+      ],
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 2,
+              "column": 2,
+              "name": "prev",
+              "code": "prev"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 2,
+              "column": 2,
+              "name": "prev",
+              "code": "prev"
+            }
+          },
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 8,
+              "column": 3,
+              "name": "prev",
+              "code": "prev"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 11,
+              "column": 6,
+              "name": "prev",
+              "code": "prev"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 12,
+              "column": 36,
+              "name": "prev",
+              "code": "prev"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 11,
+              "column": 6,
+              "name": "prev",
+              "code": "prev"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 12,
+              "column": 36,
+              "name": "prev",
+              "code": "prev"
+            }
+          }
+        ],
+        "writes": [
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 8,
+              "column": 3,
+              "name": "prev",
+              "code": "prev = curr"
+            }
+          }
+        ],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "while",
+            "relation": "contains_write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 6,
+              "column": 1,
+              "name": "prev",
+              "code": "\twhile step < 100:"
+            }
+          },
+          {
+            "usage": "control",
+            "type": "conditional",
+            "subtype": "if",
+            "relation": "contains_read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 11,
+              "column": 1,
+              "name": "prev",
+              "code": "\t\tif prev != None:"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 1,
+              "column": 1,
+              "name": "biggest_input_diff",
+              "code": "<empty>",
+              "end_line": 1,
+              "end_column": 1,
+              "language": "PYTHONSRC",
+              "boundary": "python_def"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "subject": {
+        "id": "py/01.py::01.py:<module>.biggest_input_diff::local::curr:3:2",
+        "joern_id": 94489280517,
+        "name": "curr",
+        "kind": "local",
+        "path": "py/01.py",
+        "scope": {
+          "type": "function",
+          "name": "biggest_input_diff",
+          "qualified_name": "01.py:<module>.biggest_input_diff"
+        },
+        "_declaration_line": 3,
+        "_declaration_column": 2
+      },
+      "is_collection": false,
+      "roles": [
+        "most_recent_holder"
+      ],
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 3,
+              "column": 2,
+              "name": "curr",
+              "code": "curr"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 3,
+              "column": 2,
+              "name": "curr",
+              "code": "curr"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 8,
+              "column": 10,
+              "name": "curr",
+              "code": "curr"
+            }
+          },
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 9,
+              "column": 3,
+              "name": "curr",
+              "code": "curr"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 12,
+              "column": 29,
+              "name": "curr",
+              "code": "curr"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 8,
+              "column": 10,
+              "name": "curr",
+              "code": "curr"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 12,
+              "column": 29,
+              "name": "curr",
+              "code": "curr"
+            }
+          }
+        ],
+        "writes": [
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 9,
+              "column": 3,
+              "name": "curr",
+              "code": "curr = int(input())"
+            }
+          }
+        ],
+        "updates": [],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "while",
+            "relation": "contains_write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 6,
+              "column": 1,
+              "name": "curr",
+              "code": "\twhile step < 100:"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 1,
+              "column": 1,
+              "name": "biggest_input_diff",
+              "code": "<empty>",
+              "end_line": 1,
+              "end_column": 1,
+              "language": "PYTHONSRC",
+              "boundary": "python_def"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "subject": {
+        "id": "py/01.py::01.py:<module>.biggest_input_diff::local::max_diff:4:2",
+        "joern_id": 94489280518,
+        "name": "max_diff",
+        "kind": "local",
+        "path": "py/01.py",
+        "scope": {
+          "type": "function",
+          "name": "biggest_input_diff",
+          "qualified_name": "01.py:<module>.biggest_input_diff"
+        },
+        "_declaration_line": 4,
+        "_declaration_column": 2
+      },
+      "is_collection": false,
+      "roles": [
+        "most_wanted_holder"
+      ],
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 4,
+              "column": 2,
+              "name": "max_diff",
+              "code": "max_diff"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 4,
+              "column": 2,
+              "name": "max_diff",
+              "code": "max_diff"
+            }
+          },
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 12,
+              "column": 4,
+              "name": "max_diff",
+              "code": "max_diff"
+            }
+          },
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 12,
+              "column": 19,
+              "name": "max_diff",
+              "code": "max_diff"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 15,
+              "column": 9,
+              "name": "max_diff",
+              "code": "max_diff"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 15,
+              "column": 9,
+              "name": "max_diff",
+              "code": "max_diff"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [
+          {
+            "usage": "update",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 12,
+              "column": 4,
+              "name": "max_diff",
+              "code": "max_diff = max(max_diff, curr - prev)"
+            }
+          }
+        ],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "while",
+            "relation": "contains_update",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 6,
+              "column": 1,
+              "name": "max_diff",
+              "code": "\twhile step < 100:"
+            }
+          },
+          {
+            "usage": "control",
+            "type": "conditional",
+            "subtype": "if",
+            "relation": "guards_update",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 11,
+              "column": 1,
+              "name": "max_diff",
+              "code": "\t\tif prev != None:"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 1,
+              "column": 1,
+              "name": "biggest_input_diff",
+              "code": "<empty>",
+              "end_line": 1,
+              "end_column": 1,
+              "language": "PYTHONSRC",
+              "boundary": "python_def"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "schema_version": 1,
+      "subject": {
+        "id": "py/01.py::01.py:<module>.biggest_input_diff::local::step:5:2",
+        "joern_id": 94489280519,
+        "name": "step",
+        "kind": "local",
+        "path": "py/01.py",
+        "scope": {
+          "type": "function",
+          "name": "biggest_input_diff",
+          "qualified_name": "01.py:<module>.biggest_input_diff"
+        },
+        "_declaration_line": 5,
+        "_declaration_column": 2
+      },
+      "is_collection": false,
+      "roles": [
+        "stepper"
+      ],
+      "views": {
+        "declaration": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 5,
+              "column": 2,
+              "name": "step",
+              "code": "step"
+            }
+          }
+        ],
+        "identifier": [
+          {
+            "usage": "declaration",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 5,
+              "column": 2,
+              "name": "step",
+              "code": "step"
+            }
+          },
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 6,
+              "column": 8,
+              "name": "step",
+              "code": "step"
+            }
+          },
+          {
+            "usage": "write",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 7,
+              "column": 3,
+              "name": "step",
+              "code": "step"
+            }
+          }
+        ],
+        "reads": [
+          {
+            "usage": "read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 6,
+              "column": 8,
+              "name": "step",
+              "code": "step"
+            }
+          }
+        ],
+        "writes": [],
+        "updates": [
+          {
+            "usage": "update",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 7,
+              "column": 3,
+              "name": "step",
+              "code": "step += 1"
+            }
+          }
+        ],
+        "state_mutations": [],
+        "control_context": [
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "while",
+            "relation": "contains_read",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 6,
+              "column": 1,
+              "name": "step",
+              "code": "\twhile step < 100:"
+            }
+          },
+          {
+            "usage": "control",
+            "type": "loop",
+            "subtype": "while",
+            "relation": "contains_update",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 6,
+              "column": 1,
+              "name": "step",
+              "code": "\twhile step < 100:"
+            }
+          }
+        ],
+        "scope": [
+          {
+            "usage": "scope",
+            "type": "function",
+            "relation": "direct_scope",
+            "_hint": {
+              "path": "py/01.py",
+              "line": 1,
+              "column": 1,
+              "name": "biggest_input_diff",
+              "code": "<empty>",
+              "end_line": 1,
+              "end_column": 1,
+              "language": "PYTHONSRC",
+              "boundary": "python_def"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

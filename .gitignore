@@ -1,6 +1,9 @@
 /refs
 .DS_Store
+.pytest_cache
 __pycache__/
+*.py[cod]
+/.venv/
 /local_ignored_tests/
 /graph/
 /outputs/

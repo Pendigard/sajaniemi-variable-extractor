@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from typing import Callable
 
 from .build_language_graphs import LANGUAGES, run_joern_parse
 from .run_dynamic_extractors import DEFAULT_SCALA_SCRIPT, extract_graphs
@@ -18,13 +19,16 @@ def normalize_language(value: str) -> str:
 
 
 def run_pipeline(source: Path, language: str, output_dir: Path, *, force: bool = False,
-                 dry_run: bool = False, scala_script: Path = DEFAULT_SCALA_SCRIPT) -> Path:
+                 dry_run: bool = False, scala_script: Path = DEFAULT_SCALA_SCRIPT,
+                 on_stage: Callable[[str], None] | None = None) -> Path:
     """Parse one source tree, extract roles, and write a comparable output bundle."""
     if not source.is_dir():
         raise ValueError(f"Source directory does not exist: {source}")
     language = normalize_language(language)
     graph = output_dir / "graphs" / f"{LANGUAGES[language].output_stem}.bin"
     run_joern_parse(source, graph, language, force, dry_run)
+    if on_stage:
+        on_stage("graph")
     if not dry_run:
         extract_graphs(graph.parent, source, output_dir / "roles.json",
                        scala_script=scala_script,
@@ -32,4 +36,6 @@ def run_pipeline(source: Path, language: str, output_dir: Path, *, force: bool =
                        variable_facts_output=output_dir / "variable_facts.json",
                        legacy_output=output_dir / "legacy.json",
                        keep_pre=output_dir / "pre.json")
+        if on_stage:
+            on_stage("roles")
     return graph

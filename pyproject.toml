@@ -9,6 +9,7 @@ description = "Joern-based extractor for Sajaniemi variable roles"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {file = "LICENSE"}
+dependencies = ["tqdm>=4.66,<5"]
 
 [project.scripts]
 sajaniemi-variable-extractor = "sajaniemi_extractor.cli:main"

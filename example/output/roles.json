@@ -1,0 +1,1902 @@
+[
+  {
+    "schema_version": 1,
+    "concept": {
+      "family": "sajaniemi_role",
+      "name": "fixed_value"
+    },
+    "subject": {
+      "id": "cpp/01.cpp::swap:void(vector&,int,int)::parameter::i:5:31",
+      "joern_id": 111669149697,
+      "name": "i",
+      "kind": "parameter",
+      "path": "cpp/01.cpp",
+      "scope": {
+        "type": "function",
+        "name": "void(vector&,int,int)",
+        "qualified_name": "swap:void(vector&,int,int)"
+      }
+    },
+    "views": {
+      "declaration": [
+        {
+          "id": "declaration:0",
+          "location": {
+            "start_byte": 60,
+            "end_byte": 101,
+            "start_line": 5,
+            "start_column": 1,
+            "end_line": 5,
+            "end_column": 42
+          },
+          "code": "void swap(vector<int>& v, int i, int j) {"
+        }
+      ],
+      "identifier": [
+        {
+          "id": "identifier:0",
+          "usage": "parameter",
+          "location": {
+            "start_byte": 90,
+            "end_byte": 91,
+            "start_line": 5,
+            "start_column": 31,
+            "end_line": 5,
+            "end_column": 32
+          },
+          "code": "i"
+        },
+        {
+          "id": "identifier:1",
+          "usage": "read",
+          "location": {
+            "start_byte": 119,
+            "end_byte": 120,
+            "start_line": 6,
+            "start_column": 18,
+            "end_line": 6,
+            "end_column": 19
+          },
+          "code": "i"
+        },
+        {
+          "id": "identifier:2",
+          "usage": "read",
+          "location": {
+            "start_byte": 129,
+            "end_byte": 130,
+            "start_line": 7,
+            "start_column": 7,
+            "end_line": 7,
+            "end_column": 8
+          },
+          "code": "i"
+        }
+      ],
+      "reads": [
+        {
+          "id": "read:0",
+          "location": {
+            "start_byte": 106,
+            "end_byte": 122,
+            "start_line": 6,
+            "start_column": 5,
+            "end_line": 6,
+            "end_column": 21
+          },
+          "code": "int temp = v[i];"
+        },
+        {
+          "id": "read:1",
+          "location": {
+            "start_byte": 127,
+            "end_byte": 139,
+            "start_line": 7,
+            "start_column": 5,
+            "end_line": 7,
+            "end_column": 17
+          },
+          "code": "v[i] = v[j];"
+        }
+      ],
+      "writes": [],
+      "updates": [],
+      "state_mutations": [],
+      "control_context": [],
+      "scope": [
+        {
+          "id": "scope:0",
+          "location": {
+            "start_byte": 60,
+            "end_byte": 101,
+            "start_line": 5,
+            "start_column": 1,
+            "end_line": 5,
+            "end_column": 42
+          },
+          "code": "void swap(vector<int>& v, int i, int j) {",
+          "type": "function",
+          "relation": "direct_scope"
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": 1,
+    "concept": {
+      "family": "sajaniemi_role",
+      "name": "fixed_value"
+    },
+    "subject": {
+      "id": "cpp/01.cpp::swap:void(vector&,int,int)::parameter::j:5:38",
+      "joern_id": 111669149698,
+      "name": "j",
+      "kind": "parameter",
+      "path": "cpp/01.cpp",
+      "scope": {
+        "type": "function",
+        "name": "void(vector&,int,int)",
+        "qualified_name": "swap:void(vector&,int,int)"
+      }
+    },
+    "views": {
+      "declaration": [
+        {
+          "id": "declaration:0",
+          "location": {
+            "start_byte": 60,
+            "end_byte": 101,
+            "start_line": 5,
+            "start_column": 1,
+            "end_line": 5,
+            "end_column": 42
+          },
+          "code": "void swap(vector<int>& v, int i, int j) {"
+        }
+      ],
+      "identifier": [
+        {
+          "id": "identifier:0",
+          "usage": "parameter",
+          "location": {
+            "start_byte": 97,
+            "end_byte": 98,
+            "start_line": 5,
+            "start_column": 38,
+            "end_line": 5,
+            "end_column": 39
+          },
+          "code": "j"
+        },
+        {
+          "id": "identifier:1",
+          "usage": "read",
+          "location": {
+            "start_byte": 136,
+            "end_byte": 137,
+            "start_line": 7,
+            "start_column": 14,
+            "end_line": 7,
+            "end_column": 15
+          },
+          "code": "j"
+        },
+        {
+          "id": "identifier:2",
+          "usage": "read",
+          "location": {
+            "start_byte": 146,
+            "end_byte": 147,
+            "start_line": 8,
+            "start_column": 7,
+            "end_line": 8,
+            "end_column": 8
+          },
+          "code": "j"
+        }
+      ],
+      "reads": [
+        {
+          "id": "read:0",
+          "location": {
+            "start_byte": 127,
+            "end_byte": 139,
+            "start_line": 7,
+            "start_column": 5,
+            "end_line": 7,
+            "end_column": 17
+          },
+          "code": "v[i] = v[j];"
+        },
+        {
+          "id": "read:1",
+          "location": {
+            "start_byte": 144,
+            "end_byte": 156,
+            "start_line": 8,
+            "start_column": 5,
+            "end_line": 8,
+            "end_column": 17
+          },
+          "code": "v[j] = temp;"
+        }
+      ],
+      "writes": [],
+      "updates": [],
+      "state_mutations": [],
+      "control_context": [],
+      "scope": [
+        {
+          "id": "scope:0",
+          "location": {
+            "start_byte": 60,
+            "end_byte": 101,
+            "start_line": 5,
+            "start_column": 1,
+            "end_line": 5,
+            "end_column": 42
+          },
+          "code": "void swap(vector<int>& v, int i, int j) {",
+          "type": "function",
+          "relation": "direct_scope"
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": 1,
+    "concept": {
+      "family": "sajaniemi_role",
+      "name": "organizer"
+    },
+    "subject": {
+      "id": "cpp/01.cpp::swap:void(vector&,int,int)::parameter::v:5:24",
+      "joern_id": 111669149696,
+      "name": "v",
+      "kind": "parameter",
+      "path": "cpp/01.cpp",
+      "scope": {
+        "type": "function",
+        "name": "void(vector&,int,int)",
+        "qualified_name": "swap:void(vector&,int,int)"
+      }
+    },
+    "views": {
+      "declaration": [
+        {
+          "id": "declaration:0",
+          "location": {
+            "start_byte": 60,
+            "end_byte": 101,
+            "start_line": 5,
+            "start_column": 1,
+            "end_line": 5,
+            "end_column": 42
+          },
+          "code": "void swap(vector<int>& v, int i, int j) {"
+        }
+      ],
+      "identifier": [
+        {
+          "id": "identifier:0",
+          "usage": "parameter",
+          "location": {
+            "start_byte": 83,
+            "end_byte": 84,
+            "start_line": 5,
+            "start_column": 24,
+            "end_line": 5,
+            "end_column": 25
+          },
+          "code": "v"
+        },
+        {
+          "id": "identifier:1",
+          "usage": "read",
+          "location": {
+            "start_byte": 117,
+            "end_byte": 118,
+            "start_line": 6,
+            "start_column": 16,
+            "end_line": 6,
+            "end_column": 17
+          },
+          "code": "v"
+        },
+        {
+          "id": "identifier:2",
+          "usage": "unknown",
+          "location": {
+            "start_byte": 127,
+            "end_byte": 128,
+            "start_line": 7,
+            "start_column": 5,
+            "end_line": 7,
+            "end_column": 6
+          },
+          "code": "v"
+        },
+        {
+          "id": "identifier:3",
+          "usage": "unknown",
+          "location": {
+            "start_byte": 134,
+            "end_byte": 135,
+            "start_line": 7,
+            "start_column": 12,
+            "end_line": 7,
+            "end_column": 13
+          },
+          "code": "v"
+        },
+        {
+          "id": "identifier:4",
+          "usage": "unknown",
+          "location": {
+            "start_byte": 144,
+            "end_byte": 145,
+            "start_line": 8,
+            "start_column": 5,
+            "end_line": 8,
+            "end_column": 6
+          },
+          "code": "v"
+        }
+      ],
+      "reads": [
+        {
+          "id": "read:0",
+          "location": {
+            "start_byte": 106,
+            "end_byte": 122,
+            "start_line": 6,
+            "start_column": 5,
+            "end_line": 6,
+            "end_column": 21
+          },
+          "code": "int temp = v[i];"
+        }
+      ],
+      "writes": [],
+      "updates": [],
+      "state_mutations": [
+        {
+          "id": "state_mutation:0",
+          "location": {
+            "start_byte": 127,
+            "end_byte": 139,
+            "start_line": 7,
+            "start_column": 5,
+            "end_line": 7,
+            "end_column": 17
+          },
+          "code": "v[i] = v[j];",
+          "mutation_kind": "indexed_write",
+          "parser_operator": "<operator>.assignment"
+        },
+        {
+          "id": "state_mutation:1",
+          "location": {
+            "start_byte": 144,
+            "end_byte": 156,
+            "start_line": 8,
+            "start_column": 5,
+            "end_line": 8,
+            "end_column": 17
+          },
+          "code": "v[j] = temp;",
+          "mutation_kind": "indexed_write",
+          "parser_operator": "<operator>.assignment"
+        }
+      ],
+      "control_context": [],
+      "scope": [
+        {
+          "id": "scope:0",
+          "location": {
+            "start_byte": 60,
+            "end_byte": 101,
+            "start_line": 5,
+            "start_column": 1,
+            "end_line": 5,
+            "end_column": 42
+          },
+          "code": "void swap(vector<int>& v, int i, int j) {",
+          "type": "function",
+          "relation": "direct_scope"
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": 1,
+    "concept": {
+      "family": "sajaniemi_role",
+      "name": "temporary"
+    },
+    "subject": {
+      "id": "cpp/01.cpp::swap:void(vector&,int,int)::local::temp:6:9",
+      "joern_id": 94489280512,
+      "name": "temp",
+      "kind": "local",
+      "path": "cpp/01.cpp",
+      "scope": {
+        "type": "function",
+        "name": "void(vector&,int,int)",
+        "qualified_name": "swap:void(vector&,int,int)"
+      }
+    },
+    "views": {
+      "declaration": [
+        {
+          "id": "declaration:0",
+          "location": {
+            "start_byte": 106,
+            "end_byte": 122,
+            "start_line": 6,
+            "start_column": 5,
+            "end_line": 6,
+            "end_column": 21
+          },
+          "code": "int temp = v[i];"
+        }
+      ],
+      "identifier": [
+        {
+          "id": "identifier:0",
+          "usage": "declaration",
+          "location": {
+            "start_byte": 110,
+            "end_byte": 114,
+            "start_line": 6,
+            "start_column": 9,
+            "end_line": 6,
+            "end_column": 13
+          },
+          "code": "temp"
+        },
+        {
+          "id": "identifier:1",
+          "usage": "read",
+          "location": {
+            "start_byte": 151,
+            "end_byte": 155,
+            "start_line": 8,
+            "start_column": 12,
+            "end_line": 8,
+            "end_column": 16
+          },
+          "code": "temp"
+        }
+      ],
+      "reads": [
+        {
+          "id": "read:0",
+          "location": {
+            "start_byte": 144,
+            "end_byte": 156,
+            "start_line": 8,
+            "start_column": 5,
+            "end_line": 8,
+            "end_column": 17
+          },
+          "code": "v[j] = temp;"
+        }
+      ],
+      "writes": [],
+      "updates": [],
+      "state_mutations": [],
+      "control_context": [],
+      "scope": [
+        {
+          "id": "scope:0",
+          "location": {
+            "start_byte": 60,
+            "end_byte": 101,
+            "start_line": 5,
+            "start_column": 1,
+            "end_line": 5,
+            "end_column": 42
+          },
+          "code": "void swap(vector<int>& v, int i, int j) {",
+          "type": "function",
+          "relation": "direct_scope"
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": 1,
+    "concept": {
+      "family": "sajaniemi_role",
+      "name": "fixed_value"
+    },
+    "subject": {
+      "id": "js/01.js::01.js::program:cumsum_positive::parameter::arr:1:26",
+      "joern_id": 111669149697,
+      "name": "arr",
+      "kind": "parameter",
+      "path": "js/01.js",
+      "scope": {
+        "type": "function",
+        "name": "cumsum_positive",
+        "qualified_name": "01.js::program:cumsum_positive"
+      }
+    },
+    "views": {
+      "declaration": [
+        {
+          "id": "declaration:0",
+          "location": {
+            "start_byte": 0,
+            "end_byte": 31,
+            "start_line": 1,
+            "start_column": 1,
+            "end_line": 1,
+            "end_column": 32
+          },
+          "code": "function cumsum_positive(arr) {"
+        }
+      ],
+      "identifier": [
+        {
+          "id": "identifier:0",
+          "usage": "parameter",
+          "location": {
+            "start_byte": 25,
+            "end_byte": 28,
+            "start_line": 1,
+            "start_column": 26,
+            "end_line": 1,
+            "end_column": 29
+          },
+          "code": "arr"
+        },
+        {
+          "id": "identifier:1",
+          "usage": "read",
+          "location": {
+            "start_byte": 124,
+            "end_byte": 127,
+            "start_line": 5,
+            "start_column": 23,
+            "end_line": 5,
+            "end_column": 26
+          },
+          "code": "arr"
+        }
+      ],
+      "reads": [
+        {
+          "id": "read:0",
+          "location": {
+            "start_byte": 106,
+            "end_byte": 130,
+            "start_line": 5,
+            "start_column": 5,
+            "end_line": 5,
+            "end_column": 29
+          },
+          "code": "for (const elt of arr) {"
+        }
+      ],
+      "writes": [],
+      "updates": [],
+      "state_mutations": [],
+      "control_context": [
+        {
+          "id": "control:0",
+          "location": {
+            "start_byte": 106,
+            "end_byte": 130,
+            "start_line": 5,
+            "start_column": 5,
+            "end_line": 5,
+            "end_column": 29
+          },
+          "code": "for (const elt of arr) {",
+          "type": "loop",
+          "subtype": "for",
+          "relation": "contains_read"
+        }
+      ],
+      "scope": [
+        {
+          "id": "scope:0",
+          "location": {
+            "start_byte": 0,
+            "end_byte": 31,
+            "start_line": 1,
+            "start_column": 1,
+            "end_line": 1,
+            "end_column": 32
+          },
+          "code": "function cumsum_positive(arr) {",
+          "type": "method",
+          "relation": "direct_scope"
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": 1,
+    "concept": {
+      "family": "sajaniemi_role",
+      "name": "gatherer"
+    },
+    "subject": {
+      "id": "js/01.js::01.js::program:cumsum_positive::local::total:2:9",
+      "joern_id": 94489280513,
+      "name": "total",
+      "kind": "local",
+      "path": "js/01.js",
+      "scope": {
+        "type": "function",
+        "name": "cumsum_positive",
+        "qualified_name": "01.js::program:cumsum_positive"
+      }
+    },
+    "views": {
+      "declaration": [
+        {
+          "id": "declaration:0",
+          "location": {
+            "start_byte": 36,
+            "end_byte": 50,
+            "start_line": 2,
+            "start_column": 5,
+            "end_line": 2,
+            "end_column": 19
+          },
+          "code": "let total = 0;"
+        }
+      ],
+      "identifier": [
+        {
+          "id": "identifier:0",
+          "usage": "declaration",
+          "location": {
+            "start_byte": 40,
+            "end_byte": 45,
+            "start_line": 2,
+            "start_column": 9,
+            "end_line": 2,
+            "end_column": 14
+          },
+          "code": "total"
+        },
+        {
+          "id": "identifier:1",
+          "usage": "write",
+          "location": {
+            "start_byte": 167,
+            "end_byte": 172,
+            "start_line": 7,
+            "start_column": 13,
+            "end_line": 7,
+            "end_column": 18
+          },
+          "code": "total"
+        },
+        {
+          "id": "identifier:2",
+          "usage": "read",
+          "location": {
+            "start_byte": 205,
+            "end_byte": 210,
+            "start_line": 8,
+            "start_column": 25,
+            "end_line": 8,
+            "end_column": 30
+          },
+          "code": "total"
+        }
+      ],
+      "reads": [
+        {
+          "id": "read:0",
+          "location": {
+            "start_byte": 193,
+            "end_byte": 212,
+            "start_line": 8,
+            "start_column": 13,
+            "end_line": 8,
+            "end_column": 32
+          },
+          "code": "cumsum.push(total);"
+        }
+      ],
+      "writes": [],
+      "updates": [
+        {
+          "id": "update:0",
+          "location": {
+            "start_byte": 167,
+            "end_byte": 180,
+            "start_line": 7,
+            "start_column": 13,
+            "end_line": 7,
+            "end_column": 26
+          },
+          "code": "total += elt;"
+        }
+      ],
+      "state_mutations": [],
+      "control_context": [
+        {
+          "id": "control:0",
+          "location": {
+            "start_byte": 106,
+            "end_byte": 130,
+            "start_line": 5,
+            "start_column": 5,
+            "end_line": 5,
+            "end_column": 29
+          },
+          "code": "for (const elt of arr) {",
+          "type": "loop",
+          "subtype": "for",
+          "relation": "contains_update"
+        },
+        {
+          "id": "control:1",
+          "location": {
+            "start_byte": 139,
+            "end_byte": 154,
+            "start_line": 6,
+            "start_column": 9,
+            "end_line": 6,
+            "end_column": 24
+          },
+          "code": "if (elt >= 0) {",
+          "type": "conditional",
+          "subtype": "if",
+          "relation": "guards_update"
+        }
+      ],
+      "scope": [
+        {
+          "id": "scope:0",
+          "location": {
+            "start_byte": 0,
+            "end_byte": 31,
+            "start_line": 1,
+            "start_column": 1,
+            "end_line": 1,
+            "end_column": 32
+          },
+          "code": "function cumsum_positive(arr) {",
+          "type": "method",
+          "relation": "direct_scope"
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": 1,
+    "concept": {
+      "family": "sajaniemi_role",
+      "name": "one_way_flag"
+    },
+    "subject": {
+      "id": "js/01.js::01.js::program:cumsum_positive::local::has_negative:3:9",
+      "joern_id": 94489280514,
+      "name": "has_negative",
+      "kind": "local",
+      "path": "js/01.js",
+      "scope": {
+        "type": "function",
+        "name": "cumsum_positive",
+        "qualified_name": "01.js::program:cumsum_positive"
+      }
+    },
+    "views": {
+      "declaration": [
+        {
+          "id": "declaration:0",
+          "location": {
+            "start_byte": 55,
+            "end_byte": 80,
+            "start_line": 3,
+            "start_column": 5,
+            "end_line": 3,
+            "end_column": 30
+          },
+          "code": "let has_negative = false;"
+        }
+      ],
+      "identifier": [
+        {
+          "id": "identifier:0",
+          "usage": "declaration",
+          "location": {
+            "start_byte": 59,
+            "end_byte": 71,
+            "start_line": 3,
+            "start_column": 9,
+            "end_line": 3,
+            "end_column": 21
+          },
+          "code": "has_negative"
+        },
+        {
+          "id": "identifier:1",
+          "usage": "write",
+          "location": {
+            "start_byte": 242,
+            "end_byte": 254,
+            "start_line": 10,
+            "start_column": 13,
+            "end_line": 10,
+            "end_column": 25
+          },
+          "code": "has_negative"
+        },
+        {
+          "id": "identifier:2",
+          "usage": "read",
+          "location": {
+            "start_byte": 299,
+            "end_byte": 311,
+            "start_line": 13,
+            "start_column": 21,
+            "end_line": 13,
+            "end_column": 33
+          },
+          "code": "has_negative"
+        }
+      ],
+      "reads": [
+        {
+          "id": "read:0",
+          "location": {
+            "start_byte": 283,
+            "end_byte": 313,
+            "start_line": 13,
+            "start_column": 5,
+            "end_line": 13,
+            "end_column": 35
+          },
+          "code": "return [cumsum, has_negative];"
+        }
+      ],
+      "writes": [
+        {
+          "id": "write:0",
+          "location": {
+            "start_byte": 242,
+            "end_byte": 262,
+            "start_line": 10,
+            "start_column": 13,
+            "end_line": 10,
+            "end_column": 33
+          },
+          "code": "has_negative = true;"
+        }
+      ],
+      "updates": [],
+      "state_mutations": [],
+      "control_context": [
+        {
+          "id": "control:0",
+          "location": {
+            "start_byte": 106,
+            "end_byte": 130,
+            "start_line": 5,
+            "start_column": 5,
+            "end_line": 5,
+            "end_column": 29
+          },
+          "code": "for (const elt of arr) {",
+          "type": "loop",
+          "subtype": "for",
+          "relation": "contains_write"
+        },
+        {
+          "id": "control:1",
+          "location": {
+            "start_byte": 139,
+            "end_byte": 154,
+            "start_line": 6,
+            "start_column": 9,
+            "end_line": 6,
+            "end_column": 24
+          },
+          "code": "if (elt >= 0) {",
+          "type": "conditional",
+          "subtype": "if",
+          "relation": "guards_write"
+        }
+      ],
+      "scope": [
+        {
+          "id": "scope:0",
+          "location": {
+            "start_byte": 0,
+            "end_byte": 31,
+            "start_line": 1,
+            "start_column": 1,
+            "end_line": 1,
+            "end_column": 32
+          },
+          "code": "function cumsum_positive(arr) {",
+          "type": "method",
+          "relation": "direct_scope"
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": 1,
+    "concept": {
+      "family": "sajaniemi_role",
+      "name": "container"
+    },
+    "subject": {
+      "id": "js/01.js::01.js::program:cumsum_positive::local::cumsum:4:9",
+      "joern_id": 94489280515,
+      "name": "cumsum",
+      "kind": "local",
+      "path": "js/01.js",
+      "scope": {
+        "type": "function",
+        "name": "cumsum_positive",
+        "qualified_name": "01.js::program:cumsum_positive"
+      }
+    },
+    "views": {
+      "declaration": [
+        {
+          "id": "declaration:0",
+          "location": {
+            "start_byte": 85,
+            "end_byte": 101,
+            "start_line": 4,
+            "start_column": 5,
+            "end_line": 4,
+            "end_column": 21
+          },
+          "code": "let cumsum = [];"
+        }
+      ],
+      "identifier": [
+        {
+          "id": "identifier:0",
+          "usage": "declaration",
+          "location": {
+            "start_byte": 89,
+            "end_byte": 95,
+            "start_line": 4,
+            "start_column": 9,
+            "end_line": 4,
+            "end_column": 15
+          },
+          "code": "cumsum"
+        },
+        {
+          "id": "identifier:1",
+          "usage": "unknown",
+          "location": {
+            "start_byte": 193,
+            "end_byte": 199,
+            "start_line": 8,
+            "start_column": 13,
+            "end_line": 8,
+            "end_column": 19
+          },
+          "code": "cumsum"
+        },
+        {
+          "id": "identifier:2",
+          "usage": "read",
+          "location": {
+            "start_byte": 291,
+            "end_byte": 297,
+            "start_line": 13,
+            "start_column": 13,
+            "end_line": 13,
+            "end_column": 19
+          },
+          "code": "cumsum"
+        }
+      ],
+      "reads": [
+        {
+          "id": "read:0",
+          "location": {
+            "start_byte": 283,
+            "end_byte": 313,
+            "start_line": 13,
+            "start_column": 5,
+            "end_line": 13,
+            "end_column": 35
+          },
+          "code": "return [cumsum, has_negative];"
+        }
+      ],
+      "writes": [],
+      "updates": [],
+      "state_mutations": [
+        {
+          "id": "state_mutation:0",
+          "location": {
+            "start_byte": 193,
+            "end_byte": 212,
+            "start_line": 8,
+            "start_column": 13,
+            "end_line": 8,
+            "end_column": 32
+          },
+          "code": "cumsum.push(total);",
+          "mutation_kind": "push",
+          "parser_operator": "__ecma.Array:push"
+        }
+      ],
+      "control_context": [
+        {
+          "id": "control:0",
+          "location": {
+            "start_byte": 106,
+            "end_byte": 130,
+            "start_line": 5,
+            "start_column": 5,
+            "end_line": 5,
+            "end_column": 29
+          },
+          "code": "for (const elt of arr) {",
+          "type": "loop",
+          "subtype": "for",
+          "relation": "contains_state_mutation"
+        },
+        {
+          "id": "control:1",
+          "location": {
+            "start_byte": 139,
+            "end_byte": 154,
+            "start_line": 6,
+            "start_column": 9,
+            "end_line": 6,
+            "end_column": 24
+          },
+          "code": "if (elt >= 0) {",
+          "type": "conditional",
+          "subtype": "if",
+          "relation": "guards_state_mutation"
+        }
+      ],
+      "scope": [
+        {
+          "id": "scope:0",
+          "location": {
+            "start_byte": 0,
+            "end_byte": 31,
+            "start_line": 1,
+            "start_column": 1,
+            "end_line": 1,
+            "end_column": 32
+          },
+          "code": "function cumsum_positive(arr) {",
+          "type": "method",
+          "relation": "direct_scope"
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": 1,
+    "concept": {
+      "family": "sajaniemi_role",
+      "name": "walker"
+    },
+    "subject": {
+      "id": "js/01.js::01.js::program:cumsum_positive::local::elt:5:16",
+      "joern_id": 94489280518,
+      "name": "elt",
+      "kind": "local",
+      "path": "js/01.js",
+      "scope": {
+        "type": "function",
+        "name": "cumsum_positive",
+        "qualified_name": "01.js::program:cumsum_positive"
+      }
+    },
+    "views": {
+      "declaration": [
+        {
+          "id": "declaration:0",
+          "location": {
+            "start_byte": 106,
+            "end_byte": 130,
+            "start_line": 5,
+            "start_column": 5,
+            "end_line": 5,
+            "end_column": 29
+          },
+          "code": "for (const elt of arr) {"
+        }
+      ],
+      "identifier": [
+        {
+          "id": "identifier:0",
+          "usage": "declaration",
+          "location": {
+            "start_byte": 117,
+            "end_byte": 120,
+            "start_line": 5,
+            "start_column": 16,
+            "end_line": 5,
+            "end_column": 19
+          },
+          "code": "elt"
+        },
+        {
+          "id": "identifier:1",
+          "usage": "read",
+          "location": {
+            "start_byte": 143,
+            "end_byte": 146,
+            "start_line": 6,
+            "start_column": 13,
+            "end_line": 6,
+            "end_column": 16
+          },
+          "code": "elt"
+        },
+        {
+          "id": "identifier:2",
+          "usage": "read",
+          "location": {
+            "start_byte": 176,
+            "end_byte": 179,
+            "start_line": 7,
+            "start_column": 22,
+            "end_line": 7,
+            "end_column": 25
+          },
+          "code": "elt"
+        }
+      ],
+      "reads": [
+        {
+          "id": "read:0",
+          "location": {
+            "start_byte": 139,
+            "end_byte": 154,
+            "start_line": 6,
+            "start_column": 9,
+            "end_line": 6,
+            "end_column": 24
+          },
+          "code": "if (elt >= 0) {"
+        },
+        {
+          "id": "read:1",
+          "location": {
+            "start_byte": 167,
+            "end_byte": 180,
+            "start_line": 7,
+            "start_column": 13,
+            "end_line": 7,
+            "end_column": 26
+          },
+          "code": "total += elt;"
+        }
+      ],
+      "writes": [],
+      "updates": [],
+      "state_mutations": [],
+      "control_context": [
+        {
+          "id": "control:0",
+          "location": {
+            "start_byte": 106,
+            "end_byte": 130,
+            "start_line": 5,
+            "start_column": 5,
+            "end_line": 5,
+            "end_column": 29
+          },
+          "code": "for (const elt of arr) {",
+          "type": "loop",
+          "subtype": "for",
+          "relation": "contains_declaration"
+        },
+        {
+          "id": "control:1",
+          "location": {
+            "start_byte": 139,
+            "end_byte": 154,
+            "start_line": 6,
+            "start_column": 9,
+            "end_line": 6,
+            "end_column": 24
+          },
+          "code": "if (elt >= 0) {",
+          "type": "conditional",
+          "subtype": "if",
+          "relation": "contains_read"
+        }
+      ],
+      "scope": [
+        {
+          "id": "scope:0",
+          "location": {
+            "start_byte": 0,
+            "end_byte": 31,
+            "start_line": 1,
+            "start_column": 1,
+            "end_line": 1,
+            "end_column": 32
+          },
+          "code": "function cumsum_positive(arr) {",
+          "type": "method",
+          "relation": "direct_scope"
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": 1,
+    "concept": {
+      "family": "sajaniemi_role",
+      "name": "follower"
+    },
+    "subject": {
+      "id": "py/01.py::01.py:<module>.biggest_input_diff::local::prev:2:2",
+      "joern_id": 94489280516,
+      "name": "prev",
+      "kind": "local",
+      "path": "py/01.py",
+      "scope": {
+        "type": "function",
+        "name": "biggest_input_diff",
+        "qualified_name": "01.py:<module>.biggest_input_diff"
+      }
+    },
+    "views": {
+      "declaration": [
+        {
+          "id": "declaration:0",
+          "location": {
+            "start_byte": 27,
+            "end_byte": 38,
+            "start_line": 2,
+            "start_column": 2,
+            "end_line": 2,
+            "end_column": 13
+          },
+          "code": "prev = None"
+        }
+      ],
+      "identifier": [
+        {
+          "id": "identifier:0",
+          "usage": "declaration",
+          "location": {
+            "start_byte": 27,
+            "end_byte": 31,
+            "start_line": 2,
+            "start_column": 2,
+            "end_line": 2,
+            "end_column": 6
+          },
+          "code": "prev"
+        },
+        {
+          "id": "identifier:1",
+          "usage": "write",
+          "location": {
+            "start_byte": 110,
+            "end_byte": 114,
+            "start_line": 8,
+            "start_column": 3,
+            "end_line": 8,
+            "end_column": 7
+          },
+          "code": "prev"
+        },
+        {
+          "id": "identifier:2",
+          "usage": "read",
+          "location": {
+            "start_byte": 150,
+            "end_byte": 154,
+            "start_line": 11,
+            "start_column": 6,
+            "end_line": 11,
+            "end_column": 10
+          },
+          "code": "prev"
+        },
+        {
+          "id": "identifier:3",
+          "usage": "read",
+          "location": {
+            "start_byte": 199,
+            "end_byte": 203,
+            "start_line": 12,
+            "start_column": 36,
+            "end_line": 12,
+            "end_column": 40
+          },
+          "code": "prev"
+        }
+      ],
+      "reads": [
+        {
+          "id": "read:0",
+          "location": {
+            "start_byte": 147,
+            "end_byte": 163,
+            "start_line": 11,
+            "start_column": 3,
+            "end_line": 11,
+            "end_column": 19
+          },
+          "code": "if prev != None:"
+        },
+        {
+          "id": "read:1",
+          "location": {
+            "start_byte": 167,
+            "end_byte": 204,
+            "start_line": 12,
+            "start_column": 4,
+            "end_line": 12,
+            "end_column": 41
+          },
+          "code": "max_diff = max(max_diff, curr - prev)"
+        }
+      ],
+      "writes": [
+        {
+          "id": "write:0",
+          "location": {
+            "start_byte": 110,
+            "end_byte": 121,
+            "start_line": 8,
+            "start_column": 3,
+            "end_line": 8,
+            "end_column": 14
+          },
+          "code": "prev = curr"
+        }
+      ],
+      "updates": [],
+      "state_mutations": [],
+      "control_context": [
+        {
+          "id": "control:0",
+          "location": {
+            "start_byte": 78,
+            "end_byte": 95,
+            "start_line": 6,
+            "start_column": 2,
+            "end_line": 6,
+            "end_column": 19
+          },
+          "code": "while step < 100:",
+          "type": "loop",
+          "subtype": "while",
+          "relation": "contains_write"
+        },
+        {
+          "id": "control:1",
+          "location": {
+            "start_byte": 147,
+            "end_byte": 163,
+            "start_line": 11,
+            "start_column": 3,
+            "end_line": 11,
+            "end_column": 19
+          },
+          "code": "if prev != None:",
+          "type": "conditional",
+          "subtype": "if",
+          "relation": "contains_read"
+        }
+      ],
+      "scope": [
+        {
+          "id": "scope:0",
+          "location": {
+            "start_byte": 0,
+            "end_byte": 25,
+            "start_line": 1,
+            "start_column": 1,
+            "end_line": 1,
+            "end_column": 26
+          },
+          "code": "def biggest_input_diff():",
+          "type": "function",
+          "relation": "direct_scope"
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": 1,
+    "concept": {
+      "family": "sajaniemi_role",
+      "name": "most_recent_holder"
+    },
+    "subject": {
+      "id": "py/01.py::01.py:<module>.biggest_input_diff::local::curr:3:2",
+      "joern_id": 94489280517,
+      "name": "curr",
+      "kind": "local",
+      "path": "py/01.py",
+      "scope": {
+        "type": "function",
+        "name": "biggest_input_diff",
+        "qualified_name": "01.py:<module>.biggest_input_diff"
+      }
+    },
+    "views": {
+      "declaration": [
+        {
+          "id": "declaration:0",
+          "location": {
+            "start_byte": 41,
+            "end_byte": 52,
+            "start_line": 3,
+            "start_column": 2,
+            "end_line": 3,
+            "end_column": 13
+          },
+          "code": "curr = None"
+        }
+      ],
+      "identifier": [
+        {
+          "id": "identifier:0",
+          "usage": "declaration",
+          "location": {
+            "start_byte": 41,
+            "end_byte": 45,
+            "start_line": 3,
+            "start_column": 2,
+            "end_line": 3,
+            "end_column": 6
+          },
+          "code": "curr"
+        },
+        {
+          "id": "identifier:1",
+          "usage": "read",
+          "location": {
+            "start_byte": 117,
+            "end_byte": 121,
+            "start_line": 8,
+            "start_column": 10,
+            "end_line": 8,
+            "end_column": 14
+          },
+          "code": "curr"
+        },
+        {
+          "id": "identifier:2",
+          "usage": "write",
+          "location": {
+            "start_byte": 124,
+            "end_byte": 128,
+            "start_line": 9,
+            "start_column": 3,
+            "end_line": 9,
+            "end_column": 7
+          },
+          "code": "curr"
+        },
+        {
+          "id": "identifier:3",
+          "usage": "read",
+          "location": {
+            "start_byte": 192,
+            "end_byte": 196,
+            "start_line": 12,
+            "start_column": 29,
+            "end_line": 12,
+            "end_column": 33
+          },
+          "code": "curr"
+        }
+      ],
+      "reads": [
+        {
+          "id": "read:0",
+          "location": {
+            "start_byte": 110,
+            "end_byte": 121,
+            "start_line": 8,
+            "start_column": 3,
+            "end_line": 8,
+            "end_column": 14
+          },
+          "code": "prev = curr"
+        },
+        {
+          "id": "read:1",
+          "location": {
+            "start_byte": 167,
+            "end_byte": 204,
+            "start_line": 12,
+            "start_column": 4,
+            "end_line": 12,
+            "end_column": 41
+          },
+          "code": "max_diff = max(max_diff, curr - prev)"
+        }
+      ],
+      "writes": [
+        {
+          "id": "write:0",
+          "location": {
+            "start_byte": 124,
+            "end_byte": 143,
+            "start_line": 9,
+            "start_column": 3,
+            "end_line": 9,
+            "end_column": 22
+          },
+          "code": "curr = int(input())"
+        }
+      ],
+      "updates": [],
+      "state_mutations": [],
+      "control_context": [
+        {
+          "id": "control:0",
+          "location": {
+            "start_byte": 78,
+            "end_byte": 95,
+            "start_line": 6,
+            "start_column": 2,
+            "end_line": 6,
+            "end_column": 19
+          },
+          "code": "while step < 100:",
+          "type": "loop",
+          "subtype": "while",
+          "relation": "contains_write"
+        }
+      ],
+      "scope": [
+        {
+          "id": "scope:0",
+          "location": {
+            "start_byte": 0,
+            "end_byte": 25,
+            "start_line": 1,
+            "start_column": 1,
+            "end_line": 1,
+            "end_column": 26
+          },
+          "code": "def biggest_input_diff():",
+          "type": "function",
+          "relation": "direct_scope"
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": 1,
+    "concept": {
+      "family": "sajaniemi_role",
+      "name": "most_wanted_holder"
+    },
+    "subject": {
+      "id": "py/01.py::01.py:<module>.biggest_input_diff::local::max_diff:4:2",
+      "joern_id": 94489280518,
+      "name": "max_diff",
+      "kind": "local",
+      "path": "py/01.py",
+      "scope": {
+        "type": "function",
+        "name": "biggest_input_diff",
+        "qualified_name": "01.py:<module>.biggest_input_diff"
+      }
+    },
+    "views": {
+      "declaration": [
+        {
+          "id": "declaration:0",
+          "location": {
+            "start_byte": 54,
+            "end_byte": 66,
+            "start_line": 4,
+            "start_column": 2,
+            "end_line": 4,
+            "end_column": 14
+          },
+          "code": "max_diff = 0"
+        }
+      ],
+      "identifier": [
+        {
+          "id": "identifier:0",
+          "usage": "declaration",
+          "location": {
+            "start_byte": 54,
+            "end_byte": 62,
+            "start_line": 4,
+            "start_column": 2,
+            "end_line": 4,
+            "end_column": 10
+          },
+          "code": "max_diff"
+        },
+        {
+          "id": "identifier:1",
+          "usage": "write",
+          "location": {
+            "start_byte": 167,
+            "end_byte": 175,
+            "start_line": 12,
+            "start_column": 4,
+            "end_line": 12,
+            "end_column": 12
+          },
+          "code": "max_diff"
+        },
+        {
+          "id": "identifier:2",
+          "usage": "write",
+          "location": {
+            "start_byte": 182,
+            "end_byte": 190,
+            "start_line": 12,
+            "start_column": 19,
+            "end_line": 12,
+            "end_column": 27
+          },
+          "code": "max_diff"
+        },
+        {
+          "id": "identifier:3",
+          "usage": "read",
+          "location": {
+            "start_byte": 218,
+            "end_byte": 226,
+            "start_line": 15,
+            "start_column": 9,
+            "end_line": 15,
+            "end_column": 17
+          },
+          "code": "max_diff"
+        }
+      ],
+      "reads": [
+        {
+          "id": "read:0",
+          "location": {
+            "start_byte": 211,
+            "end_byte": 226,
+            "start_line": 15,
+            "start_column": 2,
+            "end_line": 15,
+            "end_column": 17
+          },
+          "code": "return max_diff"
+        }
+      ],
+      "writes": [],
+      "updates": [
+        {
+          "id": "update:0",
+          "location": {
+            "start_byte": 167,
+            "end_byte": 204,
+            "start_line": 12,
+            "start_column": 4,
+            "end_line": 12,
+            "end_column": 41
+          },
+          "code": "max_diff = max(max_diff, curr - prev)"
+        }
+      ],
+      "state_mutations": [],
+      "control_context": [
+        {
+          "id": "control:0",
+          "location": {
+            "start_byte": 78,
+            "end_byte": 95,
+            "start_line": 6,
+            "start_column": 2,
+            "end_line": 6,
+            "end_column": 19
+          },
+          "code": "while step < 100:",
+          "type": "loop",
+          "subtype": "while",
+          "relation": "contains_update"
+        },
+        {
+          "id": "control:1",
+          "location": {
+            "start_byte": 147,
+            "end_byte": 163,
+            "start_line": 11,
+            "start_column": 3,
+            "end_line": 11,
+            "end_column": 19
+          },
+          "code": "if prev != None:",
+          "type": "conditional",
+          "subtype": "if",
+          "relation": "guards_update"
+        }
+      ],
+      "scope": [
+        {
+          "id": "scope:0",
+          "location": {
+            "start_byte": 0,
+            "end_byte": 25,
+            "start_line": 1,
+            "start_column": 1,
+            "end_line": 1,
+            "end_column": 26
+          },
+          "code": "def biggest_input_diff():",
+          "type": "function",
+          "relation": "direct_scope"
+        }
+      ]
+    }
+  },
+  {
+    "schema_version": 1,
+    "concept": {
+      "family": "sajaniemi_role",
+      "name": "stepper"
+    },
+    "subject": {
+      "id": "py/01.py::01.py:<module>.biggest_input_diff::local::step:5:2",
+      "joern_id": 94489280519,
+      "name": "step",
+      "kind": "local",
+      "path": "py/01.py",
+      "scope": {
+        "type": "function",
+        "name": "biggest_input_diff",
+        "qualified_name": "01.py:<module>.biggest_input_diff"
+      }
+    },
+    "views": {
+      "declaration": [
+        {
+          "id": "declaration:0",
+          "location": {
+            "start_byte": 68,
+            "end_byte": 76,
+            "start_line": 5,
+            "start_column": 2,
+            "end_line": 5,
+            "end_column": 10
+          },
+          "code": "step = 0"
+        }
+      ],
+      "identifier": [
+        {
+          "id": "identifier:0",
+          "usage": "declaration",
+          "location": {
+            "start_byte": 68,
+            "end_byte": 72,
+            "start_line": 5,
+            "start_column": 2,
+            "end_line": 5,
+            "end_column": 6
+          },
+          "code": "step"
+        },
+        {
+          "id": "identifier:1",
+          "usage": "read",
+          "location": {
+            "start_byte": 84,
+            "end_byte": 88,
+            "start_line": 6,
+            "start_column": 8,
+            "end_line": 6,
+            "end_column": 12
+          },
+          "code": "step"
+        },
+        {
+          "id": "identifier:2",
+          "usage": "write",
+          "location": {
+            "start_byte": 98,
+            "end_byte": 102,
+            "start_line": 7,
+            "start_column": 3,
+            "end_line": 7,
+            "end_column": 7
+          },
+          "code": "step"
+        }
+      ],
+      "reads": [
+        {
+          "id": "read:0",
+          "location": {
+            "start_byte": 78,
+            "end_byte": 95,
+            "start_line": 6,
+            "start_column": 2,
+            "end_line": 6,
+            "end_column": 19
+          },
+          "code": "while step < 100:"
+        }
+      ],
+      "writes": [],
+      "updates": [
+        {
+          "id": "update:0",
+          "location": {
+            "start_byte": 98,
+            "end_byte": 107,
+            "start_line": 7,
+            "start_column": 3,
+            "end_line": 7,
+            "end_column": 12
+          },
+          "code": "step += 1"
+        }
+      ],
+      "state_mutations": [],
+      "control_context": [
+        {
+          "id": "control:0",
+          "location": {
+            "start_byte": 78,
+            "end_byte": 95,
+            "start_line": 6,
+            "start_column": 2,
+            "end_line": 6,
+            "end_column": 19
+          },
+          "code": "while step < 100:",
+          "type": "loop",
+          "subtype": "while",
+          "relation": "contains_read"
+        },
+        {
+          "id": "control:1",
+          "location": {
+            "start_byte": 78,
+            "end_byte": 95,
+            "start_line": 6,
+            "start_column": 2,
+            "end_line": 6,
+            "end_column": 19
+          },
+          "code": "while step < 100:",
+          "type": "loop",
+          "subtype": "while",
+          "relation": "contains_update"
+        }
+      ],
+      "scope": [
+        {
+          "id": "scope:0",
+          "location": {
+            "start_byte": 0,
+            "end_byte": 25,
+            "start_line": 1,
+            "start_column": 1,
+            "end_line": 1,
+            "end_column": 26
+          },
+          "code": "def biggest_input_diff():",
+          "type": "function",
+          "relation": "direct_scope"
+        }
+      ]
+    }
+  }
+]

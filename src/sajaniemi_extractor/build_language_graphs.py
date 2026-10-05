@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build one Joern graph per language for train/test source directories."""
+"""Build Joern graphs for supported source directories."""
 
 from __future__ import annotations
 
@@ -9,6 +9,7 @@ import shutil
 import subprocess
 import tempfile
 import uuid
+import warnings
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -22,20 +23,10 @@ class LanguageConfig:
 LANGUAGES: dict[str, LanguageConfig] = {
     "C": LanguageConfig("c", "c"),
     "C++": LanguageConfig("c", "cpp"),
-    "C#": LanguageConfig("csharpsrc", "csharp"),
-    # "Java": LanguageConfig("javasrc", "java"),
     "JavaScript": LanguageConfig("javascript", "javascript"),
     "Python": LanguageConfig("pythonsrc", "python"),
     "Ruby": LanguageConfig("rubysrc", "ruby"),
 }
-
-
-def has_source_files(path: Path) -> bool:
-    return any(child.is_file() for child in path.rglob("*"))
-
-
-def output_path(output_dir: Path, split: str, language: str) -> Path:
-    return output_dir / split / f"{LANGUAGES[language].output_stem}.bin"
 
 
 def run_joern_parse(source_dir: Path, output: Path, language: str, force: bool, dry_run: bool) -> None:
@@ -60,7 +51,6 @@ def run_joern_parse(source_dir: Path, output: Path, language: str, force: bool, 
     if output.exists():
         output.unlink()
     output.parent.mkdir(parents=True, exist_ok=True)
-    print(f"[joern-parse] {source_dir} -> {output} ({config.joern_language})")
     if language == "Ruby":
         # rubysrc2cpg may silently respect the enclosing Git worktree's ignore
         # rules. The research corpora live under ignored /code, so parse an
@@ -69,54 +59,52 @@ def run_joern_parse(source_dir: Path, output: Path, language: str, force: bool, 
         staging_dir.mkdir()
         try:
             shutil.copytree(parse_source, staging_dir / source_dir.name)
-            print(shlex.join(command))
-            subprocess.run(command, check=True)
+            _run_quietly(command)
         finally:
             shutil.rmtree(staging_dir)
         return
 
-    print(shlex.join(command))
-    subprocess.run(command, check=True)
+    _run_quietly(command)
 
 
-def build_graphs(code_root: Path, output_dir: Path, splits: list[str], force: bool, dry_run: bool) -> None:
-    for split in splits:
-        split_dir = code_root / split
-        if not split_dir.is_dir():
-            print(f"[skip] missing split directory: {split_dir}")
-            continue
+def _run_quietly(command: list[str], *, cwd: Path | None = None) -> None:
+    """Keep Joern chatter hidden on success and include it in failures."""
+    try:
+        subprocess.run(command, check=True, cwd=cwd, stdout=subprocess.PIPE,
+                       stderr=subprocess.STDOUT, text=True)
+    except subprocess.CalledProcessError as error:
+        detail = (error.stdout or "").strip()
+        raise RuntimeError(f"Joern command failed: {shlex.join(command)}\n{detail}") from error
 
-        for language, config in LANGUAGES.items():
-            source_dir = split_dir / language
-            if not source_dir.is_dir():
-                print(f"[skip] missing language directory: {source_dir}")
-                continue
-            if not has_source_files(source_dir):
-                print(f"[skip] empty language directory: {source_dir}")
-                continue
 
-            run_joern_parse(
-                source_dir=source_dir,
-                output=output_path(output_dir, split, language),
-                language=language,
-                force=force,
-                dry_run=dry_run,
-            )
+def build_graphs(code_root: Path, output_dir: Path, force: bool, dry_run: bool,
+                 layout: str = "auto") -> None:
+    from .source_layout import discover_sources
+
+    jobs = discover_sources(code_root, layout)
+    succeeded = 0
+    for job in jobs:
+        group_parts = job.output_parts[:-1] if job.output_parts else ()
+        stem = job.output_parts[-1] if job.output_parts else LANGUAGES[job.language].output_stem
+        graph = output_dir.joinpath(*group_parts) / "graphs" / f"{stem}.bin"
+        try:
+            run_joern_parse(job.source, graph, job.language, force, dry_run)
+            succeeded += 1
+        except (ValueError, RuntimeError, OSError) as error:
+            if len(jobs) == 1 and not job.output_parts:
+                raise
+            warnings.warn(f"Skipping {job.source}: {error}", stacklevel=2)
+    if not succeeded:
+        raise ValueError("No source repositories could be parsed")
 
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Generate one Joern .bin graph per language from code/train and/or code/test."
+        description="Generate Joern graphs from one source tree, repositories, or named splits."
     )
-    parser.add_argument("--code-root", type=Path, default=Path("code"), help="Root containing train/ and test/.")
+    parser.add_argument("--code-root", type=Path, required=True, help="Input source root.")
     parser.add_argument("--output-dir", type=Path, required=True, help="Directory where graph .bin files are written.")
-    parser.add_argument(
-        "--splits",
-        nargs="+",
-        default=["train", "test"],
-        choices=["train", "test"],
-        help="Split directories to parse.",
-    )
+    parser.add_argument("--layout", choices=("auto", "single", "repos", "splits"), default="auto")
     parser.add_argument("--force", action="store_true", help="Rebuild graphs even when output .bin files already exist.")
     parser.add_argument("--dry-run", action="store_true", help="Print joern-parse commands without running them.")
     return parser.parse_args()
@@ -127,9 +115,9 @@ def main() -> None:
     build_graphs(
         code_root=args.code_root,
         output_dir=args.output_dir,
-        splits=args.splits,
         force=args.force,
         dry_run=args.dry_run,
+        layout=args.layout,
     )
 
 
