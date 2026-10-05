@@ -83,6 +83,26 @@ See the [CLI reference](docs/cli.md) for every command, input layout, argument, 
 
 These are possible applications of static annotations, not claims of accuracy for a particular corpus.
 
+## Limitations
+
+The ratings below are qualitative assessments of the current extractor, not measured corpus-wide precision or recall. Coverage depends on the source pattern and language.
+
+| Role | Current extraction quality | Known limitation |
+| --- | --- | --- |
+| One-way flag | Excellent | — |
+| Stepper | Excellent | — |
+| Walker | Excellent | — |
+| Most-wanted holder | Excellent | — |
+| Gatherer | Good | — |
+| Follower | Good | Strict matching favors precision, but can miss valid followers. |
+| Most-recent holder | Average | Class-member holders are harder to identify from static evidence. |
+| Fixed value | Average | The current rules can be too permissive in some contexts. |
+| Temporary | Average | The current rules can be too permissive. |
+| Organizer | Partial | Element immutability within a collection is difficult to establish from a static CPG. Detection currently relies on simple patterns or a recognized permutation without observed element mutation. |
+| Container | Partial | Some organizers may be misclassified as containers. |
+
+These rules operationalize Sajaniemi's roles; they are not a formal expression of the roles and do not establish semantic ground truth. The extractor deliberately relies on static CPG analysis rather than building or executing each project. As a result, some program behaviors cannot be recovered perfectly, and Joern's representation can occasionally be incomplete or imprecise when analyzing source code without the full build and runtime context. This trade-off is intentional: using Joern makes it possible to apply the same extraction pipeline across several programming languages, without requiring projects to be executable, while remaining practical for large collections of source code.
+
 ## Authors
 
 - Célian Vasson
